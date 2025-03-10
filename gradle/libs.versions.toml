@@ -9,13 +9,15 @@ kotlinx-serialization = "1.8.0"
 kotlinx-datetime = "0.6.1"
 # androidx
 androidx-room = "2.6.1"
+androidx-compose-bom = "2024.04.01"
+# bom
+koin-bom = "4.0.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
-composeBom = "2024.04.01"
 ktlint = "12.1.2"
 appcompat = "1.7.0"
 material = "1.12.0"
@@ -29,7 +31,7 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -56,6 +58,15 @@ kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+# koin
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines" }
+koin-androidx-workmanager = { module = "io.insert-koin:koin-androidx-workmanager" }
+koin-test = { module = "io.insert-koin:koin-test" }
+koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4" }
+koin-test-junit5 = { module = "io.insert-koin:koin-test-junit5" }
 # other
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 mockk = { module = "io.mockk:mockk", version.ref="mockk"}
@@ -73,5 +84,8 @@ kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 # conventions
 mambo-conventions-module = { id = "mambo.conventions.module", version = "unspecified" }
+mambo-conventions-koin = { id = "mambo.conventions.koin", version = "unspecified" }
+
 [bundles]
 androidx-room = ["room-ktx", "room-runtime", "room-paging"]
+koin = ["koin-core", "koin-android", "koin-core-coroutines", "koin-androidx-workmanager"]

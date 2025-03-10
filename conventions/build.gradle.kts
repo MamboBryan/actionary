@@ -29,6 +29,7 @@ gradlePlugin {
                 implementationClass = className
             }
         }
+        createPlugin("mambo.conventions.koin", "dev.mambo.conventions.KoinConvention")
         createPlugin("mambo.conventions.module", "dev.mambo.conventions.ModuleConvention")
     }
 }

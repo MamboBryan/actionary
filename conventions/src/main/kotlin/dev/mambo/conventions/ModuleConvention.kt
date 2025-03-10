@@ -25,6 +25,7 @@ class ModuleConvention : Plugin<Project> {
                 apply(catalogs.getPlugin("kotlin-android"))
                 apply(catalogs.getPlugin("ktlint"))
                 apply(catalogs.getPlugin("kotlin-serialization"))
+                apply(catalogs.getPlugin("mambo-conventions-koin"))
             }
             // setup android
             library {
