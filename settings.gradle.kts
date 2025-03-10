@@ -22,4 +22,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Actionary"
 include(":app")
- 
+
+// module folders
+include(":modules-datasources")
