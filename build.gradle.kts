@@ -19,11 +19,6 @@ allprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
     ktlint {
         enableExperimentalRules.set(true)
-        additionalEditorconfig.set(
-            mapOf(
-                "ktlint_standard_package-naming" to "disabled",
-            ),
-        )
         reporters {
             reporter(ReporterType.JSON)
         }

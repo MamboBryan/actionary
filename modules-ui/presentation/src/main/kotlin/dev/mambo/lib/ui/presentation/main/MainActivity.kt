@@ -8,7 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import dev.mambo.lib.ui.design.theme.ActionaryTheme
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+    override fun onCreate(
+        savedInstanceState: Bundle?,
+        persistentState: PersistableBundle?,
+    ) {
         super.onCreate(savedInstanceState, persistentState)
         enableEdgeToEdge()
         setContent {

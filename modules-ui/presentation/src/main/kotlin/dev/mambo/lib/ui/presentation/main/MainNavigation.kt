@@ -7,7 +7,7 @@ import dev.mambo.lib.ui.presentation.screens.tasks.TasksScreen
 
 @Composable
 fun MainNavigation() {
-    Navigator(TasksScreen){ navigator ->
+    Navigator(TasksScreen) { navigator ->
         SlideTransition(navigator)
     }
 }

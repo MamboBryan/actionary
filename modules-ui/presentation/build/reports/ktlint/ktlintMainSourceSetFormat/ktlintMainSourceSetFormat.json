@@ -1,0 +1,24 @@
+[
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/helpers/TimberHelpers.kt",
+        "errors": [
+            {
+                "line": 6,
+                "column": 31,
+                "message": "Expected a single white space before start of function body",
+                "rule": "standard:function-start-of-body-spacing"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/tasks/TasksScreenModel.kt",
+        "errors": [
+            {
+                "line": 22,
+                "column": 42,
+                "message": "Expected a single white space before start of function body",
+                "rule": "standard:function-start-of-body-spacing"
+            }
+        ]
+    }
+]

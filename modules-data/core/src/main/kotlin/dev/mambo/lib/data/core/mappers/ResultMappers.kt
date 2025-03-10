@@ -8,4 +8,3 @@ fun <T, R> LocalResult<T>.asDataResult(block: (T) -> R): DataResult<R> =
         is LocalResult.Error -> DataResult.Error(message = message)
         is LocalResult.Success -> DataResult.Success(data = block(data))
     }
-

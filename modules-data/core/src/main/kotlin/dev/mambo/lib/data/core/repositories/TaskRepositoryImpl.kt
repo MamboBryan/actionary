@@ -19,14 +19,13 @@ import kotlinx.datetime.LocalDateTime
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class TaskRepositoryImpl(
-    private val local: TaskLocalSource
+    private val local: TaskLocalSource,
 ) : TaskRepository {
-
     override suspend fun getTask(id: Int): Flow<TaskDomain?> {
         return local.getFlow(id = id).mapLatest { it?.toTaskDomain() }
     }
 
-    override suspend fun getTasks(): Flow<List<TaskDomain>> {
+    override fun getTasks(): Flow<List<TaskDomain>> {
         return local.getAllAsFlow().mapLatest { list -> list.map { it.toTaskDomain() } }
     }
 
@@ -34,19 +33,20 @@ class TaskRepositoryImpl(
         title: String,
         description: String,
         dueAt: LocalDateTime?,
-        priority: PriorityDomain?
+        priority: PriorityDomain?,
     ): DataResult<TaskDomain> {
         val now = Clock.System.now().LocalDateTime.asEpochMilliseconds()
-        val task = TaskCache(
-            id = 0,
-            title = title,
-            description = description,
-            createdAt = now,
-            updatedAt = now,
-            dueAt = dueAt?.asEpochMilliseconds(),
-            priority = priority?.name,
-            completedAt = null
-        )
+        val task =
+            TaskCache(
+                id = 0,
+                title = title,
+                description = description,
+                createdAt = now,
+                updatedAt = now,
+                dueAt = dueAt?.asEpochMilliseconds(),
+                priority = priority?.name,
+                completedAt = null,
+            )
         return local.insert(task = task).asDataResult { it.toTaskDomain() }
     }
 
@@ -56,7 +56,6 @@ class TaskRepositoryImpl(
     }
 
     override suspend fun deleteTask(task: TaskDomain): DataResult<Boolean> {
-        return  local.delete(task = task.toTaskCache()).asDataResult { it }
+        return local.delete(task = task.toTaskCache()).asDataResult { it }
     }
-
 }

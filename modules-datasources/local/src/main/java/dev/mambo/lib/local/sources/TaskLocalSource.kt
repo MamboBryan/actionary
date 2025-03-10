@@ -24,7 +24,7 @@ interface TaskLocalSource {
 
     suspend fun getAll(): LocalResult<List<TaskCache>>
 
-    suspend fun getAllAsFlow(): Flow<List<TaskCache>>
+    fun getAllAsFlow(): Flow<List<TaskCache>>
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -57,7 +57,7 @@ internal class TaskLocalSourceImpl(
 
     override suspend fun getFlow(id: Int): Flow<TaskCache?> = dao.fetchByIdFlow(id = id).mapLatest { it?.toTaskCache() }
 
-    override suspend fun getAllAsFlow(): Flow<List<TaskCache>> = dao.fetchAllFlow().mapLatest { list -> list.map { it.toTaskCache() } }
+    override fun getAllAsFlow(): Flow<List<TaskCache>> = dao.fetchAllFlow().mapLatest { list -> list.map { it.toTaskCache() } }
 
     override suspend fun getAll(): LocalResult<List<TaskCache>> =
         safeTransaction(dispatcher) {

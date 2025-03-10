@@ -7,10 +7,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.LocalDateTime
 
 interface TaskRepository {
-
     suspend fun getTask(id: Int): Flow<TaskDomain?>
 
-    suspend fun getTasks(): Flow<List<TaskDomain>>
+    fun getTasks(): Flow<List<TaskDomain>>
 
     suspend fun createTask(
         title: String,
@@ -22,5 +21,4 @@ interface TaskRepository {
     suspend fun updateTask(task: TaskDomain): DataResult<TaskDomain>
 
     suspend fun deleteTask(task: TaskDomain): DataResult<Boolean>
-
 }
