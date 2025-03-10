@@ -23,6 +23,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 timber = "5.0.1"
 mockk = "1.13.17"
+voyager = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -67,6 +68,12 @@ koin-androidx-workmanager = { module = "io.insert-koin:koin-androidx-workmanager
 koin-test = { module = "io.insert-koin:koin-test" }
 koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4" }
 koin-test-junit5 = { module = "io.insert-koin:koin-test-junit5" }
+# voyager
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-bottomSheetNavigator = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyager" }
+voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
 # other
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 mockk = { module = "io.mockk:mockk", version.ref="mockk"}
@@ -83,9 +90,14 @@ kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.
 # ktlint
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 # conventions
+mambo-conventions-feature = { id = "mambo.conventions.feature", version = "unspecified" }
 mambo-conventions-module = { id = "mambo.conventions.module", version = "unspecified" }
 mambo-conventions-koin = { id = "mambo.conventions.koin", version = "unspecified" }
 
 [bundles]
 androidx-room = ["room-ktx", "room-runtime", "room-paging"]
 koin = ["koin-core", "koin-android", "koin-core-coroutines", "koin-androidx-workmanager"]
+voyager = [
+    "voyager-navigator", "voyager-tabNavigator", "voyager-bottomSheetNavigator",
+    "voyager-transitions", "voyager-koin"
+]

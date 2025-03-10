@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.mambo.conventions.module)
+    alias(libs.plugins.mambo.conventions.feature)
 }
 
 android {

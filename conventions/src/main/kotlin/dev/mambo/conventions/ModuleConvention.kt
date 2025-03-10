@@ -1,7 +1,7 @@
 package dev.mambo.conventions
 
 import dev.mambo.extensions.androidTestImplementation
-import dev.mambo.extensions.configureAndroidLibrary
+import dev.mambo.extensions.configureAndroid
 import dev.mambo.extensions.getLibrary
 import dev.mambo.extensions.getPlugin
 import dev.mambo.extensions.implementation
@@ -29,7 +29,7 @@ class ModuleConvention : Plugin<Project> {
             }
             // setup android
             library {
-                configureAndroidLibrary()
+                configureAndroid()
             }
             // setup dependencies
             dependencies {

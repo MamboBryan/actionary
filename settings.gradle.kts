@@ -26,6 +26,7 @@ rootProject.name = "Actionary"
 // module folders
 include(":modules-datasources")
 include(":modules-data")
+include(":modules-ui")
 
 // data sources modules
 include(":modules-datasources:local")
@@ -33,6 +34,10 @@ include(":modules-datasources:local")
 // data modules
 include(":modules-data:domain")
 include(":modules-data:core")
+
+// ui modules
+include(":modules-ui:presentation")
+include(":modules-ui:design")
 
 // app modules
 include(":app")

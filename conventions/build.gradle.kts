@@ -31,5 +31,6 @@ gradlePlugin {
         }
         createPlugin("mambo.conventions.koin", "dev.mambo.conventions.KoinConvention")
         createPlugin("mambo.conventions.module", "dev.mambo.conventions.ModuleConvention")
+        createPlugin("mambo.conventions.feature", "dev.mambo.conventions.FeatureConvention")
     }
 }
