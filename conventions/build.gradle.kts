@@ -29,5 +29,6 @@ gradlePlugin {
                 implementationClass = className
             }
         }
+        createPlugin("mambo.conventions.module", "dev.mambo.conventions.ModuleConvention")
     }
 }

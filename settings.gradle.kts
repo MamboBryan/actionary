@@ -25,3 +25,4 @@ include(":app")
 
 // module folders
 include(":modules-datasources")
+include(":modules-datasources:local")
