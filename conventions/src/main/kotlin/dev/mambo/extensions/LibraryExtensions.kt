@@ -8,6 +8,7 @@ fun LibraryExtension.configureAndroidLibrary() {
     compileSdk = AndroidSdk.compileSdk
     defaultConfig {
         minSdk = AndroidSdk.minimumSdk
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     packaging {
         resources {
@@ -20,7 +21,7 @@ fun LibraryExtension.configureAndroidLibrary() {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 }

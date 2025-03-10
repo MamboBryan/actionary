@@ -45,6 +45,7 @@ class ModuleConvention : Plugin<Project> {
                 // coroutines
                 implementation(catalogs.getLibrary("kotlinx-coroutines-android"))
                 testImplementation(catalogs.getLibrary("kotlinx-coroutines-test"))
+                androidTestImplementation(catalogs.getLibrary("kotlinx-coroutines-test"))
                 // serialization
                 implementation(catalogs.getLibrary("kotlinx-serialization-json"))
             }
