@@ -13,7 +13,7 @@ data class TaskEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     @ColumnInfo(name = "completed_at") val completedAt: Long? = null,
     @ColumnInfo(name = "due_at") val dueAt: Long? = null,
-    val priority: String? = null
+    val priority: String? = null,
 ) {
     companion object {
         const val TABLE_NAME = "tasks"

@@ -8,14 +8,12 @@ import dev.mambo.lib.local.entities.TaskEntity
 @Database(
     entities = [TaskEntity::class],
     exportSchema = false,
-    version = 7
+    version = 7,
 )
 abstract class ActionaryDatabase : RoomDatabase() {
-
     abstract fun taskDAO(): TaskDAO
 
     companion object {
         const val DATABASE_NAME = "actionary_database"
     }
-
 }

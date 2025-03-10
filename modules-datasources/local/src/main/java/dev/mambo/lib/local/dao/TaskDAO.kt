@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDAO : BaseDAO<TaskEntity> {
-
     @Query("SELECT * FROM tasks")
     fun fetchAll(): List<TaskEntity>
 
@@ -19,5 +18,4 @@ interface TaskDAO : BaseDAO<TaskEntity> {
 
     @Query("SELECT * FROM tasks WHERE id = :id ")
     fun fetchByIdFlow(id: Int): Flow<TaskEntity?>
-
 }

@@ -22,7 +22,6 @@ import kotlin.test.assertTrue
 
 @RunWith(AndroidJUnit4::class)
 class TaskDAOTest {
-
     private lateinit var dao: TaskDAO
     private lateinit var database: ActionaryDatabase
 
@@ -39,72 +38,79 @@ class TaskDAOTest {
     }
 
     @Test
-    fun insert_should_saves_task() = runTest {
-        val task = TaskEntity(
-            title = "task",
-            description = "description",
-            createdAt = System.currentTimeMillis()
-        )
-        val id = dao.insert(item = task)
-        val item = dao.fetchById(id = id.toInt())
-        assertNotNull(item)
-        assertEquals(task.title, item.title)
-        assertEquals(task.description, item.description)
-    }
-
-    @Test
-    fun fetch_should_retrieve_the_correct_task() = runTest {
-        val tasks = (1..10).map {
-            TaskEntity(
-                title = "task $it",
-                description = "description $it",
-                createdAt = System.currentTimeMillis()
-            )
+    fun insert_should_saves_task() =
+        runTest {
+            val task =
+                TaskEntity(
+                    title = "task",
+                    description = "description",
+                    createdAt = System.currentTimeMillis(),
+                )
+            val id = dao.insert(item = task)
+            val item = dao.fetchById(id = id.toInt())
+            assertNotNull(item)
+            assertEquals(task.title, item.title)
+            assertEquals(task.description, item.description)
         }
-        dao.insert(items = tasks)
-        val values = dao.fetchAll()
-        assertTrue{ values.isNotEmpty() }
-        val expected = values.first()
-        val actual = dao.fetchById(id = expected.id)
-        assertEquals(expected, actual)
-        assertNotNull(actual)
-        assertEquals(expected.title, actual.title)
-        assertEquals(expected.description, actual.description)
-    }
 
     @Test
-    fun update_should_change_values_of_a_task() = runTest {
-        val task = TaskEntity(
-            title = "task",
-            description = "description",
-            createdAt = System.currentTimeMillis()
-        )
-        val id = dao.insert(item = task)
-        val initial = dao.fetchById(id = id.toInt())
-        assertNotNull(initial)
-        val expected = initial.copy(title = "title 2", updatedAt = System.currentTimeMillis())
-        dao.update(expected)
-        val actual = dao.fetchById(id = id.toInt())
-        assertNotNull(actual)
-        assertEquals(expected.title, actual.title)
-        assertEquals(expected.updatedAt, actual.updatedAt)
-        assertEquals(expected.updatedAt, actual.updatedAt)
-        assertNotEquals(expected.createdAt, actual.updatedAt)
-    }
+    fun fetch_should_retrieve_the_correct_task() =
+        runTest {
+            val tasks =
+                (1..10).map {
+                    TaskEntity(
+                        title = "task $it",
+                        description = "description $it",
+                        createdAt = System.currentTimeMillis(),
+                    )
+                }
+            dao.insert(items = tasks)
+            val values = dao.fetchAll()
+            assertTrue { values.isNotEmpty() }
+            val expected = values.first()
+            val actual = dao.fetchById(id = expected.id)
+            assertEquals(expected, actual)
+            assertNotNull(actual)
+            assertEquals(expected.title, actual.title)
+            assertEquals(expected.description, actual.description)
+        }
 
     @Test
-    fun delete_should_remove_a_task() = runTest {
-        val task = TaskEntity(
-            title = "task",
-            description = "description",
-            createdAt = System.currentTimeMillis()
-        )
-        val id = dao.insert(item = task)
-        val initial = dao.fetchById(id = id.toInt())
-        assertNotNull(initial)
-        dao.delete(initial)
-        val actual = dao.fetchById(id = id.toInt())
-        assertNull(actual)
-    }
+    fun update_should_change_values_of_a_task() =
+        runTest {
+            val task =
+                TaskEntity(
+                    title = "task",
+                    description = "description",
+                    createdAt = System.currentTimeMillis(),
+                )
+            val id = dao.insert(item = task)
+            val initial = dao.fetchById(id = id.toInt())
+            assertNotNull(initial)
+            val expected = initial.copy(title = "title 2", updatedAt = System.currentTimeMillis())
+            dao.update(expected)
+            val actual = dao.fetchById(id = id.toInt())
+            assertNotNull(actual)
+            assertEquals(expected.title, actual.title)
+            assertEquals(expected.updatedAt, actual.updatedAt)
+            assertEquals(expected.updatedAt, actual.updatedAt)
+            assertNotEquals(expected.createdAt, actual.updatedAt)
+        }
 
+    @Test
+    fun delete_should_remove_a_task() =
+        runTest {
+            val task =
+                TaskEntity(
+                    title = "task",
+                    description = "description",
+                    createdAt = System.currentTimeMillis(),
+                )
+            val id = dao.insert(item = task)
+            val initial = dao.fetchById(id = id.toInt())
+            assertNotNull(initial)
+            dao.delete(initial)
+            val actual = dao.fetchById(id = id.toInt())
+            assertNull(actual)
+        }
 }

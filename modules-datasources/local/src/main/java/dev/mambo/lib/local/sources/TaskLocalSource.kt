@@ -13,17 +13,24 @@ import kotlinx.coroutines.flow.mapLatest
 
 interface TaskLocalSource {
     suspend fun insert(task: TaskCache): LocalResult<TaskCache>
+
     suspend fun update(task: TaskCache): LocalResult<TaskCache>
+
     suspend fun delete(task: TaskCache): LocalResult<Boolean>
+
     suspend fun get(id: Int): LocalResult<TaskCache>
+
     suspend fun getFlow(id: Int): Flow<TaskCache?>
+
+    suspend fun getAll(): LocalResult<List<TaskCache>>
+
     suspend fun getAllAsFlow(): Flow<List<TaskCache>>
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
 internal class TaskLocalSourceImpl(
     private val dispatcher: CoroutineDispatcher,
-    private val dao: TaskDAO
+    private val dao: TaskDAO,
 ) : TaskLocalSource {
     override suspend fun insert(task: TaskCache): LocalResult<TaskCache> =
         safeTransaction(dispatcher) {
@@ -43,15 +50,17 @@ internal class TaskLocalSourceImpl(
             true
         }
 
-    override suspend fun get(id: Int): LocalResult<TaskCache> = safeTransaction(dispatcher) {
-        dao.fetchById(id = id)?.toTaskCache() ?: throw Exception("Task not found")
-    }
+    override suspend fun get(id: Int): LocalResult<TaskCache> =
+        safeTransaction(dispatcher) {
+            dao.fetchById(id = id)?.toTaskCache() ?: throw Exception("Task not found")
+        }
 
-    override suspend fun getFlow(id: Int): Flow<TaskCache?> =
-        dao.fetchByIdFlow(id = id).mapLatest { it?.toTaskCache() }
+    override suspend fun getFlow(id: Int): Flow<TaskCache?> = dao.fetchByIdFlow(id = id).mapLatest { it?.toTaskCache() }
 
+    override suspend fun getAllAsFlow(): Flow<List<TaskCache>> = dao.fetchAllFlow().mapLatest { list -> list.map { it.toTaskCache() } }
 
-    override suspend fun getAllAsFlow(): Flow<List<TaskCache>> =
-        dao.fetchAllFlow().mapLatest { list -> list.map { it.toTaskCache() } }
-
+    override suspend fun getAll(): LocalResult<List<TaskCache>> =
+        safeTransaction(dispatcher) {
+            dao.fetchAll().map { it.toTaskCache() }
+        }
 }

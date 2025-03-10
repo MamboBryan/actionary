@@ -48,6 +48,9 @@ class ModuleConvention : Plugin<Project> {
                 androidTestImplementation(catalogs.getLibrary("kotlinx-coroutines-test"))
                 // serialization
                 implementation(catalogs.getLibrary("kotlinx-serialization-json"))
+                // mockk
+                testImplementation(catalogs.getLibrary("mockk"))
+                androidTestImplementation(catalogs.getLibrary("mockk"))
             }
         }
     }
