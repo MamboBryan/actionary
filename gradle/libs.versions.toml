@@ -1,6 +1,10 @@
 [versions]
+gradle-plugin-android="8.8.2"
 agp = "8.8.2"
+
 kotlin = "2.0.0"
+ksp = "2.0.0-1.0.22" # always match with kotlin version
+
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -25,8 +29,18 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+# gradle plugins
+android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "gradle-plugin-android" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+
+
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "gradle-plugin-android" }
+android-library = { id = "com.android.library", version.ref = "gradle-plugin-android" }
+
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
