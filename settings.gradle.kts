@@ -1,3 +1,4 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     includeBuild("./conventions")
     repositories {
@@ -21,10 +22,17 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Actionary"
-include(":app")
 
 // module folders
 include(":modules-datasources")
+include(":modules-data")
 
 // data sources modules
 include(":modules-datasources:local")
+
+// data modules
+include(":modules-data:domain")
+include(":modules-data:core")
+
+// app modules
+include(":app")

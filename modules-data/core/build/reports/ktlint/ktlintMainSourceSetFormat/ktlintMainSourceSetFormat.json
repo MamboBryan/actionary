@@ -1,0 +1,19 @@
+[
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-data/core/src/main/kotlin/dev/mambo/lib/data/core/DataModule.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (0) (should be 4)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 5,
+                "column": 18,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            }
+        ]
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-data/domain/src/main/kotlin/dev/mambo/lib/data/domain/repositories/TaskRepository.kt",
+        "errors": [
+            {
+                "line": 10,
+                "column": 5,
+                "message": "Expected a blank line for this declaration",
+                "rule": "standard:blank-line-before-declaration"
+            },
+            {
+                "line": 11,
+                "column": 6,
+                "message": "Expected a blank line for this declaration",
+                "rule": "standard:blank-line-before-declaration"
+            },
+            {
+                "line": 17,
+                "column": 7,
+                "message": "Expected a blank line for this declaration",
+                "rule": "standard:blank-line-before-declaration"
+            }
+        ]
+    }
+]

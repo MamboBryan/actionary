@@ -8,17 +8,18 @@ import dev.mambo.lib.local.sources.TaskLocalSourceImpl
 import kotlinx.coroutines.Dispatchers
 import org.koin.dsl.module
 
-val LocalModule = module {
-    // database
-    single<ActionaryDatabase> {
-        Room.databaseBuilder(
-            context = get(),
-            klass = ActionaryDatabase::class.java,
-            name = ActionaryDatabase.DATABASE_NAME,
-        ).fallbackToDestructiveMigration().build()
+val LocalModule =
+    module {
+        // database
+        single<ActionaryDatabase> {
+            Room.databaseBuilder(
+                context = get(),
+                klass = ActionaryDatabase::class.java,
+                name = ActionaryDatabase.DATABASE_NAME,
+            ).fallbackToDestructiveMigration().build()
+        }
+        // DAO (Data Access Objects)
+        single<TaskDAO> { get<ActionaryDatabase>().taskDAO() }
+        // local sources
+        single<TaskLocalSource> { TaskLocalSourceImpl(dispatcher = Dispatchers.IO, dao = get()) }
     }
-    // DAO (Data Access Objects)
-    single<TaskDAO> { get<ActionaryDatabase>().taskDAO() }
-    // local sources
-    single<TaskLocalSource> { TaskLocalSourceImpl(dispatcher = Dispatchers.IO, dao = get()) }
-}
