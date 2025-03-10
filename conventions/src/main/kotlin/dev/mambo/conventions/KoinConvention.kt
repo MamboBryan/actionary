@@ -21,7 +21,6 @@ class KoinConvention: Plugin<Project> {
                 testImplementation(catalogs.getLibrary("koin-test"))
                 testImplementation(catalogs.getLibrary("koin-test-junit4"))
             }
-
         }
     }
 }
