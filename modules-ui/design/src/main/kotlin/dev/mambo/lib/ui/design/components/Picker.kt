@@ -80,24 +80,24 @@ fun <T> PickerItem(
 
     Column(
         modifier =
-        modifier
-            .padding(vertical = 4.dp)
-            .clip(RoundedCornerShape(10))
-            .clickable { onClick() },
+            modifier
+                .padding(vertical = 4.dp)
+                .clip(RoundedCornerShape(10))
+                .clickable { onClick() },
     ) {
         Row(
             modifier =
-            Modifier
-                .background(container)
-                .padding(8.dp)
-                .padding(horizontal = 8.dp),
+                Modifier
+                    .background(container)
+                    .padding(8.dp)
+                    .padding(horizontal = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
                 modifier =
-                Modifier
-                    .weight(1f)
-                    .padding(8.dp),
+                    Modifier
+                        .weight(1f)
+                        .padding(8.dp),
                 text = text,
                 color = content,
                 fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,

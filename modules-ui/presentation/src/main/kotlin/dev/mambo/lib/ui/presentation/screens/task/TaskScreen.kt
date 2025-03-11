@@ -17,7 +17,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -41,9 +40,7 @@ import dev.mambo.lib.ui.presentation.screens.task.components.TaskViewSection
 import kotlinx.datetime.LocalDateTime
 
 open class TaskScreen(val id: Int? = null) : Screen {
-    object TestTags {
-
-    }
+    object TestTags
 
     @Composable
     override fun Content() {
@@ -60,7 +57,7 @@ open class TaskScreen(val id: Int? = null) : Screen {
             onDismissDialog = screenModel::onDismissDialog,
             onValueChangePriority = screenModel::onValueChangePriority,
             onClickEditTask = screenModel::onClickEditTask,
-            onClickCompleteTask = screenModel::onClickCompleteTask
+            onClickCompleteTask = screenModel::onClickCompleteTask,
         )
     }
 }
@@ -78,24 +75,23 @@ fun TaskScreenContent(
     onClickEditTask: () -> Unit,
     onClickCompleteTask: () -> Unit,
 ) {
-
     if (state.navigateBack) onClickNavigateBack()
 
     AnimatedVisibility(visible = state.actionState != null) {
         Dialog(onDismissRequest = onDismissDialog) { }
-        if (state.actionState != null)
+        if (state.actionState != null) {
             when (state.actionState) {
                 is ItemUiState.Error -> {
                     Column(modifier = Modifier.fillMaxWidth(0.75f)) {
                         Text(
                             text = "Error",
                             modifier = Modifier.padding(bottom = 8.dp),
-                            style = MaterialTheme.typography.titleLarge
+                            style = MaterialTheme.typography.titleLarge,
                         )
                         Text(text = state.actionState.message)
                         Button(
                             modifier = Modifier.padding(vertical = 16.dp),
-                            onClick = onDismissDialog
+                            onClick = onDismissDialog,
                         ) {
                             Text(text = "Dismiss")
                         }
@@ -111,18 +107,19 @@ fun TaskScreenContent(
                         Text(
                             text = "Success",
                             modifier = Modifier.padding(bottom = 8.dp),
-                            style = MaterialTheme.typography.titleLarge
+                            style = MaterialTheme.typography.titleLarge,
                         )
                         Text(text = if (state.id == null) "Task Created Successfully" else "Task Updates Successfully")
                         Button(
                             modifier = Modifier.padding(vertical = 16.dp),
-                            onClick = onDismissDialog
+                            onClick = onDismissDialog,
                         ) {
                             Text(text = "Dismiss")
                         }
                     }
                 }
             }
+        }
     }
 
     Scaffold(
@@ -137,48 +134,51 @@ fun TaskScreenContent(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             AnimatedVisibility(visible = state.task?.completedAt == null) {
                                 IconButton(
-                                    onClick = onClickEditTask
+                                    onClick = onClickEditTask,
                                 ) {
                                     Icon(
                                         imageVector = Icons.Rounded.Edit,
-                                        contentDescription = "edit"
+                                        contentDescription = "edit",
                                     )
                                 }
                             }
 
                             IconButton(
-                                onClick = { onClickTaskAction(TaskAction.DELETE) }
+                                onClick = { onClickTaskAction(TaskAction.DELETE) },
                             ) {
                                 Icon(
                                     imageVector = Icons.Rounded.Delete,
-                                    contentDescription = "delete"
+                                    contentDescription = "delete",
                                 )
                             }
                         }
                     }
-                }
+                },
             )
-        }
+        },
     ) { innerPadding ->
         AnimatedContent(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
-            targetState = state.id
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding),
+            targetState = state.id,
         ) { id ->
             when {
-                id == null || state.editing == true -> TaskEditSection(
-                    state = state,
-                    onValueChangeTask = onValueChangeTask,
-                    onClickTaskAction = onClickTaskAction,
-                    onValueChangeDate = onValueChangeDate,
-                    onValueChangePriority = onValueChangePriority
-                )
+                id == null || state.editing == true ->
+                    TaskEditSection(
+                        state = state,
+                        onValueChangeTask = onValueChangeTask,
+                        onClickTaskAction = onClickTaskAction,
+                        onValueChangeDate = onValueChangeDate,
+                        onValueChangePriority = onValueChangePriority,
+                    )
 
-                else -> TaskViewSection(
-                    state = state.result,
-                    onClickCompleteTask = onClickCompleteTask
-                )
+                else ->
+                    TaskViewSection(
+                        state = state.result,
+                        onClickCompleteTask = onClickCompleteTask,
+                    )
             }
         }
     }

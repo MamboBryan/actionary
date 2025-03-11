@@ -44,54 +44,57 @@ fun TaskDateComponent(
     modifier: Modifier = Modifier,
     onValueChangeDate: (LocalDateTime) -> Unit,
 ) {
-
     var isOpen by remember { mutableStateOf(false) }
-    val pickerState = rememberDatePickerState(
-        initialSelectedDateMillis = state.dueDate?.asEpochMilliseconds(),
-    )
+    val pickerState =
+        rememberDatePickerState(
+            initialSelectedDateMillis = state.dueDate?.asEpochMilliseconds(),
+        )
 
     fun toggleDatePicker() {
         isOpen = isOpen.not()
     }
 
-    if (isOpen)
+    if (isOpen) {
         Dialog(
             properties = DialogProperties(),
-            onDismissRequest = ::toggleDatePicker
+            onDismissRequest = ::toggleDatePicker,
         ) {
             Column(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(5))
-                    .background(MaterialTheme.colorScheme.surface)
+                modifier =
+                    Modifier
+                        .clip(RoundedCornerShape(5))
+                        .background(MaterialTheme.colorScheme.surface),
             ) {
                 Column(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(5))
-                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.25f))
-                        .fillMaxWidth()
-                        .padding(24.dp)
+                    modifier =
+                        Modifier
+                            .clip(RoundedCornerShape(5))
+                            .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.25f))
+                            .fillMaxWidth()
+                            .padding(24.dp),
                 ) {
                     DatePicker(
                         state = pickerState,
                         title = {
                             Text(
                                 text = "Set Date",
-                                style = MaterialTheme.typography.titleLarge
+                                style = MaterialTheme.typography.titleLarge,
                             )
                         },
                     )
                     Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 16.dp)
+                        modifier =
+                            Modifier
+                                .fillMaxWidth()
+                                .padding(top = 16.dp),
                     ) {
                         OutlinedButton(
                             modifier = Modifier.weight(1f),
-                            onClick = ::toggleDatePicker
+                            onClick = ::toggleDatePicker,
                         ) {
                             Text(
                                 text = "Cancel",
-                                color = MaterialTheme.colorScheme.onBackground
+                                color = MaterialTheme.colorScheme.onBackground,
                             )
                         }
                         Spacer(modifier = Modifier.padding(16.dp))
@@ -105,48 +108,55 @@ fun TaskDateComponent(
                                     onValueChangeDate(instant.LocalDateTime)
                                 }
                                 toggleDatePicker()
-                            }) {
+                            },
+                        ) {
                             Text(text = "Confirm")
                         }
                     }
                 }
             }
         }
+    }
 
     Card(
         modifier = modifier,
         onClick = ::toggleDatePicker,
         shape = RoundedCornerShape(0),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.background,
-            contentColor = MaterialTheme.colorScheme.onBackground
-        )
+        colors =
+            CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.background,
+                contentColor = MaterialTheme.colorScheme.onBackground,
+            ),
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             Icon(
                 imageVector = Icons.Filled.CalendarMonth,
-                contentDescription = "date"
+                contentDescription = "date",
             )
             Text(
                 modifier = Modifier.padding(start = 8.dp, top = 2.dp),
                 fontWeight = FontWeight.Bold,
-                text = state.dueDate?.let {
-                    buildString {
-                        append(
-                            it.dayOfWeek.name.lowercase().take(3)
-                                .replaceFirstChar { it.uppercase() })
-                        append(", ")
-                        append(it.dayOfMonth)
-                        append(" ")
-                        append(
-                            it.month.name.lowercase().take(3).replaceFirstChar { it.uppercase() })
-                        append(" ")
-                        append(it.year)
-                    }
-                } ?: "Date")
+                text =
+                    state.dueDate?.let {
+                        buildString {
+                            append(
+                                it.dayOfWeek.name.lowercase().take(3)
+                                    .replaceFirstChar { it.uppercase() },
+                            )
+                            append(", ")
+                            append(it.dayOfMonth)
+                            append(" ")
+                            append(
+                                it.month.name.lowercase().take(3).replaceFirstChar { it.uppercase() },
+                            )
+                            append(" ")
+                            append(it.year)
+                        }
+                    } ?: "Date",
+            )
         }
     }
 }

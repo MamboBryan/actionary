@@ -2,11 +2,9 @@ package dev.mambo.lib.ui.presentation.screens.tasks
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -17,7 +15,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.outlined.OutlinedFlag
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
@@ -35,7 +32,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -52,7 +48,6 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import dev.mambo.lib.data.domain.helpers.LocalDateTime
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.ui.design.theme.ActionaryTheme
-import dev.mambo.lib.ui.presentation.components.BackButtonComponent
 import dev.mambo.lib.ui.presentation.components.CenteredColumn
 import dev.mambo.lib.ui.presentation.helpers.ListUiState
 import dev.mambo.lib.ui.presentation.screens.task.TaskScreen
@@ -79,7 +74,7 @@ object TasksScreen : Screen {
             tasks = tasks,
             onClickTask = screenModel::onTaskClicked,
             onClickCreateTask = { navigator?.push(TaskScreen()) },
-            navigate = { screen -> navigator?.push(screen) }
+            navigate = { screen -> navigator?.push(screen) },
         )
     }
 }
@@ -93,14 +88,13 @@ fun TasksScreenContent(
     onClickCreateTask: () -> Unit,
     navigate: (Screen) -> Unit,
 ) {
-
     if (state.task != null) navigate(TaskScreen(id = state.task.id))
 
     Scaffold(
         topBar = {
             Surface(
                 modifier = Modifier.fillMaxWidth(),
-                shadowElevation = 4.dp
+                shadowElevation = 4.dp,
             ) {
                 Column(modifier = Modifier.fillMaxWidth()) {
                     TopAppBar(title = { Text(text = "Actionary") })
@@ -113,20 +107,21 @@ fun TasksScreenContent(
                                 onClick = {},
                                 label = {
                                     Row(
-                                        modifier = Modifier.padding(
-                                            horizontal = 1.dp,
-                                            vertical = 2.dp
-                                        ),
-                                        verticalAlignment = Alignment.CenterVertically
+                                        modifier =
+                                            Modifier.padding(
+                                                horizontal = 1.dp,
+                                                vertical = 2.dp,
+                                            ),
+                                        verticalAlignment = Alignment.CenterVertically,
                                     ) {
                                         Text(text = it, fontWeight = FontWeight.Bold)
                                         Icon(
                                             modifier = Modifier.padding(start = 2.dp),
                                             imageVector = Icons.Rounded.KeyboardArrowDown,
-                                            contentDescription = "collapse"
+                                            contentDescription = "collapse",
                                         )
                                     }
-                                }
+                                },
                             )
                         }
                     }
@@ -138,7 +133,7 @@ fun TasksScreenContent(
                 FloatingActionButton(
                     onClick = onClickCreateTask,
                     containerColor = MaterialTheme.colorScheme.primary,
-                    contentColor = MaterialTheme.colorScheme.onPrimary
+                    contentColor = MaterialTheme.colorScheme.onPrimary,
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.Add,
@@ -146,22 +141,22 @@ fun TasksScreenContent(
                     )
                 }
             }
-        }
+        },
     ) { innerPadding ->
         AnimatedContent(
             modifier =
-            Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
+                Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding),
             targetState = tasks,
         ) { result ->
             when (result) {
                 ListUiState.Empty -> {
                     CenteredColumn(
                         modifier =
-                        Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.EMPTY),
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.EMPTY),
                     ) {
                         Text(text = "No tasks found")
                         Button(
@@ -176,9 +171,9 @@ fun TasksScreenContent(
                 ListUiState.Loading -> {
                     CenteredColumn(
                         modifier =
-                        Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.LOADING),
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.LOADING),
                     ) {
                         CircularProgressIndicator()
                     }
@@ -187,15 +182,15 @@ fun TasksScreenContent(
                 is ListUiState.Error -> {
                     CenteredColumn(
                         modifier =
-                        Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.ERROR),
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.ERROR),
                     ) {
                         Text(
                             modifier = Modifier.padding(vertical = 16.dp),
                             text = "Error",
                             style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold
+                            fontWeight = FontWeight.Bold,
                         )
                         Text(
                             modifier = Modifier.testTag(TasksScreen.TestTags.ERROR_MESSAGE),
@@ -207,9 +202,9 @@ fun TasksScreenContent(
                 is ListUiState.NotEmpty -> {
                     LazyColumn(
                         modifier =
-                        Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.NOT_EMPTY),
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.NOT_EMPTY),
                     ) {
                         items(result.data.size) { index ->
                             val task = result.data[index]
@@ -238,65 +233,71 @@ fun TaskItem(
     Card(
         modifier = modifier,
         onClick = onClick,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.background,
-            contentColor = MaterialTheme.colorScheme.onBackground,
-        ),
-        shape = RoundedCornerShape(0)
+        colors =
+            CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.background,
+                contentColor = MaterialTheme.colorScheme.onBackground,
+            ),
+        shape = RoundedCornerShape(0),
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
             Column(modifier = Modifier.padding(16.dp)) {
                 Row(
                     modifier = Modifier.padding(bottom = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalAlignment = Alignment.CenterVertically,
                 ) {
                     if (task.dueAt != null) {
                         Row(
                             modifier = Modifier,
-                            verticalAlignment = Alignment.CenterVertically
+                            verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Icon(
                                 modifier = Modifier.size(16.dp),
                                 imageVector = Icons.Filled.CalendarMonth,
-                                contentDescription = "date"
+                                contentDescription = "date",
                             )
                             Text(
                                 style = MaterialTheme.typography.labelMedium,
                                 modifier = Modifier.padding(start = 8.dp, top = 2.dp),
-                                text = task.dueAt?.let {
-                                    buildString {
-                                        append(
-                                            it.dayOfWeek.name.lowercase().take(3)
-                                                .replaceFirstChar { it.uppercase() })
-                                        append(", ")
-                                        append(it.dayOfMonth)
-                                        append(" ")
-                                        append(
-                                            it.month.name.lowercase().take(3)
-                                                .replaceFirstChar { it.uppercase() })
-                                        append(" ")
-                                        append(it.year)
-                                    }
-                                } ?: "Date")
+                                text =
+                                    task.dueAt?.let {
+                                        buildString {
+                                            append(
+                                                it.dayOfWeek.name.lowercase().take(3)
+                                                    .replaceFirstChar { it.uppercase() },
+                                            )
+                                            append(", ")
+                                            append(it.dayOfMonth)
+                                            append(" ")
+                                            append(
+                                                it.month.name.lowercase().take(3)
+                                                    .replaceFirstChar { it.uppercase() },
+                                            )
+                                            append(" ")
+                                            append(it.year)
+                                        }
+                                    } ?: "Date",
+                            )
                         }
                     }
                     Spacer(modifier = Modifier.weight(1f))
                     if (task.priority != null) {
                         Row(
                             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-                            verticalAlignment = Alignment.CenterVertically
+                            verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Text(
                                 style = MaterialTheme.typography.labelMedium,
                                 modifier = Modifier,
-                                text = task.priority?.label ?: "Priority"
+                                text = task.priority?.label ?: "Priority",
                             )
                             Icon(
-                                modifier = Modifier
-                                    .padding(start = 8.dp)
-                                    .size(16.dp),
+                                modifier =
+                                    Modifier
+                                        .padding(start = 8.dp)
+                                        .size(16.dp),
                                 imageVector = Icons.Outlined.OutlinedFlag,
-                                contentDescription = "priority"
+                                contentDescription = "priority",
                             )
                         }
                     }
@@ -304,35 +305,35 @@ fun TaskItem(
                 Text(
                     text = task.title,
                     fontWeight = FontWeight.Bold,
-                    style = MaterialTheme.typography.titleMedium
+                    style = MaterialTheme.typography.titleMedium,
                 )
                 Text(
                     modifier = Modifier.fillMaxWidth(),
                     text = task.description,
                     maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                    overflow = TextOverflow.Ellipsis,
                 )
                 if (task.updatedAt != task.createdAt) {
                     Text(
                         style = MaterialTheme.typography.labelMedium,
                         modifier = Modifier.padding(top = 8.dp),
-                        text = task.updatedAt.let {
-                            buildString {
-                                append("Edited : ")
-                                append(it.dayOfMonth)
-                                append("/")
-                                append(it.monthNumber)
-                                append("/")
-                                append(it.year)
-                            }
-                        }
+                        text =
+                            task.updatedAt.let {
+                                buildString {
+                                    append("Edited : ")
+                                    append(it.dayOfMonth)
+                                    append("/")
+                                    append(it.monthNumber)
+                                    append("/")
+                                    append(it.year)
+                                }
+                            },
                     )
                 }
             }
 
             HorizontalDivider(thickness = 0.5.dp)
         }
-
     }
 }
 
@@ -345,7 +346,7 @@ private fun TasksScreenLoadingPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
-            navigate = {}
+            navigate = {},
         )
     }
 }
@@ -359,7 +360,7 @@ private fun TasksScreenEmptyPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
-            navigate = {}
+            navigate = {},
         )
     }
 }
@@ -373,7 +374,7 @@ private fun TasksScreenErrorPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
-            navigate = {}
+            navigate = {},
         )
     }
 }
@@ -399,7 +400,7 @@ private fun TasksScreenNotEmptyPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
-            navigate = {}
+            navigate = {},
         )
     }
 }

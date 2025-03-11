@@ -1,12 +1,2289 @@
 [
     {
-        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/tasks/TasksScreen.kt",
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/components/BackButtonComponent.kt",
         "errors": [
             {
-                "line": 34,
+                "line": 1,
+                "column": 1,
+                "message": "File must end with a newline (\\n)",
+                "rule": "standard:final-newline"
+            },
+            {
+                "line": 13,
+                "column": 25,
+                "message": "Newline expected after opening parenthesis",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 13,
+                "column": 61,
+                "message": "Parameter should start on a newline",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 14,
+                "column": 6,
+                "message": "Newline expected before closing parenthesis",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 14,
+                "column": 6,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-declaration-site"
+            },
+            {
+                "line": 18,
+                "column": 10,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/components/LoadingComponent.kt",
+        "errors": [
+            {
+                "line": 9,
+                "column": 40,
+                "message": "Missing spacing before \"{\"",
+                "rule": "standard:curly-spacing"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/task/TaskScreen.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 20,
+                "column": 1,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 44,
+                "column": 21,
+                "message": "Unnecessary block (\"{}\")",
+                "rule": "standard:no-empty-class-body"
+            },
+            {
+                "line": 45,
+                "column": 1,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            },
+            {
+                "line": 63,
+                "column": 16,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 79,
+                "column": 33,
+                "message": "First line in a method block should not be empty",
+                "rule": "standard:no-empty-first-line-in-method-block"
+            },
+            {
+                "line": 87,
+                "column": 13,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 93,
+                "column": 23,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 98,
+                "column": 6,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 114,
+                "column": 25,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 119,
+                "column": 8,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 140,
+                "column": 27,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 144,
+                "column": 34,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 150,
+                "column": 50,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 154,
+                "column": 34,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 158,
+                "column": 5,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 159,
+                "column": 7,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 164,
+                "column": 20,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 164,
+                "column": 24,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 165,
+                "column": 23,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 166,
+                "column": 36,
+                "message": "Unexpected indentation (16) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 167,
+                "column": 26,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 171,
+                "column": 4,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 171,
+                "column": 17,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 172,
+                "column": 21,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 173,
+                "column": 25,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 174,
+                "column": 29,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 175,
+                "column": 33,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 176,
+                "column": 12,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 178,
+                "column": 19,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 179,
+                "column": 24,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 180,
+                "column": 20,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 181,
+                "column": 4,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 183,
+                "column": 1,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/task/TaskScreenModel.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            },
+            {
+                "line": 3,
+                "column": 1,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 31,
+                "column": 29,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-declaration-site"
+            },
+            {
+                "line": 35,
+                "column": 11,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-declaration-site"
+            },
+            {
+                "line": 37,
                 "column": 1,
                 "message": "Class body should not start with blank line",
                 "rule": "standard:no-empty-first-line-in-class-body"
+            },
+            {
+                "line": 52,
+                "column": 10,
+                "message": "Newline expected after opening parenthesis",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 55,
+                "column": 20,
+                "message": "Parameter should start on a newline",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 55,
+                "column": 42,
+                "message": "Newline expected before closing parenthesis",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 55,
+                "column": 44,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-declaration-site"
+            },
+            {
+                "line": 70,
+                "column": 14,
+                "message": "Expected a single space before body block",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 70,
+                "column": 26,
+                "message": "Missing spacing before \"{\"",
+                "rule": "standard:curly-spacing"
+            },
+            {
+                "line": 70,
+                "column": 26,
+                "message": "Expected a single white space before start of function body",
+                "rule": "standard:function-start-of-body-spacing"
+            },
+            {
+                "line": 83,
+                "column": 20,
+                "message": "Expected a single space before body block",
+                "rule": "standard:function-signature"
+            },
+            {
+                "line": 83,
+                "column": 31,
+                "message": "Missing spacing before \"{\"",
+                "rule": "standard:curly-spacing"
+            },
+            {
+                "line": 83,
+                "column": 31,
+                "message": "Expected a single white space before start of function body",
+                "rule": "standard:function-start-of-body-spacing"
+            },
+            {
+                "line": 98,
+                "column": 36,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 98,
+                "column": 80,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 101,
+                "column": 17,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 105,
+                "column": 1,
+                "message": "Unexpected indentation (28) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 107,
+                "column": 21,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 108,
+                "column": 3,
+                "message": "Unexpected indentation (24) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 109,
+                "column": 14,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 112,
+                "column": 8,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 117,
+                "column": 5,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 118,
+                "column": 18,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 119,
+                "column": 30,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 119,
+                "column": 73,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 119,
+                "column": 83,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 121,
+                "column": 1,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 138,
+                "column": 12,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 142,
+                "column": 3,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 147,
+                "column": 27,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 148,
+                "column": 30,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 148,
+                "column": 79,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 149,
+                "column": 39,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 149,
+                "column": 57,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 150,
+                "column": 20,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 151,
+                "column": 28,
+                "message": "Unexpected indentation (8) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 173,
+                "column": 6,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 175,
+                "column": 34,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/task/components/TaskDateComponent.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "File must end with a newline (\\n)",
+                "rule": "standard:final-newline"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (20) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 47,
+                "column": 1,
+                "message": "First line in a method block should not be empty",
+                "rule": "standard:no-empty-first-line-in-method-block"
+            },
+            {
+                "line": 49,
+                "column": 23,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 50,
+                "column": 8,
+                "message": "Unexpected indentation (8) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 53,
+                "column": 5,
+                "message": "Unexpected indentation (4) (should be 8)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 59,
+                "column": 1,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 61,
+                "column": 9,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 63,
+                "column": 36,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 64,
+                "column": 39,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 65,
+                "column": 43,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 67,
+                "column": 14,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 69,
+                "column": 20,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 70,
+                "column": 19,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 70,
+                "column": 76,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 72,
+                "column": 40,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 74,
+                "column": 24,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 75,
+                "column": 3,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 81,
+                "column": 26,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 85,
+                "column": 44,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 87,
+                "column": 24,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 89,
+                "column": 8,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 89,
+                "column": 21,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 93,
+                "column": 24,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 97,
+                "column": 31,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 110,
+                "column": 26,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 111,
+                "column": 8,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 121,
+                "column": 56,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 126,
+                "column": 9,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 127,
+                "column": 2,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 127,
+                "column": 23,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 127,
+                "column": 33,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 129,
+                "column": 2,
+                "message": "Unexpected indentation (8) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 132,
+                "column": 2,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 135,
+                "column": 32,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 139,
+                "column": 6,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 141,
+                "column": 7,
+                "message": "Unexpected indentation (20) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 142,
+                "column": 8,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 142,
+                "column": 44,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 144,
+                "column": 23,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 144,
+                "column": 32,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 145,
+                "column": 4,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 145,
+                "column": 74,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 146,
+                "column": 5,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 147,
+                "column": 10,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 148,
+                "column": 20,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 150,
+                "column": 9,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/task/components/TaskEditSection.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "File must end with a newline (\\n)",
+                "rule": "standard:final-newline"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            },
+            {
+                "line": 14,
+                "column": 1,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 14,
+                "column": 40,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 25,
+                "column": 7,
+                "message": "Unnecessary import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 27,
+                "column": 14,
+                "message": "Missing trailing comma before \"}\"",
+                "rule": "standard:trailing-comma-on-declaration-site"
+            },
+            {
+                "line": 28,
+                "column": 2,
+                "message": "Missing trailing comma before \"}\"",
+                "rule": "standard:trailing-comma-on-declaration-site"
+            },
+            {
+                "line": 32,
+                "column": 13,
+                "message": "Enum entry should start on a separate line",
+                "rule": "standard:enum-wrapping"
+            },
+            {
+                "line": 32,
+                "column": 25,
+                "message": "Enum entry should start on a separate line",
+                "rule": "standard:enum-wrapping"
+            },
+            {
+                "line": 36,
+                "column": 20,
+                "message": "Enum entry should start on a separate line",
+                "rule": "standard:enum-wrapping"
+            },
+            {
+                "line": 56,
+                "column": 4,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 57,
+                "column": 53,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 59,
+                "column": 19,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 59,
+                "column": 34,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 60,
+                "column": 43,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 61,
+                "column": 46,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 62,
+                "column": 45,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 63,
+                "column": 51,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 64,
+                "column": 48,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 65,
+                "column": 48,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 66,
+                "column": 23,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 66,
+                "column": 48,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 68,
+                "column": 3,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 68,
+                "column": 39,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 68,
+                "column": 72,
+                "message": "Unexpected indentation (16) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 73,
+                "column": 20,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 76,
+                "column": 64,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 78,
+                "column": 16,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 79,
+                "column": 15,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 79,
+                "column": 45,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 80,
+                "column": 46,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 81,
+                "column": 47,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 82,
+                "column": 51,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 83,
+                "column": 55,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 84,
+                "column": 54,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 85,
+                "column": 52,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 85,
+                "column": 60,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 86,
+                "column": 59,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 87,
+                "column": 55,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 99,
+                "column": 12,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 112,
+                "column": 46,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 114,
+                "column": 65,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/task/components/TaskPriorityComponent.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "File must end with a newline (\\n)",
+                "rule": "standard:final-newline"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            },
+            {
+                "line": 3,
+                "column": 1,
+                "message": "Imports must be ordered in lexicographic order without any empty lines in-between with \"java\", \"javax\", \"kotlin\" and aliases in the end",
+                "rule": "standard:import-ordering"
+            },
+            {
+                "line": 9,
+                "column": 1,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 10,
+                "column": 9,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 31,
+                "column": 1,
+                "message": "Needless blank line(s)",
+                "rule": "standard:no-consecutive-blank-lines"
+            },
+            {
+                "line": 40,
+                "column": 4,
+                "message": "First line in a method block should not be empty",
+                "rule": "standard:no-empty-first-line-in-method-block"
+            },
+            {
+                "line": 43,
+                "column": 5,
+                "message": "Expected a blank line for this declaration",
+                "rule": "standard:blank-line-before-declaration"
+            },
+            {
+                "line": 48,
+                "column": 10,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 53,
+                "column": 16,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 61,
+                "column": 8,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 63,
+                "column": 11,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 64,
+                "column": 19,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 64,
+                "column": 33,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 65,
+                "column": 1,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 65,
+                "column": 1,
+                "message": "Unexpected indentation (8) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 69,
+                "column": 10,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 74,
+                "column": 3,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 79,
+                "column": 28,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/task/components/TaskViewSection.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "File must end with a newline (\\n)",
+                "rule": "standard:final-newline"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (40) (should be 52)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (32) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (36) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (28) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (24) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Unexpected indentation (28) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 40,
+                "column": 28,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 57,
+                "column": 32,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 58,
+                "column": 26,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 59,
+                "column": 30,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 61,
+                "column": 5,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 65,
+                "column": 2,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 69,
+                "column": 27,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 73,
+                "column": 28,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 78,
+                "column": 7,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 79,
+                "column": 24,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 80,
+                "column": 30,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 80,
+                "column": 86,
+                "message": "Unexpected indentation (48) (should be 52)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 81,
+                "column": 90,
+                "message": "Unexpected indentation (52) (should be 56)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 83,
+                "column": 5,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 83,
+                "column": 11,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 83,
+                "column": 37,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 84,
+                "column": 21,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 85,
+                "column": 26,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 86,
+                "column": 44,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 87,
+                "column": 22,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 87,
+                "column": 78,
+                "message": "Unexpected indentation (48) (should be 52)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 89,
+                "column": 18,
+                "message": "Unexpected indentation (52) (should be 56)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 89,
+                "column": 51,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 89,
+                "column": 58,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 91,
+                "column": 10,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 92,
+                "column": 11,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 94,
+                "column": 15,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 95,
+                "column": 16,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 95,
+                "column": 39,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 96,
+                "column": 9,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 97,
+                "column": 29,
+                "message": "Unexpected indentation (40) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 103,
+                "column": 10,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 107,
+                "column": 53,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 115,
+                "column": 7,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 122,
+                "column": 46,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 129,
+                "column": 12,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 129,
+                "column": 30,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 133,
+                "column": 50,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 134,
+                "column": 24,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 134,
+                "column": 55,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 134,
+                "column": 69,
+                "message": "Unexpected indentation (28) (should be 24)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 139,
+                "column": 49,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 144,
+                "column": 13,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 147,
+                "column": 7,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 151,
+                "column": 9,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 152,
+                "column": 7,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 153,
+                "column": 33,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 156,
+                "column": 9,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 158,
+                "column": 15,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 159,
+                "column": 22,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 160,
+                "column": 18,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 160,
+                "column": 53,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 161,
+                "column": 23,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 162,
+                "column": 9,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 165,
+                "column": 20,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 170,
+                "column": 42,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 171,
+                "column": 6,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 171,
+                "column": 32,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 172,
+                "column": 5,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 172,
+                "column": 14,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 172,
+                "column": 58,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 173,
+                "column": 6,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 173,
+                "column": 14,
+                "message": "Missing newline after \"(\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 173,
+                "column": 64,
+                "message": "Missing { ... }",
+                "rule": "standard:multiline-if-else"
+            },
+            {
+                "line": 176,
+                "column": 9,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 177,
+                "column": 24,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 178,
+                "column": 31,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 179,
+                "column": 2,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 179,
+                "column": 56,
+                "message": "Unexpected indentation (28) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 180,
+                "column": 32,
+                "message": "Unexpected indentation (32) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 182,
+                "column": 8,
+                "message": "Unexpected indentation (32) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 182,
+                "column": 22,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 183,
+                "column": 12,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 184,
+                "column": 3,
+                "message": "Unexpected indentation (36) (should be 48)",
+                "rule": "standard:indent"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/tasks/TasksScreen.kt",
+        "errors": [
+            {
+                "line": 1,
+                "column": 1,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 5,
+                "column": 1,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 7,
+                "column": 42,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 17,
+                "column": 57,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 34,
+                "column": 9,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 50,
+                "column": 46,
+                "message": "Unused import",
+                "rule": "standard:no-unused-imports"
+            },
+            {
+                "line": 76,
+                "column": 72,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 93,
+                "column": 7,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 96,
+                "column": 1,
+                "message": "First line in a method block should not be empty",
+                "rule": "standard:no-empty-first-line-in-method-block"
+            },
+            {
+                "line": 112,
+                "column": 14,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 113,
+                "column": 31,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 114,
+                "column": 40,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 115,
+                "column": 8,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 116,
+                "column": 14,
+                "message": "Unexpected indentation (44) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 116,
+                "column": 52,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 117,
+                "column": 22,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 124,
+                "column": 25,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 125,
+                "column": 50,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 138,
+                "column": 3,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 141,
+                "column": 66,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 144,
+                "column": 37,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 145,
+                "column": 5,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 145,
+                "column": 40,
+                "message": "Unexpected indentation (16) (should be 20)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 155,
+                "column": 29,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 156,
+                "column": 26,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 158,
+                "column": 18,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 171,
+                "column": 37,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 172,
+                "column": 24,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 176,
+                "column": 4,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 183,
+                "column": 26,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 184,
+                "column": 11,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 187,
+                "column": 17,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 195,
+                "column": 24,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 203,
+                "column": 12,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 205,
+                "column": 1,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 207,
+                "column": 29,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 235,
+                "column": 29,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 239,
+                "column": 26,
+                "message": "Unexpected indentation (12) (should be 16)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 241,
+                "column": 17,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 241,
+                "column": 41,
+                "message": "Unexpected indentation (8) (should be 12)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 242,
+                "column": 14,
+                "message": "Unexpected indentation (12) (should be 8)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 242,
+                "column": 24,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 248,
+                "column": 2,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 252,
+                "column": 13,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 258,
+                "column": 28,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 265,
+                "column": 53,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 266,
+                "column": 20,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 267,
+                "column": 15,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 267,
+                "column": 47,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 268,
+                "column": 33,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 268,
+                "column": 47,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 269,
+                "column": 3,
+                "message": "Unexpected indentation (48) (should be 52)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 270,
+                "column": 11,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 270,
+                "column": 57,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 271,
+                "column": 28,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 272,
+                "column": 41,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 273,
+                "column": 35,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 274,
+                "column": 35,
+                "message": "Unexpected indentation (44) (should be 48)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 275,
+                "column": 22,
+                "message": "Missing newline before \")\"",
+                "rule": "standard:wrapping"
+            },
+            {
+                "line": 275,
+                "column": 37,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 275,
+                "column": 69,
+                "message": "Unexpected indentation (48) (should be 52)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 276,
+                "column": 81,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 277,
+                "column": 41,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 278,
+                "column": 45,
+                "message": "Unexpected indentation (40) (should be 44)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 278,
+                "column": 52,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 280,
+                "column": 11,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 281,
+                "column": 8,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 283,
+                "column": 9,
+                "message": "Unexpected indentation (36) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 287,
+                "column": 29,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 292,
+                "column": 29,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 298,
+                "column": 16,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 298,
+                "column": 20,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 299,
+                "column": 4,
+                "message": "Unexpected indentation (36) (should be 40)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 299,
+                "column": 58,
+                "message": "Unexpected indentation (36) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 299,
+                "column": 60,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 307,
+                "column": 62,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 313,
+                "column": 51,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 323,
+                "column": 9,
+                "message": "A multiline expression should start on a new line",
+                "rule": "standard:multiline-expression-wrapping"
+            },
+            {
+                "line": 323,
+                "column": 16,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 324,
+                "column": 18,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 325,
+                "column": 19,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 326,
+                "column": 33,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 328,
+                "column": 3,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 330,
+                "column": 5,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 330,
+                "column": 14,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 333,
+                "column": 29,
+                "message": "Unexpected indentation (32) (should be 36)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 340,
+                "column": 2,
+                "message": "Unexpected indentation (28) (should be 32)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 341,
+                "column": 24,
+                "message": "Unexpected indentation (24) (should be 28)",
+                "rule": "standard:indent"
+            },
+            {
+                "line": 346,
+                "column": 3,
+                "message": "Unexpected blank line(s) before \"}\"",
+                "rule": "standard:no-blank-line-before-rbrace"
+            },
+            {
+                "line": 353,
+                "column": 8,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 367,
+                "column": 9,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            },
+            {
+                "line": 382,
+                "column": 1,
+                "message": "Missing trailing comma before \")\"",
+                "rule": "standard:trailing-comma-on-call-site"
+            }
+        ]
+    },
+    {
+        "file": "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/src/main/kotlin/dev/mambo/lib/ui/presentation/screens/tasks/TasksScreenModel.kt",
+        "errors": [
+            {
+                "line": 35,
+                "column": 32,
+                "message": "Missing spacing before \"{\"",
+                "rule": "standard:curly-spacing"
             }
         ]
     }

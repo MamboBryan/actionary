@@ -10,11 +10,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-fun BackButtonComponent(modifier: Modifier = Modifier, onClick: () -> Unit) {
+fun BackButtonComponent(
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+) {
     IconButton(onClick = onClick) {
         Icon(
             imageVector = Icons.AutoMirrored.Rounded.ArrowBack,
-            contentDescription = "back"
+            contentDescription = "back",
         )
     }
 }

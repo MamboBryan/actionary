@@ -11,10 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material3.Button
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.SmallFloatingActionButton
@@ -25,15 +22,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dev.mambo.lib.data.domain.models.PriorityDomain
 import dev.mambo.lib.ui.presentation.screens.task.TaskScreenState
-import dev.mambo.lib.ui.presentation.screens.task.components.TaskPriorityComponent
 import kotlinx.datetime.LocalDateTime
 
 enum class TaskAction {
-    CREATE, UPDATE, DELETE
+    CREATE,
+    UPDATE,
+    DELETE,
 }
 
 enum class TaskValue {
-    TITLE, DESCRIPTION
+    TITLE,
+    DESCRIPTION,
 }
 
 @Composable
@@ -56,40 +55,43 @@ fun TaskEditSection(
             value = state.title,
             onValueChange = { onValueChangeTask(TaskValue.TITLE, it) },
             label = { Text(text = "Title") },
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = MaterialTheme.colorScheme.background,
-                unfocusedContainerColor = MaterialTheme.colorScheme.background,
-                focusedBorderColor = MaterialTheme.colorScheme.background,
-                unfocusedBorderColor = MaterialTheme.colorScheme.background,
-                focusedTextColor = MaterialTheme.colorScheme.onBackground,
-                unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
-                cursorColor = MaterialTheme.colorScheme.onBackground,
-                focusedLabelColor = MaterialTheme.colorScheme.primary,
-                unfocusedLabelColor = MaterialTheme.colorScheme.primary,
-            )
+            colors =
+                OutlinedTextFieldDefaults.colors(
+                    focusedContainerColor = MaterialTheme.colorScheme.background,
+                    unfocusedContainerColor = MaterialTheme.colorScheme.background,
+                    focusedBorderColor = MaterialTheme.colorScheme.background,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.background,
+                    focusedTextColor = MaterialTheme.colorScheme.onBackground,
+                    unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+                    cursorColor = MaterialTheme.colorScheme.onBackground,
+                    focusedLabelColor = MaterialTheme.colorScheme.primary,
+                    unfocusedLabelColor = MaterialTheme.colorScheme.primary,
+                ),
         )
         TextField(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f),
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .weight(1f),
             value = state.description,
             onValueChange = { onValueChangeTask(TaskValue.DESCRIPTION, it) },
             label = { Text(text = "Description") },
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedContainerColor = MaterialTheme.colorScheme.background,
-                unfocusedContainerColor = MaterialTheme.colorScheme.background,
-                focusedBorderColor = MaterialTheme.colorScheme.background,
-                unfocusedBorderColor = MaterialTheme.colorScheme.background,
-                focusedTextColor = MaterialTheme.colorScheme.onBackground,
-                unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
-                cursorColor = MaterialTheme.colorScheme.onBackground,
-                focusedLabelColor = MaterialTheme.colorScheme.primary,
-                unfocusedLabelColor = MaterialTheme.colorScheme.primary,
-            )
+            colors =
+                OutlinedTextFieldDefaults.colors(
+                    focusedContainerColor = MaterialTheme.colorScheme.background,
+                    unfocusedContainerColor = MaterialTheme.colorScheme.background,
+                    focusedBorderColor = MaterialTheme.colorScheme.background,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.background,
+                    focusedTextColor = MaterialTheme.colorScheme.onBackground,
+                    unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+                    cursorColor = MaterialTheme.colorScheme.onBackground,
+                    focusedLabelColor = MaterialTheme.colorScheme.primary,
+                    unfocusedLabelColor = MaterialTheme.colorScheme.primary,
+                ),
         )
         Row(
             modifier = Modifier.padding(16.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Button(
                 modifier = Modifier.weight(1f),
@@ -99,7 +101,7 @@ fun TaskEditSection(
                         null -> onClickTaskAction(TaskAction.CREATE)
                         else -> onClickTaskAction(TaskAction.UPDATE)
                     }
-                }
+                },
             ) {
                 when (state.task) {
                     null -> Text(text = "create")
@@ -111,15 +113,14 @@ fun TaskEditSection(
                 SmallFloatingActionButton(
                     onClick = { onClickTaskAction(TaskAction.DELETE) },
                     containerColor = MaterialTheme.colorScheme.error,
-                    contentColor = MaterialTheme.colorScheme.onError
+                    contentColor = MaterialTheme.colorScheme.onError,
                 ) {
                     Icon(
                         imageVector = Icons.Rounded.Delete,
-                        contentDescription = "delete"
+                        contentDescription = "delete",
                     )
                 }
             }
-
         }
     }
 }

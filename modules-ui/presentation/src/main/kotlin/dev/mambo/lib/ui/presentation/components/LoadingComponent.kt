@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun LoadingComponent(modifier: Modifier = Modifier) {
-    CenteredColumn(modifier = modifier){
+    CenteredColumn(modifier = modifier) {
         CircularProgressIndicator()
     }
 }

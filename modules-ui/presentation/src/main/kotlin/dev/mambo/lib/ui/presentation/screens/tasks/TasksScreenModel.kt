@@ -32,7 +32,7 @@ class TasksScreenModel(
     val tasks = _tasks
 
     fun onTaskClicked(task: TaskDomain) {
-        screenModelScope.launch{
+        screenModelScope.launch {
             mutableState.update { it.copy(task = task) }
             delay(500)
             mutableState.update { it.copy(task = null) }

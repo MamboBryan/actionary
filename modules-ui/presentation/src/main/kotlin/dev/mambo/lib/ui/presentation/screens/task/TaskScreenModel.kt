@@ -1,6 +1,5 @@
 package dev.mambo.lib.ui.presentation.screens.task
 
-import androidx.work.SystemClock
 import cafe.adriel.voyager.core.model.StateScreenModel
 import cafe.adriel.voyager.core.model.screenModelScope
 import dev.mambo.lib.data.domain.helpers.DataResult
@@ -28,13 +27,12 @@ data class TaskScreenState(
     val description: String = "",
     val dueDate: LocalDateTime? = null,
     val priority: PriorityDomain? = null,
-    val result: ItemUiState<TaskDomain> = ItemUiState.Loading
+    val result: ItemUiState<TaskDomain> = ItemUiState.Loading,
 )
 
 class TaskScreenModel(
-    private val repository: TaskRepository
+    private val repository: TaskRepository,
 ) : StateScreenModel<TaskScreenState>(TaskScreenState()) {
-
     fun onValueChangeId(id: Int?) {
         if (state.value.updated.not()) {
             mutableState.update { it.copy(id = id, updated = true, editing = false) }
@@ -52,7 +50,10 @@ class TaskScreenModel(
         }
     }
 
-    fun onValueChangeTask(value: TaskValue, update: String) {
+    fun onValueChangeTask(
+        value: TaskValue,
+        update: String,
+    ) {
         when (value) {
             TaskValue.TITLE -> mutableState.update { it.copy(title = update) }
             TaskValue.DESCRIPTION -> mutableState.update { it.copy(description = update) }
@@ -67,7 +68,7 @@ class TaskScreenModel(
         mutableState.update { it.copy(priority = priority) }
     }
 
-    fun onClickEditTask(){
+    fun onClickEditTask()  {
         val task = mutableState.value.task ?: return
         mutableState.update {
             it.copy(
@@ -80,7 +81,7 @@ class TaskScreenModel(
         }
     }
 
-    fun onClickCompleteTask(){
+    fun onClickCompleteTask()  {
         updateTask(date = Clock.System.now().LocalDateTime)
     }
 
@@ -95,9 +96,14 @@ class TaskScreenModel(
                 mutableState.update { state ->
                     state.copy(
                         task = it,
-                        result = if (it == null) ItemUiState.Error("Task not found") else ItemUiState.Success(
-                            it
-                        )
+                        result =
+                            if (it == null) {
+                                ItemUiState.Error("Task not found")
+                            } else {
+                                ItemUiState.Success(
+                                    it,
+                                )
+                            },
                     )
                 }
             }
@@ -108,12 +114,13 @@ class TaskScreenModel(
         val state = state.value
         screenModelScope.launch {
             mutableState.update { it.copy(actionState = ItemUiState.Loading) }
-            val result = repository.createTask(
-                title = state.title,
-                description = state.description,
-                dueAt = state.dueDate,
-                priority = state.priority
-            )
+            val result =
+                repository.createTask(
+                    title = state.title,
+                    description = state.description,
+                    dueAt = state.dueDate,
+                    priority = state.priority,
+                )
             when (result) {
                 is DataResult.Error -> {
                     mutableState.update { it.copy(actionState = ItemUiState.Error(result.message)) }
@@ -126,7 +133,7 @@ class TaskScreenModel(
                             id = task.id,
                             actionState = null,
                             task = task,
-                            result = ItemUiState.Success(task)
+                            result = ItemUiState.Success(task),
                         )
                     }
                 }
@@ -137,13 +144,14 @@ class TaskScreenModel(
     private fun updateTask(date: LocalDateTime? = null) {
         val state = state.value
         val task = state.task ?: return
-        val update = task.copy(
-            title = state.title,
-            description = state.description,
-            dueAt = state.dueDate,
-            priority = state.priority,
-            completedAt = date
-        )
+        val update =
+            task.copy(
+                title = state.title,
+                description = state.description,
+                dueAt = state.dueDate,
+                priority = state.priority,
+                completedAt = date,
+            )
         screenModelScope.launch {
             mutableState.update { it.copy(actionState = ItemUiState.Loading) }
             val result = repository.updateTask(task = update)
@@ -159,13 +167,12 @@ class TaskScreenModel(
                             actionState = null,
                             task = task,
                             editing = false,
-                            result = ItemUiState.Success(task)
+                            result = ItemUiState.Success(task),
                         )
                     }
                 }
             }
         }
-
     }
 
     private fun deleteTask() {
@@ -186,5 +193,4 @@ class TaskScreenModel(
             }
         }
     }
-
 }
