@@ -4,9 +4,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 
 @Composable
-fun ActionaryTheme(
-    content: @Composable () -> Unit,
-) {
+fun ActionaryTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = ColorScheme,
         typography = Typography,

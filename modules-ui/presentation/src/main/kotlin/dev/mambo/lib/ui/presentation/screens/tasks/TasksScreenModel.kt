@@ -18,17 +18,17 @@ data class TasksScreenState(
 class TasksScreenModel(
     private val repository: TaskRepository,
 ) : StateScreenModel<TasksScreenState>(TasksScreenState()) {
-
-    private val _tasks = repository.getTasks().mapLatest { list ->
-        if (list.isEmpty())
-            ListUiState.Empty
-        else
-            ListUiState.NotEmpty(list)
-    }
+    private val _tasks =
+        repository.getTasks().mapLatest { list ->
+            if (list.isEmpty()) {
+                ListUiState.Empty
+            } else {
+                ListUiState.NotEmpty(list)
+            }
+        }
     val tasks = _tasks
 
     fun onTaskClicked(task: TaskDomain) {
         mutableState.update { it.copy(task = task) }
     }
-
 }

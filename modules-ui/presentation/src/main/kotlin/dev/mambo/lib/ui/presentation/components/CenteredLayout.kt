@@ -17,7 +17,7 @@ fun CenteredColumn(
     Column(
         modifier = modifier,
         verticalArrangement = verticalArrangement,
-        horizontalAlignment = horizontalAlignment
+        horizontalAlignment = horizontalAlignment,
     ) {
         content()
     }
@@ -33,7 +33,7 @@ fun CenteredRow(
     Row(
         modifier = modifier,
         verticalAlignment = verticalAlignment,
-        horizontalArrangement = horizontalArrangement
+        horizontalArrangement = horizontalArrangement,
     ) {
         content()
     }

@@ -12,61 +12,60 @@ import org.junit.Rule
 import org.junit.Test
 
 class TasksScreenTest {
-
     @get:Rule
     val composeTestRule = createComposeRule()
-    val list = (1..10).map {
-        TaskDomain(
-            id = it,
-            title = "Task $it",
-            description = "Description $it",
-            createdAt = Clock.System.now().LocalDateTime,
-            dueAt = null,
-            priority = null,
-            completedAt = null
-        )
-    }
+    val list =
+        (1..10).map {
+            TaskDomain(
+                id = it,
+                title = "Task $it",
+                description = "Description $it",
+                createdAt = Clock.System.now().LocalDateTime,
+                dueAt = null,
+                priority = null,
+                completedAt = null,
+            )
+        }
 
     @Test
-    fun shouldShowLoadingIndicator_WhenOnInitCalled(){
+    fun shouldShowLoadingIndicator_WhenOnInitCalled() {
         composeTestRule.setContent {
             TasksScreenContent(
                 tasks = ListUiState.Loading,
                 state = TasksScreenState(),
                 onClickTask = {},
-                onClickCreateTask = {}
+                onClickCreateTask = {},
             )
         }
-        composeTestRule.onNodeWithTag(TasksScreen.TestTags.Loading).assertIsDisplayed()
+        composeTestRule.onNodeWithTag(TasksScreen.TestTags.LOADING).assertIsDisplayed()
     }
 
     @Test
-    fun shouldShowError_WhenGettingTasksFails(){
+    fun shouldShowError_WhenGettingTasksFails() {
         composeTestRule.setContent {
             TasksScreenContent(
                 tasks = ListUiState.Error(message = "failed getting tasks"),
                 state = TasksScreenState(),
                 onClickTask = {},
-                onClickCreateTask = {}
+                onClickCreateTask = {},
             )
         }
-        composeTestRule.onNodeWithTag(TasksScreen.TestTags.Error).assertIsDisplayed()
+        composeTestRule.onNodeWithTag(TasksScreen.TestTags.ERROR).assertIsDisplayed()
     }
 
     @Test
-    fun shouldShowValidErrorMessage_WhenGettingTasksFails(){
+    fun shouldShowValidErrorMessage_WhenGettingTasksFails() {
         val message = "failed getting tasks"
         composeTestRule.setContent {
             TasksScreenContent(
                 tasks = ListUiState.Error(message = message),
                 state = TasksScreenState(),
                 onClickTask = {},
-                onClickCreateTask = {}
+                onClickCreateTask = {},
             )
         }
-        composeTestRule.onNodeWithTag(TasksScreen.TestTags.Error).assertIsDisplayed()
-        composeTestRule.onNodeWithTag(TasksScreen.TestTags.ErrorMessage)
+        composeTestRule.onNodeWithTag(TasksScreen.TestTags.ERROR).assertIsDisplayed()
+        composeTestRule.onNodeWithTag(TasksScreen.TestTags.ERROR_MESSAGE)
             .assertTextEquals(message)
     }
-
 }

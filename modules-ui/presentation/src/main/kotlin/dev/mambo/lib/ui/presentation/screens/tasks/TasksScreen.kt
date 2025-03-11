@@ -31,13 +31,12 @@ import dev.mambo.lib.ui.presentation.helpers.ListUiState
 import kotlinx.datetime.Clock
 
 object TasksScreen : Screen {
-
     data object TestTags {
-        const val Loading = "Tasks.Loading"
-        const val Error = "Tasks.Error"
-        const val Empty = "Tasks.Empty"
-        const val NotEmpty = "Tasks.NotEmpty"
-        const val ErrorMessage = "Tasks.Error.Message"
+        const val LOADING = "Tasks.Loading"
+        const val ERROR = "Tasks.Error"
+        const val EMPTY = "Tasks.Empty"
+        const val NOT_EMPTY = "Tasks.NotEmpty"
+        const val ERROR_MESSAGE = "Tasks.Error.Message"
     }
 
     @Composable
@@ -49,7 +48,7 @@ object TasksScreen : Screen {
             state = state,
             tasks = tasks,
             onClickTask = screenModel::onTaskClicked,
-            onClickCreateTask = {}
+            onClickCreateTask = {},
         )
     }
 }
@@ -67,27 +66,29 @@ fun TasksScreenContent(
             TopAppBar(
                 title = {
                     Text(text = "Actionary")
-                }
+                },
             )
-        }
+        },
     ) { innerPadding ->
         AnimatedContent(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
-            targetState = tasks
+            modifier =
+                Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding),
+            targetState = tasks,
         ) { result ->
             when (result) {
                 ListUiState.Empty -> {
                     CenteredColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.Empty)
+                        modifier =
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.EMPTY),
                     ) {
                         Text(text = "No tasks found")
                         Button(
                             modifier = Modifier.padding(vertical = 16.dp),
-                            onClick = onClickCreateTask
+                            onClick = onClickCreateTask,
                         ) {
                             Text(text = "create")
                         }
@@ -96,9 +97,10 @@ fun TasksScreenContent(
 
                 ListUiState.Loading -> {
                     CenteredColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.Loading)
+                        modifier =
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.LOADING),
                     ) {
                         CircularProgressIndicator()
                     }
@@ -106,30 +108,32 @@ fun TasksScreenContent(
 
                 is ListUiState.Error -> {
                     CenteredColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.Error)
+                        modifier =
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.ERROR),
                     ) {
                         Text(text = "Error")
                         Text(
-                            modifier = Modifier.testTag(TasksScreen.TestTags.ErrorMessage),
-                            text = result.message
+                            modifier = Modifier.testTag(TasksScreen.TestTags.ERROR_MESSAGE),
+                            text = result.message,
                         )
                     }
                 }
 
                 is ListUiState.NotEmpty -> {
                     LazyColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .testTag(TasksScreen.TestTags.NotEmpty)
+                        modifier =
+                            Modifier
+                                .fillMaxSize()
+                                .testTag(TasksScreen.TestTags.NOT_EMPTY),
                     ) {
                         items(result.data.size) { index ->
                             val task = result.data[index]
                             TaskItem(
                                 modifier = Modifier.fillMaxWidth(),
                                 task = task,
-                                onClick = { onClickTask(task) }
+                                onClick = { onClickTask(task) },
                             )
                         }
                     }
@@ -140,13 +144,17 @@ fun TasksScreenContent(
 }
 
 @Composable
-fun TaskItem(task: TaskDomain, modifier: Modifier = Modifier, onClick: () -> Unit) {
+fun TaskItem(
+    task: TaskDomain,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+) {
     Card(modifier = modifier, onClick = onClick) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(text = task.title, fontWeight = FontWeight.Bold)
             Text(
                 text = task.description,
-                maxLines = 3
+                maxLines = 3,
             )
         }
     }
@@ -160,7 +168,7 @@ private fun TasksScreenLoadingPreview() {
             tasks = ListUiState.Loading,
             state = TasksScreenState(),
             onClickTask = {},
-            onClickCreateTask = {}
+            onClickCreateTask = {},
         )
     }
 }
@@ -173,7 +181,7 @@ private fun TasksScreenEmptyPreview() {
             tasks = ListUiState.Empty,
             state = TasksScreenState(),
             onClickTask = {},
-            onClickCreateTask = {}
+            onClickCreateTask = {},
         )
     }
 }
@@ -186,7 +194,7 @@ private fun TasksScreenErrorPreview() {
             tasks = ListUiState.Error(message = "unable to fetch tasks"),
             state = TasksScreenState(),
             onClickTask = {},
-            onClickCreateTask = {}
+            onClickCreateTask = {},
         )
     }
 }
@@ -194,23 +202,24 @@ private fun TasksScreenErrorPreview() {
 @Preview
 @Composable
 private fun TasksScreenNotEmptyPreview() {
-    val list = (1..10).map {
-        TaskDomain(
-            id = it,
-            title = "Task $it",
-            description = "Description $it",
-            createdAt = Clock.System.now().LocalDateTime,
-            dueAt = null,
-            priority = null,
-            completedAt = null
-        )
-    }
+    val list =
+        (1..10).map {
+            TaskDomain(
+                id = it,
+                title = "Task $it",
+                description = "Description $it",
+                createdAt = Clock.System.now().LocalDateTime,
+                dueAt = null,
+                priority = null,
+                completedAt = null,
+            )
+        }
     ActionaryTheme {
         TasksScreenContent(
             tasks = ListUiState.NotEmpty(list),
             state = TasksScreenState(),
             onClickTask = {},
-            onClickCreateTask = {}
+            onClickCreateTask = {},
         )
     }
 }

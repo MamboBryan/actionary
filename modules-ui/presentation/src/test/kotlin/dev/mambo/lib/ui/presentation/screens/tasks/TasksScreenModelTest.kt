@@ -16,43 +16,46 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class TasksScreenModelTest {
-
-    val list = (1..10).map {
-        TaskDomain(
-            id = it,
-            title = "Task $it",
-            description = "Description $it",
-            createdAt = Clock.System.now().LocalDateTime,
-            dueAt = null,
-            priority = null,
-            completedAt = null
-        )
-    }
-    private val repository = mockk<TaskRepository> {
-        every { getTasks() } returns flowOf(list)
-    }
+    val list =
+        (1..10).map {
+            TaskDomain(
+                id = it,
+                title = "Task $it",
+                description = "Description $it",
+                createdAt = Clock.System.now().LocalDateTime,
+                dueAt = null,
+                priority = null,
+                completedAt = null,
+            )
+        }
+    private val repository =
+        mockk<TaskRepository> {
+            every { getTasks() } returns flowOf(list)
+        }
     private val model = TasksScreenModel(repository = repository)
 
     @Test
-    fun `tasks returns a list of entries`() = runTest {
-        val result = model.tasks.first()
-        assertTrue { result is ListUiState.NotEmpty }
-        val actual = (result as ListUiState.NotEmpty).data
-        assertContentEquals(list, actual)
-    }
+    fun `tasks returns a list of entries`() =
+        runTest {
+            val result = model.tasks.first()
+            assertTrue { result is ListUiState.NotEmpty }
+            val actual = (result as ListUiState.NotEmpty).data
+            assertContentEquals(list, actual)
+        }
 
     @Test
-    fun `onClickTask saves task in the screen's state`() = runTest {
-        val task = list.random()
-        model.onTaskClicked(task = task)
-        val actual = model.state.value.task
-        assertEquals(task, actual)
-    }
+    fun `onClickTask saves task in the screen's state`() =
+        runTest {
+            val task = list.random()
+            model.onTaskClicked(task = task)
+            val actual = model.state.value.task
+            assertEquals(task, actual)
+        }
 
     @Test
-    fun `task state should be null on init`() = runTest {
-        val actual = model.state.value.task
-        assertEquals(null, actual)
-    }
-
+    fun `task state should be null on init`() =
+        runTest {
+            val actual = model.state.value.task
+            assertEquals(null, actual)
+        }
 }
