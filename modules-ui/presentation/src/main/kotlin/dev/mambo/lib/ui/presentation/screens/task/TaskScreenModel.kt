@@ -56,6 +56,10 @@ class TaskScreenModel(
         }
     }
 
+    fun onValueChangeDate(date: LocalDateTime) {
+        mutableState.update { it.copy(dueDate = date) }
+    }
+
     fun onDismissDialog() {
         mutableState.update { it.copy(actionState = null) }
     }

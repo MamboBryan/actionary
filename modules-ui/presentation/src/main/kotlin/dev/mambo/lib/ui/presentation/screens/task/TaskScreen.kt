@@ -29,6 +29,7 @@ import dev.mambo.lib.ui.presentation.screens.task.components.TaskAction
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskEditSection
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskValue
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskViewSection
+import kotlinx.datetime.LocalDateTime
 
 open class TaskScreen(val id: Int? = null) : Screen {
     object TestTags {
@@ -46,6 +47,7 @@ open class TaskScreen(val id: Int? = null) : Screen {
             onClickNavigateBack = { navigator?.pop() },
             onClickTaskAction = screenModel::onClickTaskAction,
             onValueChangeTask = screenModel::onValueChangeTask,
+            onValueChangeDate = screenModel::onValueChangeDate,
             onDismissDialog = screenModel::onDismissDialog
         )
     }
@@ -58,6 +60,7 @@ fun TaskScreenContent(
     onClickNavigateBack: () -> Unit,
     onClickTaskAction: (TaskAction) -> Unit,
     onValueChangeTask: (TaskValue, String) -> Unit,
+    onValueChangeDate: (LocalDateTime) -> Unit,
     onDismissDialog: () -> Unit,
 ) {
 
@@ -125,7 +128,8 @@ fun TaskScreenContent(
                 id == null || state.editing == true -> TaskEditSection(
                     state = state,
                     onValueChangeTask = onValueChangeTask,
-                    onClickTaskAction = onClickTaskAction
+                    onClickTaskAction = onClickTaskAction,
+                    onValueChangeDate = onValueChangeDate
                 )
 
                 else -> TaskViewSection(state = state.result)

@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dev.mambo.lib.ui.presentation.screens.task.TaskScreenState
+import kotlinx.datetime.LocalDateTime
 
 enum class TaskAction {
     CREATE, UPDATE, DELETE
@@ -36,10 +37,11 @@ fun TaskEditSection(
     modifier: Modifier = Modifier,
     onClickTaskAction: (TaskAction) -> Unit,
     onValueChangeTask: (TaskValue, String) -> Unit,
+    onValueChangeDate: (LocalDateTime) -> Unit,
 ) {
     Column(modifier = modifier) {
         Row(modifier = Modifier.fillMaxWidth()) {
-            Text(text = "Date : ")
+            TaskDateComponent(state = state, onValueChangeDate = onValueChangeDate)
             Spacer(modifier = Modifier.weight(1f))
             Text(text = "Priority : ")
         }
@@ -57,7 +59,6 @@ fun TaskEditSection(
             onValueChange = { onValueChangeTask(TaskValue.DESCRIPTION, it) },
             label = { Text(text = "Description") }
         )
-        HorizontalDivider()
         Row(
             modifier = Modifier.padding(16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp)
