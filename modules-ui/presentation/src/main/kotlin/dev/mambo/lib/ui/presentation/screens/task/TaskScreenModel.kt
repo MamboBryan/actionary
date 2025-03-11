@@ -68,7 +68,7 @@ class TaskScreenModel(
         mutableState.update { it.copy(priority = priority) }
     }
 
-    fun onClickEditTask()  {
+    fun onClickEditTask() {
         val task = mutableState.value.task ?: return
         mutableState.update {
             it.copy(
@@ -81,7 +81,7 @@ class TaskScreenModel(
         }
     }
 
-    fun onClickCompleteTask()  {
+    fun onClickCompleteTask() {
         updateTask(date = Clock.System.now().LocalDateTime)
     }
 

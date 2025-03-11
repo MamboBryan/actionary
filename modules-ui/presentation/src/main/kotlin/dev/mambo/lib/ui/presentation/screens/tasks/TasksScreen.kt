@@ -2,9 +2,11 @@ package dev.mambo.lib.ui.presentation.screens.tasks
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -24,6 +26,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -31,11 +34,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -92,41 +96,7 @@ fun TasksScreenContent(
 
     Scaffold(
         topBar = {
-            Surface(
-                modifier = Modifier.fillMaxWidth(),
-                shadowElevation = 4.dp,
-            ) {
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    TopAppBar(title = { Text(text = "Actionary") })
-                    val list = listOf("Priority", "Category", "Date")
-                    LazyRow(modifier = Modifier.fillMaxWidth()) {
-                        items(list) {
-                            FilterChip(
-                                modifier = Modifier.padding(start = 16.dp),
-                                selected = false,
-                                onClick = {},
-                                label = {
-                                    Row(
-                                        modifier =
-                                            Modifier.padding(
-                                                horizontal = 1.dp,
-                                                vertical = 2.dp,
-                                            ),
-                                        verticalAlignment = Alignment.CenterVertically,
-                                    ) {
-                                        Text(text = it, fontWeight = FontWeight.Bold)
-                                        Icon(
-                                            modifier = Modifier.padding(start = 2.dp),
-                                            imageVector = Icons.Rounded.KeyboardArrowDown,
-                                            contentDescription = "collapse",
-                                        )
-                                    }
-                                },
-                            )
-                        }
-                    }
-                }
-            }
+            TasksTopAppBar()
         },
         floatingActionButton = {
             AnimatedVisibility(visible = tasks is ListUiState.NotEmpty) {
@@ -218,6 +188,65 @@ fun TasksScreenContent(
                             Spacer(modifier = Modifier.padding(vertical = 64.dp))
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+@OptIn(ExperimentalMaterial3Api::class)
+private fun TasksTopAppBar() {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shadowElevation = 4.dp,
+    ) {
+        val padding = TopAppBarDefaults.windowInsets.asPaddingValues()
+        Column(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        top = padding.calculateTopPadding(),
+                        bottom = 16.dp,
+                    ),
+        ) {
+            Text(
+                modifier = Modifier.padding(top = 8.dp, start = 16.dp, bottom = 8.dp),
+                text = "Actionary",
+                style = MaterialTheme.typography.displaySmall,
+                fontWeight = FontWeight.Bold,
+            )
+            val list = listOf("Priority", "Category", "Date")
+            LazyRow(modifier = Modifier.fillMaxWidth()) {
+                items(list) {
+                    FilterChip(
+                        modifier = Modifier.padding(start = 16.dp),
+                        border = BorderStroke(0.dp, Color.Transparent),
+                        colors =
+                            FilterChipDefaults.filterChipColors(
+                                containerColor = MaterialTheme.colorScheme.primary.copy(0.25f),
+                            ),
+                        selected = false,
+                        onClick = {},
+                        label = {
+                            Row(
+                                modifier = Modifier,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    text = it,
+                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.labelMedium,
+                                )
+                                Icon(
+                                    modifier = Modifier.padding(start = 2.dp),
+                                    imageVector = Icons.Rounded.KeyboardArrowDown,
+                                    contentDescription = "collapse",
+                                )
+                            }
+                        },
+                    )
                 }
             }
         }

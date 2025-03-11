@@ -8,6 +8,7 @@
 /.idea
 
 # Build
+**/build/**
 /build
 /conventions/build
 /conventions/build/*
