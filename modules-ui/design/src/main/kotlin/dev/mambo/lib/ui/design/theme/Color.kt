@@ -27,8 +27,8 @@ private val DarkColorScheme =
         onPrimary = DarkOnPrimary,
         background = DarkBackground,
         onBackground = DarkOnBackground,
-        surface = DarkSurface,
-        onSurface = DarkOnSurface,
+        surface = DarkBackground,
+        onSurface = DarkOnBackground,
     )
 
 private val LightColorScheme =
@@ -37,8 +37,8 @@ private val LightColorScheme =
         onPrimary = LightOnPrimary,
         background = LightBackground,
         onBackground = LightOnBackground,
-        surface = LightSurface,
-        onSurface = LightOnSurface,
+        surface = LightBackground,
+        onSurface = LightOnBackground,
     )
 
 val ColorScheme: ColorScheme

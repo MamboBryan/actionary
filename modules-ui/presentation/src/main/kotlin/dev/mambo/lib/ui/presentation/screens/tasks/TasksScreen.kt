@@ -2,20 +2,31 @@ package dev.mambo.lib.ui.presentation.screens.tasks
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.outlined.OutlinedFlag
 import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -23,8 +34,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
@@ -38,9 +52,11 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import dev.mambo.lib.data.domain.helpers.LocalDateTime
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.ui.design.theme.ActionaryTheme
+import dev.mambo.lib.ui.presentation.components.BackButtonComponent
 import dev.mambo.lib.ui.presentation.components.CenteredColumn
 import dev.mambo.lib.ui.presentation.helpers.ListUiState
 import dev.mambo.lib.ui.presentation.screens.task.TaskScreen
+import dev.mambo.lib.ui.presentation.screens.task.components.label
 import kotlinx.datetime.Clock
 
 object TasksScreen : Screen {
@@ -86,15 +102,34 @@ fun TasksScreenContent(
                 modifier = Modifier.fillMaxWidth(),
                 shadowElevation = 4.dp
             ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp)
-                ) {
-                    Text(
-                        text = "Actionary",
-                        style = MaterialTheme.typography.titleLarge
-                    )
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    TopAppBar(title = { Text(text = "Actionary") })
+                    val list = listOf("Priority", "Category", "Date")
+                    LazyRow(modifier = Modifier.fillMaxWidth()) {
+                        items(list) {
+                            FilterChip(
+                                modifier = Modifier.padding(start = 16.dp),
+                                selected = false,
+                                onClick = {},
+                                label = {
+                                    Row(
+                                        modifier = Modifier.padding(
+                                            horizontal = 1.dp,
+                                            vertical = 2.dp
+                                        ),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(text = it, fontWeight = FontWeight.Bold)
+                                        Icon(
+                                            modifier = Modifier.padding(start = 2.dp),
+                                            imageVector = Icons.Rounded.KeyboardArrowDown,
+                                            contentDescription = "collapse"
+                                        )
+                                    }
+                                }
+                            )
+                        }
+                    }
                 }
             }
         },
@@ -211,6 +246,61 @@ fun TaskItem(
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
             Column(modifier = Modifier.padding(16.dp)) {
+                Row(
+                    modifier = Modifier.padding(bottom = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    if (task.dueAt != null) {
+                        Row(
+                            modifier = Modifier,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                modifier = Modifier.size(16.dp),
+                                imageVector = Icons.Filled.CalendarMonth,
+                                contentDescription = "date"
+                            )
+                            Text(
+                                style = MaterialTheme.typography.labelMedium,
+                                modifier = Modifier.padding(start = 8.dp, top = 2.dp),
+                                text = task.dueAt?.let {
+                                    buildString {
+                                        append(
+                                            it.dayOfWeek.name.lowercase().take(3)
+                                                .replaceFirstChar { it.uppercase() })
+                                        append(", ")
+                                        append(it.dayOfMonth)
+                                        append(" ")
+                                        append(
+                                            it.month.name.lowercase().take(3)
+                                                .replaceFirstChar { it.uppercase() })
+                                        append(" ")
+                                        append(it.year)
+                                    }
+                                } ?: "Date")
+                        }
+                    }
+                    Spacer(modifier = Modifier.weight(1f))
+                    if (task.priority != null) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                style = MaterialTheme.typography.labelMedium,
+                                modifier = Modifier,
+                                text = task.priority?.label ?: "Priority"
+                            )
+                            Icon(
+                                modifier = Modifier
+                                    .padding(start = 8.dp)
+                                    .size(16.dp),
+                                imageVector = Icons.Outlined.OutlinedFlag,
+                                contentDescription = "priority"
+                            )
+                        }
+                    }
+                }
                 Text(
                     text = task.title,
                     fontWeight = FontWeight.Bold,
@@ -222,7 +312,24 @@ fun TaskItem(
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
+                if (task.updatedAt != task.createdAt) {
+                    Text(
+                        style = MaterialTheme.typography.labelMedium,
+                        modifier = Modifier.padding(top = 8.dp),
+                        text = task.updatedAt.let {
+                            buildString {
+                                append("Edited : ")
+                                append(it.dayOfMonth)
+                                append("/")
+                                append(it.monthNumber)
+                                append("/")
+                                append(it.year)
+                            }
+                        }
+                    )
+                }
             }
+
             HorizontalDivider(thickness = 0.5.dp)
         }
 

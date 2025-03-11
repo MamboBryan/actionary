@@ -1,8 +1,10 @@
 package dev.mambo.lib.ui.presentation.screens.task
 
+import androidx.work.SystemClock
 import cafe.adriel.voyager.core.model.StateScreenModel
 import cafe.adriel.voyager.core.model.screenModelScope
 import dev.mambo.lib.data.domain.helpers.DataResult
+import dev.mambo.lib.data.domain.helpers.LocalDateTime
 import dev.mambo.lib.data.domain.models.PriorityDomain
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.data.domain.repositories.TaskRepository
@@ -12,6 +14,7 @@ import dev.mambo.lib.ui.presentation.screens.task.components.TaskValue
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
 
 data class TaskScreenState(
@@ -58,6 +61,27 @@ class TaskScreenModel(
 
     fun onValueChangeDate(date: LocalDateTime) {
         mutableState.update { it.copy(dueDate = date) }
+    }
+
+    fun onValueChangePriority(priority: PriorityDomain?) {
+        mutableState.update { it.copy(priority = priority) }
+    }
+
+    fun onClickEditTask(){
+        val task = mutableState.value.task ?: return
+        mutableState.update {
+            it.copy(
+                editing = true,
+                title = task.title,
+                description = task.description,
+                dueDate = task.dueAt,
+                priority = task.priority,
+            )
+        }
+    }
+
+    fun onClickCompleteTask(){
+        updateTask(date = Clock.System.now().LocalDateTime)
     }
 
     fun onDismissDialog() {
@@ -110,14 +134,15 @@ class TaskScreenModel(
         }
     }
 
-    private fun updateTask() {
+    private fun updateTask(date: LocalDateTime? = null) {
         val state = state.value
         val task = state.task ?: return
         val update = task.copy(
             title = state.title,
             description = state.description,
             dueAt = state.dueDate,
-            priority = state.priority
+            priority = state.priority,
+            completedAt = date
         )
         screenModelScope.launch {
             mutableState.update { it.copy(actionState = ItemUiState.Loading) }
@@ -131,9 +156,9 @@ class TaskScreenModel(
                     val task = result.data
                     mutableState.update {
                         it.copy(
-                            id = task.id,
                             actionState = null,
                             task = task,
+                            editing = false,
                             result = ItemUiState.Success(task)
                         )
                     }

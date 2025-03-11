@@ -67,7 +67,7 @@ fun <T> PickerItem(
     isSelected: Boolean,
     text: String,
     modifier: Modifier = Modifier,
-    containerColor: Color = MaterialTheme.colorScheme.background,
+    containerColor: Color = MaterialTheme.colorScheme.primary.copy(0.1f),
     contentColor: Color = MaterialTheme.colorScheme.onBackground,
     onClick: () -> Unit,
 ) {
@@ -140,7 +140,7 @@ fun <T : Any> BottomSheetPicker(
             hideSheet()
             onDismiss()
         },
-        containerColor = MaterialTheme.colorScheme.surface,
+        containerColor = MaterialTheme.colorScheme.background,
     ) {
         Picker(
             title = title,
