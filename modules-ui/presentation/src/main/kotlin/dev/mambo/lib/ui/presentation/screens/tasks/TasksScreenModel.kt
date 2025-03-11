@@ -1,12 +1,15 @@
 package dev.mambo.lib.ui.presentation.screens.tasks
 
 import cafe.adriel.voyager.core.model.StateScreenModel
+import cafe.adriel.voyager.core.model.screenModelScope
 import dev.mambo.lib.data.domain.helpers.LocalDateTime
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.data.domain.repositories.TaskRepository
 import dev.mambo.lib.ui.presentation.helpers.ListUiState
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
 
@@ -29,6 +32,10 @@ class TasksScreenModel(
     val tasks = _tasks
 
     fun onTaskClicked(task: TaskDomain) {
-        mutableState.update { it.copy(task = task) }
+        screenModelScope.launch{
+            mutableState.update { it.copy(task = task) }
+            delay(500)
+            mutableState.update { it.copy(task = null) }
+        }
     }
 }

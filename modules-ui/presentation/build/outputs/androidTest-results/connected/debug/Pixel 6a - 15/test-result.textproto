@@ -1,4 +1,4 @@
-# 2025-03-11T09:16:41.678098Z:
+# 2025-03-11T09:41:08.131745Z:
 test_suite_meta_data {
   scheduled_test_case_count: 3
 }
@@ -9,12 +9,12 @@ test_result {
     test_package: "dev.mambo.lib.ui.presentation.screens.tasks"
     test_method: "shouldShowValidErrorMessage_WhenGettingTasksFails"
     start_time {
-      seconds: 1741684596
-      nanos: 662000000
+      seconds: 1741686063
+      nanos: 25000000
     }
     end_time {
-      seconds: 1741684598
-      nanos: 319000000
+      seconds: 1741686064
+      nanos: 148000000
     }
   }
   test_status: PASSED
@@ -61,12 +61,12 @@ test_result {
     test_package: "dev.mambo.lib.ui.presentation.screens.tasks"
     test_method: "shouldShowLoadingIndicator_WhenOnInitCalled"
     start_time {
-      seconds: 1741684598
-      nanos: 342000000
+      seconds: 1741686064
+      nanos: 759000000
     }
     end_time {
-      seconds: 1741684599
-      nanos: 52000000
+      seconds: 1741686065
+      nanos: 539000000
     }
   }
   test_status: PASSED
@@ -113,12 +113,12 @@ test_result {
     test_package: "dev.mambo.lib.ui.presentation.screens.tasks"
     test_method: "shouldShowError_WhenGettingTasksFails"
     start_time {
-      seconds: 1741684599
-      nanos: 665000000
+      seconds: 1741686066
+      nanos: 124000000
     }
     end_time {
-      seconds: 1741684601
-      nanos: 29000000
+      seconds: 1741686066
+      nanos: 893000000
     }
   }
   test_status: PASSED

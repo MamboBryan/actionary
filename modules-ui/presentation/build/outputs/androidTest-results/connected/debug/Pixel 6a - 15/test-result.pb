@@ -1,7 +1,7 @@
 
-Å
-
-TasksScreenTest+dev.mambo.lib.ui.presentation.screens.tasks1shouldShowValidErrorMessage_WhenGettingTasksFails2ôş¿¾€£Õ»:öş¿¾À›˜"•
+Ã
+‹
+TasksScreenTest+dev.mambo.lib.ui.presentation.screens.tasks1shouldShowValidErrorMessage_WhenGettingTasksFails2¯ŠÀ¾Àğõ:°ŠÀ¾€šÉF"•
 
 logcatandroidÿ
 ü/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/logcat-dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest-shouldShowValidErrorMessage_WhenGettingTasksFails.txt"°
@@ -13,9 +13,9 @@
 ‹/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/meminfo"±
 
 device-info.cpuinfoandroid
-‹/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/cpuinfo¸
-†
-TasksScreenTest+dev.mambo.lib.ui.presentation.screens.tasks+shouldShowLoadingIndicator_WhenOnInitCalled2öş¿¾€ƒŠ£:÷ş¿¾€êå"
+‹/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/cpuinfo¹
+‡
+TasksScreenTest+dev.mambo.lib.ui.presentation.screens.tasks+shouldShowLoadingIndicator_WhenOnInitCalled2°ŠÀ¾À×õé:±ŠÀ¾Àù"
 
 logcatandroidù
 ö/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/logcat-dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest-shouldShowLoadingIndicator_WhenOnInitCalled.txt"°
@@ -29,7 +29,7 @@
 device-info.cpuinfoandroid
 ‹/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/cpuinfo¬
 €
-TasksScreenTest+dev.mambo.lib.ui.presentation.screens.tasks%shouldShowError_WhenGettingTasksFails2÷ş¿¾À°Œ½:ùş¿¾À‚ê"‰
+TasksScreenTest+dev.mambo.lib.ui.presentation.screens.tasks%shouldShowError_WhenGettingTasksFails2²ŠÀ¾€®;:²ŠÀ¾À²è©"‰
 
 logcatandroidó
 ğ/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/logcat-dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest-shouldShowError_WhenGettingTasksFails.txt"°

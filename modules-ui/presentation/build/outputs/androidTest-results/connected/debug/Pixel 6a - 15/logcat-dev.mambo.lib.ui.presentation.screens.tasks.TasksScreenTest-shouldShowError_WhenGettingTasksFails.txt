@@ -1,104 +1,84 @@
-03-11 12:16:41.034 25820 25844 I TestRunner: started: shouldShowError_WhenGettingTasksFails(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)
-03-11 12:16:41.038 25820 25844 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@bb2409a]
-03-11 12:16:41.041 25820 25844 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
-03-11 12:16:41.044  1800  4994 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2254fd21 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
-03-11 12:16:41.060 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: PRE_ON_CREATE
-03-11 12:16:41.060 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
-03-11 12:16:41.060   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
-03-11 12:16:41.070 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: CREATED
-03-11 12:16:41.071 25820 25820 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@196023e
-03-11 12:16:41.072 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: STARTED
-03-11 12:16:41.073 25820 25820 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@196023e
-03-11 12:16:41.075  1400  1480 I WifiHAL : Creating message to get link statistics; iface = 47
-03-11 12:16:41.076 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: RESUMED
-03-11 12:16:41.076 25820 25820 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@196023e
-03-11 12:16:41.078   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
-03-11 12:16:41.078   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
-03-11 12:16:41.078   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
-03-11 12:16:41.078   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
-03-11 12:16:41.072   719   719 W HwBinder:719_2: type=1400 audit(0.0:11018): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
-03-11 12:16:41.072   719   719 W HwBinder:719_2: type=1400 audit(0.0:11019): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
-03-11 12:16:41.108  1800  1872 W ziparchive: Unable to open '/data/app/~~GAv1vPYOS76u6Fi6Qf4qUg==/dev.mambo.lib.ui.presentation.test-wHa_1-mVCnTJ8ZAHjaLuIA==/base.dm': No such file or directory
-03-11 12:16:41.109  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity for user 0: +63ms
-03-11 12:16:41.124  1400  1480 I WifiHAL : Getting cached scan results, iface handle = 0xb4000070a6636710
-03-11 12:16:41.124  1400  1480 E WifiHAL : Creating message to get cached scan results
-03-11 12:16:41.124  1400  1480 D WifiHAL : error code -95 mapped to -3
-03-11 12:16:41.125  1800  2435 E WifiStaIfaceAidlImpl: getCachedScanData failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
-03-11 12:16:41.132  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:4717bbdd: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
-03-11 12:16:41.132  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:4717bbdd: onCancelled at PHASE_SERVER_SHOULD_HIDE
-03-11 12:16:41.133  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2589
-03-11 12:16:41.133  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-03-11 12:16:41.134  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1568 onStartInput(EditorInfo{EditorInfo{packageName=dev.mambo.lib.ui.presentation.test, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-03-11 12:16:41.134  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-03-11 12:16:41.134  4028  4028 I AndroidIME: InputBundleManager.loadActiveInputBundleId():407 loadActiveInputBundleId: und-Latn-x-password, password
-03-11 12:16:41.145   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
-03-11 12:16:41.145   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
-03-11 12:16:41.145   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
-03-11 12:16:41.145   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
-03-11 12:16:41.145   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=3 error(-22)
-03-11 12:16:41.145   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
-03-11 12:16:41.145   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
-03-11 12:16:41.145   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
-03-11 12:16:41.140   719   719 W HwBinder:719_2: type=1400 audit(0.0:11020): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
-03-11 12:16:41.140   719   719 W HwBinder:719_2: type=1400 audit(0.0:11021): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
-03-11 12:16:41.140   719   719 W HwBinder:719_2: type=1400 audit(0.0:11022): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
-03-11 12:16:41.158  1800  2443 D ConnectivityService: NetReassign [no changes] [c 0] [a 2] [i 5]
-03-11 12:16:41.365  1800  2483 W ServiceManagerCppClient: Waited one second for android.hardware.biometrics.fingerprint.IFingerprint/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
-03-11 12:16:41.367   636 25972 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.biometrics.fingerprint.IFingerprint/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
-03-11 12:16:41.383  2517  2559 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@bffa987
-03-11 12:16:41.596 18147 18147 D VRI[HomeActivity]: visibilityChanged oldVisibility=true newVisibility=false
-03-11 12:16:41.611 25820 25844 W SurfaceComposerClient: Sync transaction timed out waiting for commit callback.
-03-11 12:16:41.693  1800  4391 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2254fd21 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
-03-11 12:16:41.701 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: PAUSED
-03-11 12:16:41.701 25820 25820 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@196023e
-03-11 12:16:41.705 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: PRE_ON_CREATE
-03-11 12:16:41.706 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234
-03-11 12:16:41.708 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: CREATED
-03-11 12:16:41.709 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234
-03-11 12:16:41.709 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: STARTED
-03-11 12:16:41.709 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234
-03-11 12:16:41.711 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: RESUMED
-03-11 12:16:41.711 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234
-03-11 12:16:41.736  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +42ms
-03-11 12:16:41.745 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: PAUSED
-03-11 12:16:41.745 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234
-03-11 12:16:41.748 25820 25820 D VRI[ComponentActivity]: visibilityChanged oldVisibility=true newVisibility=false
-03-11 12:16:41.760   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
-03-11 12:16:41.762   826   826 W powerhal-libperfmgr: Sess(3681), cannot resume, already active
-03-11 12:16:41.827   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
-03-11 12:16:41.827   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
-03-11 12:16:41.827   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
-03-11 12:16:41.827   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
-03-11 12:16:41.848  1800  2289 I ImeTracker: com.whatsapp:b23200ac: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
-03-11 12:16:41.849  1800  2289 I ImeTracker: com.whatsapp:b23200ac: onCancelled at PHASE_SERVER_SHOULD_HIDE
-03-11 12:16:41.851  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2589
-03-11 12:16:41.851  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-03-11 12:16:41.852  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1568 onStartInput(EditorInfo{EditorInfo{packageName=com.whatsapp, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-03-11 12:16:41.852  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-03-11 12:16:41.853  4028  4028 I AndroidIME: InputBundleManager.loadActiveInputBundleId():407 loadActiveInputBundleId: und-Latn-x-password, password
-03-11 12:16:41.879  1800  1874 W JobInfo : Job 'com.baobabcircle.afyapap.stg/me.pushy.sdk.services.PushyJobService#10000' has a deadline with functional constraints and an extremely short time window of 0 ms (delay=15000, deadline=15000). The functional constraints are not likely to be satisfied when the job runs.
-03-11 12:16:41.894   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
-03-11 12:16:41.894   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
-03-11 12:16:41.894   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
-03-11 12:16:41.894   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
-03-11 12:16:42.083  1800  2443 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
-03-11 12:16:42.084  1800  2443 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
-03-11 12:16:42.085  1800  2443 D InetDiagMessage: Destroyed live tcp sockets for uids={10114} in 2ms
-03-11 12:16:42.086  1800  2443 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
-03-11 12:16:42.087  1800  2443 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
-03-11 12:16:42.087  1800  2443 D InetDiagMessage: Destroyed live tcp sockets for uids={20114} in 2ms
-03-11 12:16:42.348 25820 25820 D VRI[InstrumentationActivityInvoker$EmptyActivity]: visibilityChanged oldVisibility=true newVisibility=false
-03-11 12:16:42.365 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: STOPPED
-03-11 12:16:42.366 25820 25820 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@196023e
-03-11 12:16:42.366  1800  2483 W ServiceManagerCppClient: Waited one second for android.hardware.biometrics.fingerprint.IFingerprint/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
-03-11 12:16:42.368   636 25980 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.biometrics.fingerprint.IFingerprint/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
-03-11 12:16:42.373 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@196023e in: DESTROYED
-03-11 12:16:42.373 25820 25820 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
-03-11 12:16:42.373 25820 25820 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@9aa0c69
-03-11 12:16:42.378 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: STOPPED
-03-11 12:16:42.379 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fa84234 in: DESTROYED
-03-11 12:16:42.379 25820 25820 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@f57fe91
-03-11 12:16:42.383  2913  2913 D RecentsView: onTaskRemoved: 2415, not handling task stack changes
-03-11 12:16:42.383  2913  2913 D RecentsView: onTaskRemoved: 2415, not handling task stack changes
-03-11 12:16:42.390 25820 25844 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@bb2409a]
-03-11 12:16:42.391 25820 25844 I TestRunner: finished: shouldShowError_WhenGettingTasksFails(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)
+03-11 12:41:07.467 29966 29990 I TestRunner: started: shouldShowError_WhenGettingTasksFails(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)
+03-11 12:41:07.476 29966 29990 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@6628145]
+03-11 12:41:07.478 29966 29990 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-11 12:41:07.481  1800  5271 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2409d5c0 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+03-11 12:41:07.492   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:41:07.496 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: PRE_ON_CREATE
+03-11 12:41:07.496 29966 29966 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+03-11 12:41:07.501 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: CREATED
+03-11 12:41:07.501 29966 29966 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@38372f9
+03-11 12:41:07.501 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: STARTED
+03-11 12:41:07.501 29966 29966 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@38372f9
+03-11 12:41:07.503 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: RESUMED
+03-11 12:41:07.504 29966 29966 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@38372f9
+03-11 12:41:07.526   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+03-11 12:41:07.526   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:41:07.526   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:41:07.526   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:41:07.520   719   719 W HwBinder:719_2: type=1400 audit(0.0:11161): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:41:07.533  1800  1872 W ziparchive: Unable to open '/data/app/~~mbTD6pvPqMtlrgPr1yJIaQ==/dev.mambo.lib.ui.presentation.test-v42k6hz2WhL_3Nx4alDQdQ==/base.dm': No such file or directory
+03-11 12:41:07.533  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity for user 0: +52ms
+03-11 12:41:07.562  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:e995e669: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+03-11 12:41:07.562  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:e995e669: onCancelled at PHASE_SERVER_SHOULD_HIDE
+03-11 12:41:07.563  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2589
+03-11 12:41:07.564  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+03-11 12:41:07.564  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1568 onStartInput(EditorInfo{EditorInfo{packageName=dev.mambo.lib.ui.presentation.test, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+03-11 12:41:07.564  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+03-11 12:41:07.564  4028  4028 I AndroidIME: InputBundleManager.loadActiveInputBundleId():407 loadActiveInputBundleId: und-Latn-x-password, password
+03-11 12:41:07.593   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+03-11 12:41:07.593   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:41:07.593   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:41:07.593   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:41:07.593   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=3 error(-22)
+03-11 12:41:07.593   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:41:07.593   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:41:07.593   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:41:07.640  1800  4289 W JobInfo : Job 'com.google.android.apps.photos/com.google.android.libraries.social.async.BackgroundTaskJobService#1043' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+03-11 12:41:07.716  1800  2733 D ConnectivityService: requestNetwork for uid/pid:10192/3115 activeRequest: null callbackRequest: 3951 [NetworkRequest [ REQUEST id=3952, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|NC
+03-11 12:41:07.720  1800  2435 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3952, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:41:07.720  1800  2435 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3952, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:41:07.720  1800  2435 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=3952, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:41:07.721  1800  2435 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3952, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:41:07.723  1800  2443 D ConnectivityService: NetReassign [3952 : null → 104] [c 0] [a 2] [i 4]
+03-11 12:41:07.755  1800  2483 W ServiceManagerCppClient: Waited one second for android.hardware.biometrics.fingerprint.IFingerprint/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+03-11 12:41:07.757   636 30134 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.biometrics.fingerprint.IFingerprint/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+03-11 12:41:07.787  3894  3894 I ContentProtectionServic: CP service destroyed
+03-11 12:41:07.817  2517  2559 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@e61965c
+03-11 12:41:07.856  3115  3135 I oid.apps.photos: CollectorTransition concurrent mark compact GC freed 9720KB AllocSpace bytes, 9(560KB) LOS objects, 79% free, 6323KB/30MB, paused 1.637ms,14.496ms total 197.517ms
+03-11 12:41:07.856  3115  3135 W oid.apps.photos: Reducing the number of considered missed Gc histogram windows from 142 to 100
+03-11 12:41:07.867  1800  1874 W JobInfo : Job 'com.baobabcircle.afyapap.stg/me.pushy.sdk.services.PushyJobService#10000' has a deadline with functional constraints and an extremely short time window of 0 ms (delay=15000, deadline=15000). The functional constraints are not likely to be satisfied when the job runs.
+03-11 12:41:07.870  1400  1480 I WifiHAL : Creating message to get link statistics; iface = 47
+03-11 12:41:07.920  1400  3071 I WifiHAL : Getting cached scan results, iface handle = 0xb4000070a6636710
+03-11 12:41:07.920  1400  3071 E WifiHAL : Creating message to get cached scan results
+03-11 12:41:07.920  1400  3071 D WifiHAL : error code -95 mapped to -3
+03-11 12:41:07.921  1800  2435 E WifiStaIfaceAidlImpl: getCachedScanData failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+03-11 12:41:07.964  1800  2443 D ConnectivityService: NetReassign [no changes] [c 1] [a 2] [i 5]
+03-11 12:41:08.047 18147 18147 D VRI[HomeActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:41:08.058 29966 29990 W SurfaceComposerClient: Sync transaction timed out waiting for commit callback.
+03-11 12:41:08.147  1800  2242 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2409d5c0 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+03-11 12:41:08.155 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: PAUSED
+03-11 12:41:08.155 29966 29966 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@38372f9
+03-11 12:41:08.158   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:41:08.159 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107 in: PRE_ON_CREATE
+03-11 12:41:08.159 29966 29966 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107
+03-11 12:41:08.162 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107 in: CREATED
+03-11 12:41:08.162 29966 29966 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107
+03-11 12:41:08.163 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107 in: STARTED
+03-11 12:41:08.163 29966 29966 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107
+03-11 12:41:08.164 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107 in: RESUMED
+03-11 12:41:08.164 29966 29966 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107
+03-11 12:41:08.183  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +36ms
+03-11 12:41:08.186 29966 29966 D VRI[ComponentActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:41:08.196 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: STOPPED
+03-11 12:41:08.196 29966 29966 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@38372f9
+03-11 12:41:08.202 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@38372f9 in: DESTROYED
+03-11 12:41:08.202 29966 29966 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+03-11 12:41:08.202 29966 29966 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@bd3eef0
+03-11 12:41:08.206 29966 29966 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107 in: PAUSED
+03-11 12:41:08.206 29966 29966 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@e338107
+03-11 12:41:08.207   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:41:08.212   826   826 W powerhal-libperfmgr: Sess(3681), cannot resume, already active
+03-11 12:41:08.214  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:1096dc63: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+03-11 12:41:08.214 29966 29990 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@6628145]
+03-11 12:41:08.214  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:1096dc63: onCancelled at PHASE_SERVER_SHOULD_HIDE
+03-11 12:41:08.215 29966 29990 I TestRunner: finished: shouldShowError_WhenGettingTasksFails(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)

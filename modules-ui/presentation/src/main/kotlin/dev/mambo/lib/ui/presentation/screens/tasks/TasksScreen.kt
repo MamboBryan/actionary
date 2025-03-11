@@ -23,11 +23,13 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.getScreenModel
+import cafe.adriel.voyager.navigator.LocalNavigator
 import dev.mambo.lib.data.domain.helpers.LocalDateTime
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.ui.design.theme.ActionaryTheme
 import dev.mambo.lib.ui.presentation.components.CenteredColumn
 import dev.mambo.lib.ui.presentation.helpers.ListUiState
+import dev.mambo.lib.ui.presentation.screens.task.TaskScreen
 import kotlinx.datetime.Clock
 
 object TasksScreen : Screen {
@@ -41,6 +43,7 @@ object TasksScreen : Screen {
 
     @Composable
     override fun Content() {
+        val navigator = LocalNavigator.current
         val screenModel: TasksScreenModel = getScreenModel()
         val state by screenModel.state.collectAsStateWithLifecycle()
         val tasks by screenModel.tasks.collectAsStateWithLifecycle(ListUiState.Loading)
@@ -48,7 +51,8 @@ object TasksScreen : Screen {
             state = state,
             tasks = tasks,
             onClickTask = screenModel::onTaskClicked,
-            onClickCreateTask = {},
+            onClickCreateTask = { navigator?.push(TaskScreen()) },
+            navigate = { screen -> navigator?.push(screen) }
         )
     }
 }
@@ -60,7 +64,11 @@ fun TasksScreenContent(
     state: TasksScreenState,
     onClickTask: (TaskDomain) -> Unit,
     onClickCreateTask: () -> Unit,
+    navigate: (Screen) -> Unit,
 ) {
+
+    if (state.task != null) navigate(TaskScreen(id = state.task.id))
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -169,6 +177,7 @@ private fun TasksScreenLoadingPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
+            navigate = {}
         )
     }
 }
@@ -182,6 +191,7 @@ private fun TasksScreenEmptyPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
+            navigate = {}
         )
     }
 }
@@ -195,6 +205,7 @@ private fun TasksScreenErrorPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
+            navigate = {}
         )
     }
 }
@@ -220,6 +231,7 @@ private fun TasksScreenNotEmptyPreview() {
             state = TasksScreenState(),
             onClickTask = {},
             onClickCreateTask = {},
+            navigate = {}
         )
     }
 }
