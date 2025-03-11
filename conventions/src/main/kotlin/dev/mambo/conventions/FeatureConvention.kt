@@ -51,6 +51,8 @@ class FeatureConvention : Plugin<Project> {
                 implementation(catalogs.getLibrary("androidx-material3"))
                 implementation(catalogs.getLibrary("androidx-ui-graphics"))
                 implementation(catalogs.getLibrary("androidx-activity-compose"))
+                implementation(catalogs.getLibrary("androidx-compose-foundation"))
+                implementation(catalogs.getLibrary("androidx-lifecycle-runtime-ktx"))
                 androidTestImplementation(platform(catalogs.getLibrary("androidx-compose-bom")))
                 androidTestImplementation(catalogs.getLibrary("androidx-ui-test-junit4"))
                 debugImplementation(catalogs.getLibrary("androidx-ui-tooling"))

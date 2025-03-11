@@ -1,0 +1,350 @@
+03-11 12:16:39.681 25820 25844 I TestRunner: started: shouldShowLoadingIndicator_WhenOnInitCalled(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)
+03-11 12:16:39.684 22106 22150 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.684 25820 25844 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@9bcfc49]
+03-11 12:16:39.686 22106 22150 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.686 25820 25844 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-11 12:16:39.688 22106 22169 I SyncWorkManagerPeriodic: Successfully scheduled next periodic workers
+03-11 12:16:39.689  1800  5270 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2254fd21 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+03-11 12:16:39.693 22041 22051 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085579800 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.696   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:16:39.698 22041 22051 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575180 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.701 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: PRE_ON_CREATE
+03-11 12:16:39.701 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+03-11 12:16:39.702 22106 22174 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.707 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: CREATED
+03-11 12:16:39.708 25820 25820 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@b1bebd
+03-11 12:16:39.708 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: STARTED
+03-11 12:16:39.708 25820 25820 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@b1bebd
+03-11 12:16:39.710 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: RESUMED
+03-11 12:16:39.710 25820 25820 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@b1bebd
+03-11 12:16:39.711 22041 22053 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000070855787e0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.712 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.721 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000070855794a0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.721 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085579b60 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.724   719   719 W HwBinder:719_2: type=1400 audit(0.0:11008): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.729 22106 22174 D WM-GreedyScheduler: Cancelling work ID a19940b8-1600-468c-9f34-bf8fe411c514
+03-11 12:16:39.729 22106 22150 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.730   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+03-11 12:16:39.730   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:39.730   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:39.730   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:39.724   719   719 W HwBinder:719_2: type=1400 audit(0.0:11009): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.736 22106 22174 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.736 22106 22150 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.737 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.740 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.742 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.743  1800  1872 W ziparchive: Unable to open '/data/app/~~GAv1vPYOS76u6Fi6Qf4qUg==/dev.mambo.lib.ui.presentation.test-wHa_1-mVCnTJ8ZAHjaLuIA==/base.dm': No such file or directory
+03-11 12:16:39.744  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity for user 0: +54ms
+03-11 12:16:39.748 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085578120 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.752 22041 22051 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085579a10 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.754 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085579fb0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.754 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.756 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.758 22106 22150 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.760 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.761 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.764 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.768  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:74f728c6: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+03-11 12:16:39.768  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:74f728c6: onCancelled at PHASE_SERVER_SHOULD_HIDE
+03-11 12:16:39.770 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.772 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.772  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2589
+03-11 12:16:39.773  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+03-11 12:16:39.773  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1568 onStartInput(EditorInfo{EditorInfo{packageName=dev.mambo.lib.ui.presentation.test, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+03-11 12:16:39.773  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+03-11 12:16:39.774  4028  4028 I AndroidIME: InputBundleManager.loadActiveInputBundleId():407 loadActiveInputBundleId: und-Latn-x-password, password
+03-11 12:16:39.776 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.777 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.777 22106 22150 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.778 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.779 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.784 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.787 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.789 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.794 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.795 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.797   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+03-11 12:16:39.797   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:39.797   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:39.797   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:39.797   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=3 error(-22)
+03-11 12:16:39.797   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:39.797   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:39.797   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:39.792   719   719 W HwBinder:719_2: type=1400 audit(0.0:11010): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.792   719   719 W HwBinder:719_2: type=1400 audit(0.0:11011): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.792   719   719 W HwBinder:719_2: type=1400 audit(0.0:11012): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.800 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.802 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.803 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.804 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.805 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.807 22041 22057 I droid.deskclock: WaitForGcToComplete blocked ProfileSaver on Background for 332.119ms
+03-11 12:16:39.807 22106 22172 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.808 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.809 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.809 22106 22172 I EssentialsCurrentCondit: Current condition cache hit for request=-66601366
+03-11 12:16:39.810 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=-66601366
+03-11 12:16:39.810 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.811 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.811 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.813 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.816 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.817 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.819 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.821 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.822 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.822 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.823 22106 22172 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.824 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.824 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.827 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.827 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.829 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.833 22106 22172 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.837 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.837 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.839 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.840 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.841 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.844 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.844 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.845 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575930 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.845 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.845 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.846 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.848 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.851 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.854 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.855 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.855 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.856 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.856 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.857 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.858 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.859 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.860 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.860 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.862 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.863 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.863 22106 22151 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.863 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.865 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.865 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.867 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.868 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575b70 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.870 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.871 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.872 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.873 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.873 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.874 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.875 22106 22174 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.876  7806  8054 D Pushy   : Connected successfully (sending keep alive every 300 seconds with 15 second JobService interval)
+03-11 12:16:39.876 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.877 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.877  7806  8054 W JobInfo : Job 'com.baobabcircle.afyapap.stg/me.pushy.sdk.services.PushyJobService#10000' has a deadline with functional constraints and an extremely short time window of 0 ms (delay=15000, deadline=15000). The functional constraints are not likely to be satisfied when the job runs.
+03-11 12:16:39.877 22106 22174 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.878 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.878  1800  3579 W JobInfo : Job 'com.baobabcircle.afyapap.stg/me.pushy.sdk.services.PushyJobService#10000' has a deadline with functional constraints and an extremely short time window of 0 ms (delay=15000, deadline=15000). The functional constraints are not likely to be satisfied when the job runs.
+03-11 12:16:39.878  1800  3579 W JobInfo : Job 'com.baobabcircle.afyapap.stg/me.pushy.sdk.services.PushyJobService#10000' has a deadline with functional constraints and an extremely short time window of 0 ms (delay=15000, deadline=15000). The functional constraints are not likely to be satisfied when the job runs.
+03-11 12:16:39.880 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.881 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.889 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085576830 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.889 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.889 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.890 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.890 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.892 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.893 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.893  1800  4289 I WifiService: acquireWifiLock uid=10323 lockMode=1 packageName=com.baobabcircle.afyapap.stg
+03-11 12:16:39.894 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.895 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.898  7806  8054 D Pushy   : Wi-Fi lock acquired
+03-11 12:16:39.900 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.903 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.905 22106 22172 D WM-ConstraintTracker: k: initial state = NetworkState(isConnected=true, isValidated=true, isMetered=false, isNotRoaming=true)
+03-11 12:16:39.905 22106 22172 D WM-NetworkStateTracker: Registering network callback
+03-11 12:16:39.905 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.906 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.909 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.911 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.916  1800  4289 D ConnectivityService: requestNetwork for uid/pid:10281/22106 activeRequest: null callbackRequest: 3886 [NetworkRequest [ REQUEST id=3887, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10281 RequestorUid: 10281 RequestorPkg: com.google.android.apps.weather UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|NC
+03-11 12:16:39.918 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.920  1800  2435 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3887, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10281 RequestorUid: 10281 RequestorPkg: com.google.android.apps.weather UnderlyingNetworks: Null] ]
+03-11 12:16:39.920  1800  2435 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3887, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10281 RequestorUid: 10281 RequestorPkg: com.google.android.apps.weather UnderlyingNetworks: Null] ]
+03-11 12:16:39.920 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.921  1800  2435 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=3887, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10281 RequestorUid: 10281 RequestorPkg: com.google.android.apps.weather UnderlyingNetworks: Null] ]
+03-11 12:16:39.921  1800  2435 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3887, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10281 RequestorUid: 10281 RequestorPkg: com.google.android.apps.weather UnderlyingNetworks: Null] ]
+03-11 12:16:39.921 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.922 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.923  1800  2443 D ConnectivityService: NetReassign [3887 : null → 104] [c 0] [a 2] [i 5]
+03-11 12:16:39.923 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.925 22106 22172 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.925 22106 22151 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.925 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.926 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.926 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.927 22106 22151 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.928 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.928 22106 22151 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.928 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.928 22106 22172 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.930 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.932 22106 25960 D WM-NetworkStateTracker: Network capabilities changed: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=6497Kbps LinkDnBandwidth>=26569Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /192.168.0.104, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -55, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 300Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 300Mbps, Frequency: 2442MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -55 UnderlyingNetworks: Null]
+03-11 12:16:39.933 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.933 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.933 22106 22174 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.935 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.935 22041 25930 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000070855765c0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.936 22106 22174 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.936 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.936 22106 22151 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.937 22041 22051 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085576920 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.938 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.938 22106 22174 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.939 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=-66601366
+03-11 12:16:39.940 22106 22151 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:39.940 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.941 22041 25930 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000070855796b0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.941 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.942 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.942 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.942 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.943 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.943 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.943 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.943 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.943 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.944 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.944 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.944 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb40000708557a2e0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.944 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.944 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000070855776a0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.944 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.945 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.945 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.945 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085579bc0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.947 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.947 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.947 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.948 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.949 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.949 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.949 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085576950 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.949 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.949 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.950 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.950 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.950 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.950 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.951 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.951 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.952 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.952 22106 22151 D WM-ConstraintTracker: a: initial state = true
+03-11 12:16:39.952 22106 22151 D WM-BrdcstRcvrCnstrntTrc: a: registering receiver
+03-11 12:16:39.952 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.953 22106 22172 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.953 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.953 22106 22172 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.953 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.953 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.954 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.954 22106 22172 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.955 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.956 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.956 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.957 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.958 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.959 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.960 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.965 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575660 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.971 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085574a30 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.973 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.974 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.974 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.975 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.975 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.975 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.975 22106 22174 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.975 22106 22151 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.976 22106 22151 D WM-GreedyScheduler: Constraints met: Scheduling work ID WorkGenerationalId(workSpecId=a549a77e-86c9-4b83-90ed-6b0f32b5998d, generation=4609)
+03-11 12:16:39.977 22106 22151 D WM-GreedyScheduler: Constraints met: Scheduling work ID WorkGenerationalId(workSpecId=36b7ac3a-c313-4aaf-b113-3f99e86ddfdf, generation=4610)
+03-11 12:16:39.977 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.978 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.979 22106 22106 D WM-GreedyScheduler: Stopping tracking for WorkGenerationalId(workSpecId=a549a77e-86c9-4b83-90ed-6b0f32b5998d, generation=4609)
+03-11 12:16:39.980 22106 22106 D WM-GreedyScheduler: Stopping tracking for WorkGenerationalId(workSpecId=36b7ac3a-c313-4aaf-b113-3f99e86ddfdf, generation=4610)
+03-11 12:16:39.986 22106 22151 D WM-GreedyScheduler: Cancelling work ID a549a77e-86c9-4b83-90ed-6b0f32b5998d
+03-11 12:16:39.988 22106 22174 D WM-NetworkStateTracker: Unregistering network callback
+03-11 12:16:39.990 22041 25919 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000070855754b0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.994 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.995 22106 22174 D WM-GreedyScheduler: Cancelling work ID 36b7ac3a-c313-4aaf-b113-3f99e86ddfdf
+03-11 12:16:39.996 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085578000 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.997 22106 22174 D WM-BrdcstRcvrCnstrntTrc: a: unregistering receiver
+03-11 12:16:39.998 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575b40 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:40.002 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:40.003 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:40.004 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:40.005 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:40.010 22041 25930 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575c90 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:40.016 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:40.018 22106 22151 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:40.019  2517  2559 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@b64e9e1
+03-11 12:16:40.022 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:40.023 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085576170 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:40.026 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:40.026 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:40.027 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575f00 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:40.028 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:40.029 22106 22172 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:40.029 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:40.031 22106 22174 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:40.034 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575780 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:40.037 22041 22202 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085575120 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:40.238 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.238 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.249 18147 18147 D VRI[HomeActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:16:40.256 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.256 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.257 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.257 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.258 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.258 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.259 22106 22121 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.259 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.259 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.260 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.261 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.265 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.267 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.267 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.268 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.268 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.268 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.274 22106 25959 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:40.356  1800  4391 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2254fd21 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+03-11 12:16:40.364  1800  2483 W ServiceManagerCppClient: Waited one second for android.hardware.biometrics.fingerprint.IFingerprint/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+03-11 12:16:40.365 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: PAUSED
+03-11 12:16:40.365 25820 25820 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@b1bebd
+03-11 12:16:40.366   636 25962 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.biometrics.fingerprint.IFingerprint/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+03-11 12:16:40.369 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d in: PRE_ON_CREATE
+03-11 12:16:40.369 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d
+03-11 12:16:40.379 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d in: CREATED
+03-11 12:16:40.379 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d
+03-11 12:16:40.379 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d in: STARTED
+03-11 12:16:40.379 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d
+03-11 12:16:40.381 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d in: RESUMED
+03-11 12:16:40.381 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d
+03-11 12:16:40.384  1800  4289 W JobInfo : Job 'com.google.android.apps.photos/com.google.android.libraries.social.async.BackgroundTaskJobService#1043' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+03-11 12:16:40.405  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +49ms
+03-11 12:16:40.412 25820 25820 D VRI[ComponentActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:16:40.413 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: STOPPED
+03-11 12:16:40.413 25820 25820 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@b1bebd
+03-11 12:16:40.418 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@b1bebd in: DESTROYED
+03-11 12:16:40.418 25820 25820 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+03-11 12:16:40.418 25820 25820 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@8577c44
+03-11 12:16:40.422 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@bb431d in: PAUSED
+03-11 12:16:40.428 25820 25844 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@9bcfc49]
+03-11 12:16:40.428   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:16:40.429 25820 25844 I TestRunner: finished: shouldShowLoadingIndicator_WhenOnInitCalled(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)

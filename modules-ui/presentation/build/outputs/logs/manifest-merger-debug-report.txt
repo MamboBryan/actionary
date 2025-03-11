@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml:2:13-83
-INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml:2:13-83
+ADDED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml:2:13-83
+INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml:2:13-83
 	package
-		INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml
+		INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml
 	xmlns:android
-		ADDED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml:2:23-81
+		ADDED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml:2:23-81
 uses-sdk
-INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml reason: use-sdk injection requested
-INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml
-INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml
+INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml reason: use-sdk injection requested
+INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml
+INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml
 	android:targetSdkVersion
-		INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml
+		INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml
 	android:minSdkVersion
-		INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1976916690465554103.xml
+		INJECTED from /Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15786377368938184189.xml

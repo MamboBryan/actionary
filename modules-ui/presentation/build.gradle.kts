@@ -7,7 +7,10 @@ android {
 }
 
 dependencies {
+    // modules
     api(projects.modulesUi.design)
-    implementation(libs.bundles.voyager)
     implementation(projects.modulesData.domain)
+    // libraries
+    implementation(libs.bundles.voyager)
+    implementation(libs.androidx.core.splashscreen)
 }

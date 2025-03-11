@@ -1,0 +1,579 @@
+03-11 12:16:38.014 25820 25844 I TestRunner: started: shouldShowValidErrorMessage_WhenGettingTasksFails(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)
+03-11 12:16:38.015  4080  4990 I famc    : (REDACTED) <<< [%s] Reading SodaResourceManager message with updated resourceIds: %s. Total set: %s
+03-11 12:16:38.016  3894  4193 I bez     : Finished work type: HANDLE_PACKAGES_CHANGED, success: true, latency: PT0.03S
+03-11 12:16:38.016  3894  3894 I WorkService: Stopping the work service
+03-11 12:16:38.016  3894  3894 I WorkService: Work service moved out of the foreground
+03-11 12:16:38.047  1400  1480 I WifiHAL : Getting cached scan results, iface handle = 0xb4000070a6636710
+03-11 12:16:38.047  1400  1480 E WifiHAL : Creating message to get cached scan results
+03-11 12:16:38.047  1400  1480 D WifiHAL : error code -95 mapped to -3
+03-11 12:16:38.048  1800  2435 E WifiStaIfaceAidlImpl: getCachedScanData failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+03-11 12:16:38.053  4235  4835 I doip    : Didn't find an initialized EnrollmentManager. Updating config.
+03-11 12:16:38.053  4235  4835 I A       : (REDACTED) updateConfig: Hotword present: %b, LP directory: %s
+03-11 12:16:38.057  4235  5528 I native  : I0000 00:00:1741684598.057522    5528 enrollment_manager_impl.cc:447] UpdateConfigRequest with timeout: 0
+03-11 12:16:38.071 25820 25844 W FileTestStorage: Output properties is not supported.
+03-11 12:16:38.072 25820 25844 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+03-11 12:16:38.080 25820 25820 D EventInjectionStrategy: Creating injection strategy with input manager.
+03-11 12:16:38.081 25820 25820 W esentation.test: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+03-11 12:16:38.082 25820 25820 W esentation.test: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+03-11 12:16:38.082 25820 25820 W esentation.test: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+03-11 12:16:38.088  1800  2443 D ConnectivityService: NetReassign [no changes] [c 0] [a 2] [i 10]
+03-11 12:16:38.094  4235 10021 E SpeechMicro: Hotword model is single-channel neuralnet.
+03-11 12:16:38.098  4235 10021 I native  : I0000 00:00:1741684598.098657   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.098  4235 10021 I native  : I0000 00:00:1741684598.098888   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.098  4235 10021 I native  : I0000 00:00:1741684598.098929   10021 enrollment_manager_impl.cc:1047] Attempting to insert stored TD-SID profiles into config.
+03-11 12:16:38.098  4235 10021 I native  : I0000 00:00:1741684598.098953   10021 enrollment_manager_impl.cc:1071] Found 0 speakers with existing TDSID models.
+03-11 12:16:38.098  4235 10021 W native  : W0000 00:00:1741684598.098975   10021 enrollment_manager_impl.cc:1103] No valid TD-SID models found.
+03-11 12:16:38.099  4235 10021 I native  : I0000 00:00:1741684598.098993   10021 enrollment_manager_impl.cc:1402] Retrieved stored TDSID models. Speakers requiring re-training:0
+03-11 12:16:38.099  4235 10021 I native  : I0000 00:00:1741684598.099008   10021 enrollment_manager_impl.cc:1120] Attempting to insert stored TI-SID profiles into config.
+03-11 12:16:38.099  4235 10021 I native  : I0000 00:00:1741684598.099018   10021 enrollment_manager_impl.cc:1145] Found 0 speakers with existing TI-SID models.
+03-11 12:16:38.099  4235 10021 W native  : W0000 00:00:1741684598.099029   10021 enrollment_manager_impl.cc:1177] No valid TI-SID models found.
+03-11 12:16:38.099  4235 10021 I native  : I0000 00:00:1741684598.099041   10021 enrollment_manager_impl.cc:1415] Retrieved stored TISID models. Speakers requiring re-training:0
+03-11 12:16:38.099  4235 10021 I native  : I0000 00:00:1741684598.099057   10021 enrollment_manager_impl.cc:1425] Retrieved Server TISID models.
+03-11 12:16:38.099  4235  5528 I A       : (REDACTED) handleResponse for  %s user(s)
+03-11 12:16:38.099  4235  5528 I A       : (REDACTED) Found SodaVmmmClassicWriter. Preparing to propagate model update for status: %s
+03-11 12:16:38.099  4235  5528 I A       : Skipping model update propagation to SodaVmmmClassicWriter since speaker model did not change.
+03-11 12:16:38.100  4235  5525 I A       : getHotwordSpeakerIdModels
+03-11 12:16:38.100  4235  5525 I doip    : Returning empty SpeakerId model
+03-11 12:16:38.100  4235  5525 I doip    : #initialize
+03-11 12:16:38.100  4235  5525 I doip    : #getTdsidModel
+03-11 12:16:38.100  4235 10021 I native  : I0000 00:00:1741684598.100593   10021 enrollment_manager_impl.cc:460] Invoking listeners with updated speaker profiles.
+03-11 12:16:38.100  4235  5528 I A       : #handleModelUpdate
+03-11 12:16:38.100  4235  5528 I A       : (REDACTED) # of TDSID models received: %s
+03-11 12:16:38.100  4235  5528 I A       : (REDACTED) Size of TI-SID model bytestring received: %s
+03-11 12:16:38.100  4235  5528 I A       : (REDACTED) # of Server TI-SID voiceprints received: %s
+03-11 12:16:38.102  4235  4940 I doip    : Already has an initialized EnrollmentManager.
+03-11 12:16:38.102  4235  5528 I A       : getTextIndependentSpeakerIdModels
+03-11 12:16:38.102  4235  5528 I doip    : #initialize
+03-11 12:16:38.104  4235  4940 I doip    : Didn't find an initialized EnrollmentManager. Updating config.
+03-11 12:16:38.104  4235  4940 I A       : (REDACTED) updateConfig: Hotword present: %b, LP directory: %s
+03-11 12:16:38.107 25820 25820 W esentation.test: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+03-11 12:16:38.107  4235  5525 I native  : I0000 00:00:1741684598.107341    5525 enrollment_manager_impl.cc:447] UpdateConfigRequest with timeout: 0
+03-11 12:16:38.107 25820 25820 W esentation.test: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+03-11 12:16:38.107 25820 25820 W esentation.test: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+03-11 12:16:38.108 25820 25844 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@41a5583]
+03-11 12:16:38.121  4080  5255 I famc    : (REDACTED) <<< [%s] Reading SodaResourceManager message with updated resourceIds: %s. Total set: %s
+03-11 12:16:38.121  4080  5255 I famc    : (REDACTED) <<< [%s] SodaResourceManager session emitted all requested resources: %s. Ok to terminate.
+03-11 12:16:38.126 25820 25844 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-11 12:16:38.133  4235 10021 E SpeechMicro: Hotword model is single-channel neuralnet.
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134617   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134831   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134874   10021 enrollment_manager_impl.cc:1047] Attempting to insert stored TD-SID profiles into config.
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134890   10021 enrollment_manager_impl.cc:1071] Found 0 speakers with existing TDSID models.
+03-11 12:16:38.134  4235 10021 W native  : W0000 00:00:1741684598.134910   10021 enrollment_manager_impl.cc:1103] No valid TD-SID models found.
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134920   10021 enrollment_manager_impl.cc:1402] Retrieved stored TDSID models. Speakers requiring re-training:0
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134933   10021 enrollment_manager_impl.cc:1120] Attempting to insert stored TI-SID profiles into config.
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134946   10021 enrollment_manager_impl.cc:1145] Found 0 speakers with existing TI-SID models.
+03-11 12:16:38.134  4235 10021 W native  : W0000 00:00:1741684598.134962   10021 enrollment_manager_impl.cc:1177] No valid TI-SID models found.
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134975   10021 enrollment_manager_impl.cc:1415] Retrieved stored TISID models. Speakers requiring re-training:0
+03-11 12:16:38.134  4235 10021 I native  : I0000 00:00:1741684598.134990   10021 enrollment_manager_impl.cc:1425] Retrieved Server TISID models.
+03-11 12:16:38.135  4235  5525 I A       : (REDACTED) handleResponse for  %s user(s)
+03-11 12:16:38.135  4235  5525 I A       : (REDACTED) Found SodaVmmmClassicWriter. Preparing to propagate model update for status: %s
+03-11 12:16:38.135  4235  5525 I A       : Skipping model update propagation to SodaVmmmClassicWriter since speaker model did not change.
+03-11 12:16:38.135  4235 10021 I native  : I0000 00:00:1741684598.135603   10021 enrollment_manager_impl.cc:460] Invoking listeners with updated speaker profiles.
+03-11 12:16:38.135  4235  5525 I A       : #handleModelUpdate
+03-11 12:16:38.135  4235  5525 I A       : (REDACTED) # of TDSID models received: %s
+03-11 12:16:38.136  4235  5525 I A       : (REDACTED) Size of TI-SID model bytestring received: %s
+03-11 12:16:38.136  4235  5525 I A       : (REDACTED) # of Server TI-SID voiceprints received: %s
+03-11 12:16:38.136  4235  5489 I A       : getHotwordSpeakerIdModels
+03-11 12:16:38.136  4235  5489 I doip    : Returning empty SpeakerId model
+03-11 12:16:38.136  4235  5529 I faja    : (REDACTED) [%s] No SpeakerId model found
+03-11 12:16:38.136  4235  5489 I doip    : #getTdsidModel
+03-11 12:16:38.136  4235  5489 I doip    : #initialize
+03-11 12:16:38.138  1800  5026 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2254fd21 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+03-11 12:16:38.138  4235  4940 I doip    : Didn't find an initialized EnrollmentManager. Updating config.
+03-11 12:16:38.139  4235  4940 I A       : (REDACTED) updateConfig: Hotword present: %b, LP directory: %s
+03-11 12:16:38.142  4235  5525 I native  : I0000 00:00:1741684598.142258    5525 enrollment_manager_impl.cc:447] UpdateConfigRequest with timeout: 0
+03-11 12:16:38.157  4080  5240 I famc    : (REDACTED) <<< [%s] Reading SodaResourceManager message with updated resourceIds: %s. Total set: %s
+03-11 12:16:38.158  4080  5240 I famc    : (REDACTED) <<< [%s] SodaResourceManager session emitted all requested resources: %s. Ok to terminate.
+03-11 12:16:38.165 25820 25847 D vulkan  : searching for layers in '/data/app/~~GAv1vPYOS76u6Fi6Qf4qUg==/dev.mambo.lib.ui.presentation.test-wHa_1-mVCnTJ8ZAHjaLuIA==/lib/arm64'
+03-11 12:16:38.166 25820 25847 D vulkan  : searching for layers in '/data/app/~~GAv1vPYOS76u6Fi6Qf4qUg==/dev.mambo.lib.ui.presentation.test-wHa_1-mVCnTJ8ZAHjaLuIA==/base.apk!/lib/arm64-v8a'
+03-11 12:16:38.171 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: PRE_ON_CREATE
+03-11 12:16:38.171 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+03-11 12:16:38.177  4235  5525 I faja    : (REDACTED) [%s] All resources wrote to PDS and notified client.
+03-11 12:16:38.177  4235  5525 I faja    : (REDACTED) [%s] hotwordLatency: %d, tdsidLatency: %d, All resources latency: %d
+03-11 12:16:38.178 25820 25847 I DMABUFHEAPS: Using DMA-BUF heap named: vframe-secure
+03-11 12:16:38.178  4235  4835 I famo    : (REDACTED) [%s] Returning ResourceResponse.
+03-11 12:16:38.185  4080  5240 I famc    : (REDACTED) [%s] SRM session terminated after all resources accounted for: %s.
+03-11 12:16:38.185   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:16:38.192 25820 25820 D DesktopModeFlagsUtil: Toggle override initialized to: OVERRIDE_UNSET
+03-11 12:16:38.197  4080  4853 I ezts    : #updateSodaResourcesWithoutReload
+03-11 12:16:38.197  4235 10021 E SpeechMicro: Hotword model is single-channel neuralnet.
+03-11 12:16:38.197  4080  5240 I ezts    : #updateSodaResourcesWithoutReload inside sequencer
+03-11 12:16:38.198  4080  4876 I ezts    : #checkAsrCompatibility inside sequencer
+03-11 12:16:38.198  4080  4876 I ezts    : (REDACTED) #checkAsrCompatibility initializing Soda. Locale: %s. Expected LP version: %d
+03-11 12:16:38.198  4235 10021 I native  : I0000 00:00:1741684598.198813   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199179   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199201   10021 enrollment_manager_impl.cc:1047] Attempting to insert stored TD-SID profiles into config.
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199214   10021 enrollment_manager_impl.cc:1071] Found 0 speakers with existing TDSID models.
+03-11 12:16:38.199  4235 10021 W native  : W0000 00:00:1741684598.199237   10021 enrollment_manager_impl.cc:1103] No valid TD-SID models found.
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199248   10021 enrollment_manager_impl.cc:1402] Retrieved stored TDSID models. Speakers requiring re-training:0
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199262   10021 enrollment_manager_impl.cc:1120] Attempting to insert stored TI-SID profiles into config.
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199274   10021 enrollment_manager_impl.cc:1145] Found 0 speakers with existing TI-SID models.
+03-11 12:16:38.199  4235 10021 W native  : W0000 00:00:1741684598.199306   10021 enrollment_manager_impl.cc:1177] No valid TI-SID models found.
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199320   10021 enrollment_manager_impl.cc:1415] Retrieved stored TISID models. Speakers requiring re-training:0
+03-11 12:16:38.199  4235 10021 I native  : I0000 00:00:1741684598.199440   10021 enrollment_manager_impl.cc:1425] Retrieved Server TISID models.
+03-11 12:16:38.196   719   719 W HwBinder:719_2: type=1400 audit(0.0:10998): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:38.196   719   719 W HwBinder:719_2: type=1400 audit(0.0:10999): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:38.200  4235  5525 I A       : (REDACTED) handleResponse for  %s user(s)
+03-11 12:16:38.200  4080  4876 I ezts    : (REDACTED) Soda cache directory: %s
+03-11 12:16:38.200  4235  5525 I A       : (REDACTED) Found SodaVmmmClassicWriter. Preparing to propagate model update for status: %s
+03-11 12:16:38.200  4235  5525 I A       : Skipping model update propagation to SodaVmmmClassicWriter since speaker model did not change.
+03-11 12:16:38.200   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+03-11 12:16:38.200  4235  5525 I A       : getHotwordSpeakerIdModels
+03-11 12:16:38.200  4235  5525 I doip    : Returning empty SpeakerId model
+03-11 12:16:38.200  4080  4876 I ezts    : Hotmatch disabled: flag not enabled
+03-11 12:16:38.201  4235  5525 I doip    : #getTdsidModel
+03-11 12:16:38.201  4235  5525 I doip    : #initialize
+03-11 12:16:38.201  4080  4876 I fagy    : SODA instance exists and matches params. Updating callbacks and returning preloaded instance.
+03-11 12:16:38.201   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:38.201   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:38.202   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:38.207  4235 10021 I native  : I0000 00:00:1741684598.207355   10021 enrollment_manager_impl.cc:460] Invoking listeners with updated speaker profiles.
+03-11 12:16:38.208  4235  5525 I A       : #handleModelUpdate
+03-11 12:16:38.208  4235  5525 I A       : (REDACTED) # of TDSID models received: %s
+03-11 12:16:38.208  4235  5525 I A       : (REDACTED) Size of TI-SID model bytestring received: %s
+03-11 12:16:38.208  4235  5525 I A       : (REDACTED) # of Server TI-SID voiceprints received: %s
+03-11 12:16:38.208  4080  4876 I ezts    : #checkAsrCompatibility successful!
+03-11 12:16:38.209  4080  4876 I ezul    : Compatcheck success for background update.
+03-11 12:16:38.209  4080  4876 I ezts    : #backgroundUpdate
+03-11 12:16:38.209  4080  5300 I ezts    : #backgroundUpdate inside sequencer
+03-11 12:16:38.209  4080  5300 I ezts    : #backgroundUpdate using the existing ASR soda instance.
+03-11 12:16:38.212  4235  4835 I doip    : Didn't find an initialized EnrollmentManager. Updating config.
+03-11 12:16:38.212  4235  4835 I A       : (REDACTED) updateConfig: Hotword present: %b, LP directory: %s
+03-11 12:16:38.214  4235  5525 I native  : I0000 00:00:1741684598.214429    5525 enrollment_manager_impl.cc:447] UpdateConfigRequest with timeout: 0
+03-11 12:16:38.214  4080  5300 I native  : I0000 00:00:1741684598.214555    5300 context-module-impl.cc:801] Update context input. (Proto:MessageLite at 0xb400007085626480)
+03-11 12:16:38.217  4080  5300 I native  : I0000 00:00:1741684598.217000    5300 context-module-impl.cc:808] Update context input for public scope. (Proto:MessageLite at 0xb400007085626480)
+03-11 12:16:38.217  4080  5300 I ezul    : #backgroundBiasingUpdate succeeded.
+03-11 12:16:38.220 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: CREATED
+03-11 12:16:38.220 25820 25820 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@d0ac30
+03-11 12:16:38.221  4080  4990 I errh    : (REDACTED) Sending speech biasing context update to SODA with locale %s. %s
+03-11 12:16:38.221 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: STARTED
+03-11 12:16:38.221 25820 25820 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@d0ac30
+03-11 12:16:38.221  4080  4990 I ezul    : (REDACTED) #getSodaAsrUpdateRequest inserting app domain: %s
+03-11 12:16:38.223 25820 25820 D CompatChangeReporter: Compat change id reported: 37756858; UID 10541; state: ENABLED
+03-11 12:16:38.226  4080  4876 I ewcu    : (REDACTED) AppFlow %s is about to be transmitted
+03-11 12:16:38.226  4080  5300 I ezts    : #checkAsrCompatibility inside sequencer
+03-11 12:16:38.227  4080  5255 I ewfq    : (REDACTED) %s TNG App is logging Clearcut event named %s with the %s account state and %s source
+03-11 12:16:38.227  4080  5300 I ezts    : (REDACTED) #checkAsrCompatibility initializing Soda. Locale: %s. Expected LP version: %d
+03-11 12:16:38.227  4080  5300 I ezts    : (REDACTED) Soda cache directory: %s
+03-11 12:16:38.228  4080  5253 I bthj    : #getOobeStatus: OptedOut [CONTEXT ratelimit_period="10 SECONDS" skipped=5 ]
+03-11 12:16:38.228  4080  5253 I bmyi    : User not OptedIn. Skipping Eligibility Checks.
+03-11 12:16:38.232 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: RESUMED
+03-11 12:16:38.232 25820 25820 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@d0ac30
+03-11 12:16:38.238  4080  5300 I ezts    : Hotmatch disabled: flag not enabled
+03-11 12:16:38.239  4080  5300 I fagy    : SODA instance exists and matches params. Updating callbacks and returning preloaded instance.
+03-11 12:16:38.245  4235 10021 E SpeechMicro: Hotword model is single-channel neuralnet.
+03-11 12:16:38.246  4080  5300 I ezts    : #checkAsrCompatibility successful!
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249377   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249632   10021 enrollment_manager_impl_utils.cc:80] Using standalone TI-SID pipeline config:/data/user/0/com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1702979559060/configs/ONDEVICE_LARGE_VOICE_MATCH.config
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249655   10021 enrollment_manager_impl.cc:1047] Attempting to insert stored TD-SID profiles into config.
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249669   10021 enrollment_manager_impl.cc:1071] Found 0 speakers with existing TDSID models.
+03-11 12:16:38.249  4235 10021 W native  : W0000 00:00:1741684598.249693   10021 enrollment_manager_impl.cc:1103] No valid TD-SID models found.
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249707   10021 enrollment_manager_impl.cc:1402] Retrieved stored TDSID models. Speakers requiring re-training:0
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249721   10021 enrollment_manager_impl.cc:1120] Attempting to insert stored TI-SID profiles into config.
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249735   10021 enrollment_manager_impl.cc:1145] Found 0 speakers with existing TI-SID models.
+03-11 12:16:38.249  4235 10021 W native  : W0000 00:00:1741684598.249749   10021 enrollment_manager_impl.cc:1177] No valid TI-SID models found.
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249762   10021 enrollment_manager_impl.cc:1415] Retrieved stored TISID models. Speakers requiring re-training:0
+03-11 12:16:38.249  4235 10021 I native  : I0000 00:00:1741684598.249776   10021 enrollment_manager_impl.cc:1425] Retrieved Server TISID models.
+03-11 12:16:38.255  4235  5525 I A       : (REDACTED) handleResponse for  %s user(s)
+03-11 12:16:38.255  4235  5525 I A       : (REDACTED) Found SodaVmmmClassicWriter. Preparing to propagate model update for status: %s
+03-11 12:16:38.255  4235  5525 I A       : Skipping model update propagation to SodaVmmmClassicWriter since speaker model did not change.
+03-11 12:16:38.256  4235  5529 I A       : getHotwordSpeakerIdModels
+03-11 12:16:38.256  4235  5529 I doip    : Returning empty SpeakerId model
+03-11 12:16:38.256  4235  5529 I falo    : (REDACTED) [%s] No Tdsid update occurred. Skipping callback(s)
+03-11 12:16:38.257  4080  5300 I ezul    : Compatcheck success for background update.
+03-11 12:16:38.257  4080  5300 I ezts    : #backgroundUpdate
+03-11 12:16:38.257  4080  4842 I ezts    : #backgroundUpdate inside sequencer
+03-11 12:16:38.257  4080  4853 I ezts    : #backgroundUpdate using the existing ASR soda instance.
+03-11 12:16:38.258  4080  4853 I ezul    : #backgroundBiasingUpdate succeeded.
+03-11 12:16:38.258  4080  5240 I errh    : (REDACTED) SODA speech biasing context update for %s is complete. %s
+03-11 12:16:38.259  4080  5240 I erqs    : (REDACTED) Successfully scheduled context update for key: %s for %s.
+03-11 12:16:38.259  4080  4853 I ewcu    : (REDACTED) AppFlow %s is about to be transmitted
+03-11 12:16:38.260  4080  5240 I ewfq    : (REDACTED) %s TNG App is logging Clearcut event named %s with the %s account state and %s source
+03-11 12:16:38.260  4080  5240 I bmyi    : User not OptedIn. Skipping Eligibility Checks.
+03-11 12:16:38.264  4235 10021 I native  : I0000 00:00:1741684598.264506   10021 enrollment_manager_impl.cc:460] Invoking listeners with updated speaker profiles.
+03-11 12:16:38.264  4080  4853 I ewcu    : (REDACTED) AppFlow %s is about to be transmitted
+03-11 12:16:38.264  4235  4980 I A       : #handleModelUpdate
+03-11 12:16:38.264  4235  4980 I A       : (REDACTED) # of TDSID models received: %s
+03-11 12:16:38.264  4235  4980 I A       : (REDACTED) Size of TI-SID model bytestring received: %s
+03-11 12:16:38.264  4235  4980 I A       : (REDACTED) # of Server TI-SID voiceprints received: %s
+03-11 12:16:38.266  4080  5240 I ewfq    : (REDACTED) %s TNG App is logging Clearcut event named %s with the %s account state and %s source
+03-11 12:16:38.267  4080  5240 I bmyi    : User not OptedIn. Skipping Eligibility Checks.
+03-11 12:16:38.264   719   719 W HwBinder:719_2: type=1400 audit(0.0:11000): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:38.264   719   719 W HwBinder:719_2: type=1400 audit(0.0:11001): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:38.268   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+03-11 12:16:38.268   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:38.268   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:38.268   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:38.270   717   768 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10541 pid=0
+03-11 12:16:38.270   717   768 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10541 => denied (259 us)
+03-11 12:16:38.270   717  3023 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10541 pid=25820
+03-11 12:16:38.270   717  3023 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10541 => denied (101 us)
+03-11 12:16:38.271   717   768 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10541 pid=0
+03-11 12:16:38.271   717   768 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10541 => denied (122 us)
+03-11 12:16:38.271   717  3023 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10541 pid=25820
+03-11 12:16:38.271   717  3023 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10541 => denied (90 us)
+03-11 12:16:38.271   717   768 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10541 pid=0
+03-11 12:16:38.271   717   768 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10541 => denied (111 us)
+03-11 12:16:38.271   717  3023 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10541 pid=25820
+03-11 12:16:38.271   717  3023 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10541 => denied (65 us)
+03-11 12:16:38.329 22106 22106 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+03-11 12:16:38.329 22106 22106 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+03-11 12:16:38.331 22106 22150 D WM-ForceStopRunnable: The default process name was not specified.
+03-11 12:16:38.336   635   635 I lowmemorykiller: Kill 'com.google.android.dialer' (19167), uid 10124, oom_score_adj 985 to free 97708kB rss, 70936kB swap; reason: low watermark is breached
+03-11 12:16:38.338 22106 22150 D WM-ForceStopRunnable: Performing cleanup operations.
+03-11 12:16:38.351  1800  2483 W ServiceManagerCppClient: Waited one second for android.hardware.biometrics.fingerprint.IFingerprint/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+03-11 12:16:38.351 22106 22143 I id.apps.weather: Waiting for a blocking GC ProfileSaver
+03-11 12:16:38.364   636 25869 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.biometrics.fingerprint.IFingerprint/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+03-11 12:16:38.370 22106 22106 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=a19940b8-1600-468c-9f34-bf8fe411c514, generation=4609)
+03-11 12:16:38.376  1678  1678 I adbd    : Remote process closed the socket (on MSG_PEEK)
+03-11 12:16:38.378   635   635 I lowmemorykiller: Kill 'com.android.vending:instant_app_installer' (14001), uid 10162, oom_score_adj 985 to free 72500kB rss, 56004kB swap; reason: low watermark is breached
+03-11 12:16:38.379  1304  1304 I Zygote  : Process 19167 exited due to signal 9 (Killed)
+03-11 12:16:38.379  1800  2443 D ConnectivityService: releasing NetworkRequest [ REQUEST id=3756, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10124 RequestorUid: 10124 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ] (release request)
+03-11 12:16:38.379  1800  1930 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10124/pid_19167
+03-11 12:16:38.380  1800  2443 D ConnectivityService: releasing NetworkRequest [ REQUEST id=3758, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10124 RequestorUid: 10124 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ] (release request)
+03-11 12:16:38.381  5140  5140 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+03-11 12:16:38.397 22106 22112 W id.apps.weather: Missing inline cache for androidx.work.impl.am androidx.work.impl.am.i(android.content.Context)
+03-11 12:16:38.411  1800  2443 E ConnectivityService: RemoteException caught trying to send a callback msg for NetworkRequest [ LISTEN id=3759, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10124 RequestorUid: 10124 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+03-11 12:16:38.411  1800  2443 E ConnectivityService: RemoteException caught trying to send a callback msg for NetworkRequest [ LISTEN id=3759, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10124 RequestorUid: 10124 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+03-11 12:16:38.414  1800  2590 D ConnectivityService: requestNetwork for uid/pid:10163/7431 activeRequest: null callbackRequest: 3882 [NetworkRequest [ REQUEST id=3883, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10163 RequestorUid: 10163 RequestorPkg: com.linkedin.android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|NC
+03-11 12:16:38.420  1800  2435 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3883, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10163 RequestorUid: 10163 RequestorPkg: com.linkedin.android UnderlyingNetworks: Null] ]
+03-11 12:16:38.420 22106 22113 W id.apps.weather: Suspending all threads took: 7.419ms
+03-11 12:16:38.420  1800  2435 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3883, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10163 RequestorUid: 10163 RequestorPkg: com.linkedin.android UnderlyingNetworks: Null] ]
+03-11 12:16:38.420  1800  2435 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=3883, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10163 RequestorUid: 10163 RequestorPkg: com.linkedin.android UnderlyingNetworks: Null] ]
+03-11 12:16:38.420  1800  2435 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3883, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10163 RequestorUid: 10163 RequestorPkg: com.linkedin.android UnderlyingNetworks: Null] ]
+03-11 12:16:38.422  1800  2443 D ConnectivityService: NetReassign [3883 : null → 104] [c 0] [a 3] [i 4]
+03-11 12:16:38.425  1800  3579 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10541 pid=0
+03-11 12:16:38.425  1800  3579 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10541 => denied (169 us)
+03-11 12:16:38.425  1800  3579 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10541 pid=0
+03-11 12:16:38.425  1800  3579 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10541 => denied (48 us)
+03-11 12:16:38.425  1800  3579 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10541 pid=0
+03-11 12:16:38.425  1800  3579 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10541 => denied (41 us)
+03-11 12:16:38.427  1800  1872 W ziparchive: Unable to open '/data/app/~~GAv1vPYOS76u6Fi6Qf4qUg==/dev.mambo.lib.ui.presentation.test-wHa_1-mVCnTJ8ZAHjaLuIA==/base.dm': No such file or directory
+03-11 12:16:38.429  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity for user 0: +295ms
+03-11 12:16:38.449   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+03-11 12:16:38.449   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:38.449   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:38.449   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:38.444   719   719 W HwBinder:719_2: type=1400 audit(0.0:11002): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:38.456  1304  1304 I Zygote  : Process 14001 exited due to signal 9 (Killed)
+03-11 12:16:38.456  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:7ce0759d: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+03-11 12:16:38.456  1800  2289 I ImeTracker: dev.mambo.lib.ui.presentation.test:7ce0759d: onCancelled at PHASE_SERVER_SHOULD_HIDE
+03-11 12:16:38.459  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2589
+03-11 12:16:38.460  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+03-11 12:16:38.460  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1568 onStartInput(EditorInfo{EditorInfo{packageName=dev.mambo.lib.ui.presentation.test, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+03-11 12:16:38.444   719   719 W HwBinder:719_2: type=1400 audit(0.0:11003): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:38.462  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+03-11 12:16:38.463  4028  4028 I AndroidIME: InputBundleManager.loadActiveInputBundleId():407 loadActiveInputBundleId: und-Latn-x-password, password
+03-11 12:16:38.465  1800  2443 D ConnectivityService: releasing NetworkRequest [ REQUEST id=3693, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10162 RequestorUid: 10162 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ] (release request)
+03-11 12:16:38.466  1800  1930 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10162/pid_14001
+03-11 12:16:38.466  3028  3028 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.instantapps.START pkg=com.google.android.gms }
+03-11 12:16:38.497 22106 22113 I id.apps.weather: Background concurrent mark compact GC freed 7975KB AllocSpace bytes, 5(164KB) LOS objects, 83% free, 4703KB/28MB, paused 8.525ms,5.995ms total 300.937ms
+03-11 12:16:38.497 22106 22143 I id.apps.weather: WaitForGcToComplete blocked ProfileSaver on Background for 145.964ms
+03-11 12:16:38.513 22106 22150 D WM-Processor: n: processing WorkGenerationalId(workSpecId=a19940b8-1600-468c-9f34-bf8fe411c514, generation=4609)
+03-11 12:16:38.551 25820 25825 I esentation.test: Compiler allocated 4194KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+03-11 12:16:38.567 22106 22106 D WM-WorkerWrapper: Starting work for com.google.apps.tiktok.contrib.work.TikTokListenableWorker
+03-11 12:16:38.570 22106 25863 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.571 22106 25863 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.573 22106 22106 I SyncManagerImpl: #sync(). Running Synclets and scheduling next sync.
+03-11 12:16:38.573 22106 22121 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.573 22106 25863 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.574 22106 25863 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.574 22106 25863 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.577 22106 25863 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.577 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.578 22106 22168 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.578 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.580 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.581 22106 22151 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+03-11 12:16:38.586 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.588 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.590 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.591 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.592 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.594 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.595 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.595 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.596 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.602 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.603 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.604 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.605 22106 22198 V ClearcutMetricXmitter: Transmission is done.
+03-11 12:16:38.613 22106 22151 I SyncManagerImpl: Running synclets: [OrphanCacheSingletonSynclet, RegisteredLocationsWeatherDataSynclet, ForecastNotificationSynclet]
+03-11 12:16:38.630 22106 22175 I SyncManagerImpl: Starting synclet: OrphanCacheSingletonSynclet
+03-11 12:16:38.634 22106 22177 I SyncManagerImpl: Starting synclet: RegisteredLocationsWeatherDataSynclet
+03-11 12:16:38.636 22106 22177 I SyncManagerImpl: Starting synclet: ForecastNotificationSynclet
+03-11 12:16:38.646 25820 25825 I esentation.test: Compiler allocated 5281KB to compile void android.view.ViewRootImpl.performTraversals()
+03-11 12:16:38.662 22106 22177 I RegisteredLocationsWeat: found 1 registration documents with 4 unique locations when performing data sync
+03-11 12:16:38.678 22106 22170 I RegisteredLocationsWeat: found 1 registration documents with current location set when performing data sync
+03-11 12:16:38.679 22106 22170 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:38.680 22106 22170 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:38.703  2517  2559 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@2cf00f
+03-11 12:16:38.704 22106 22177 I EssentialsCurrentCondit: Fetching fresh current condition weather for request=1581780847
+03-11 12:16:38.709 22106 22170 I EssentialsDailyForecast: Fetching fresh daily forecast for request=1581780847
+03-11 12:16:38.709 22106 22175 I EssentialsCurrentCondit: Fetching fresh current condition weather for request=231847088
+03-11 12:16:38.711 22106 22169 I EssentialsDailyForecast: Fetching fresh daily forecast for request=231847088
+03-11 12:16:38.717 22106 22176 I EssentialsCurrentCondit: Fetching fresh current condition weather for request=2131550694
+03-11 12:16:38.717 18147 18147 D VRI[HomeActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:16:38.721 22106 22171 I EssentialsDailyForecast: Fetching fresh daily forecast for request=2131550694
+03-11 12:16:38.727  5140  5140 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+03-11 12:16:38.727  5140  5140 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+03-11 12:16:38.748  3028  4590 I FontLog : (REDACTED) Received query %s, URI %s
+03-11 12:16:38.748  3028  4590 I FontLog : (REDACTED) Query [%s] resolved to %s
+03-11 12:16:38.754  3028  4590 I FontLog : (REDACTED) Fetch %s end status %s
+03-11 12:16:38.758  3028  4590 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+03-11 12:16:38.768  3028  4590 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+03-11 12:16:38.834 22106 22170 I EssentialsDailyForecast: Fetching fresh daily forecast for request=-1105819202
+03-11 12:16:38.836 22106 22169 I EssentialsCurrentCondit: Fetching fresh current condition weather for request=-1105819202
+03-11 12:16:38.843 22106 22177 I PreferredLocationsRemot: Preferred location cache hit
+03-11 12:16:38.843 22106 22171 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:38.843 22106 22177 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:38.846 22106 22171 I LocationProviderImpl: Using last known location, age=PT22.951S
+03-11 12:16:38.847 22106 22177 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:38.847 22106 22177 I LocationProviderImpl: Using last known location, age=PT22.954S
+03-11 12:16:38.849 22106 22171 I EssentialsCurrentCondit: Querying current condition cache for request=5980253
+03-11 12:16:38.852 22106 22175 I PreferredLocationsRemot: Preferred location cache hit
+03-11 12:16:38.852 22106 22175 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:38.853 22106 22177 I WeatherForecastNotifica: Last notification date: 2025-03-10, current date: 2025-03-11
+03-11 12:16:38.860 22106 22175 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:38.861 22106 22175 I LocationProviderImpl: Using last known location, age=PT22.968S
+03-11 12:16:38.861 22106 22177 I PreferredLocationsRemot: Preferred location cache hit
+03-11 12:16:38.876 22106 22177 I EssentialsCurrentCondit: Querying current condition cache for request=1229004808
+03-11 12:16:38.876 22106 22171 I EssentialsHourlyForecas: Querying hourly forecast cache for request=-1135340275
+03-11 12:16:38.877 22106 22176 I EssentialsDailyForecast: Querying daily forecast cache for request=1229004808
+03-11 12:16:38.878 22106 22171 I LocalAddressCacheAccess: Querying local address cache for request=-2000785073
+03-11 12:16:38.878 22106 22177 I LocalAddressCacheAccess: Querying local address cache for request=-2000785073
+03-11 12:16:38.879 22106 22175 I EssentialsCurrentCondit: Querying current condition cache for request=-1135340275
+03-11 12:16:38.881 22106 22169 I EssentialsCurrentCondit: Current condition cache hit for request=5980253
+03-11 12:16:38.882 22106 22176 I EssentialsCurrentCondit: Current condition cache hit for request=1229004808
+03-11 12:16:38.883 22106 22169 I EssentialsDailyForecast: Querying daily forecast cache for request=5980253
+03-11 12:16:38.888 22106 22175 I EssentialsCurrentCondit: Current condition cache hit for request=-1135340275
+03-11 12:16:38.898 22106 22177 I LocalAddressCacheAccess: Local address cache hit for request=-2000785073
+03-11 12:16:38.900 22106 22175 I LocalAddressCacheAccess: Local address cache hit for request=-2000785073
+03-11 12:16:38.903 22106 22175 I EssentialsDailyForecast: Daily forecast cache hit for request=1229004808
+03-11 12:16:38.906  2893  2893 D CarrierSvcBindHelper: onPackageModified: dev.mambo.lib.ui.presentation.test
+03-11 12:16:38.907  2893  3131 D EuiccConnector: handleMessage: E msg.what=1
+03-11 12:16:38.907  2893  3131 D EuiccConnector: processMsg: ConnectedState
+03-11 12:16:38.907  2893  3131 D EuiccConnector: processMsg: DisconnectedState
+03-11 12:16:38.907  4068 25841 I AiAiEcho: (REDACTED) AppIndexer Package:[%s] UserProfile:[%d] Enabled:[%s].
+03-11 12:16:38.907  4068 25841 I AiAiEcho: (REDACTED) AppFetcherImplV2 updateApps package:[%s], userId:[%d], reason:[%s].
+03-11 12:16:38.908  2913  2983 D PackageUpdatedTask: Package updated: mOp=UPDATE packages=[dev.mambo.lib.ui.presentation.test], user=UserHandle{0}
+03-11 12:16:38.908  2893  2893 D CarrierSvcBindHelper: No carrier app for: 0
+03-11 12:16:38.908  2893  2893 D CarrierSvcBindHelper: No carrier app for: 1
+03-11 12:16:38.908  2893  3131 D EuiccConnector: handleMessage: X
+03-11 12:16:38.910  4068 25841 D LauncherApps: getActivityList: No launchable activities found forpackageName=dev.mambo.lib.ui.presentation.test, user=UserHandle{0}
+03-11 12:16:38.910  2913  2983 D LauncherApps: getActivityList: No launchable activities found forpackageName=dev.mambo.lib.ui.presentation.test, user=UserHandle{0}
+03-11 12:16:38.912 13799 22354 I PermissionControllerServiceImpl: Updating user sensitive for uid 10541
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: New Components =>
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{72b8f03 com.google.android.tag/com.android.apps.tag.TagViewer m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.Ndef,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{270fe80 com.paypal.android.p2pmobile/com.paypal.android.pdsdk.ui.receive.PayDropReceiveActivity$EntryPoint m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.IsoDep,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{ea78cb9 com.paypal.android.p2pmobile/com.paypal.android.pdsdk.ui.send.PayDropSendingStatusActivity$EntryPoint m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.IsoDep,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{a4d78fe com.paypal.android.p2pmobile/com.paypal.android.pdsdk.ui.send.enteramount.PayDropEnterAmountActivity$EntryPoint m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.IsoDep,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: Removed Components =>
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{78ef56f com.google.android.tag/com.android.apps.tag.TagViewer m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.Ndef,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{980827c com.paypal.android.p2pmobile/com.paypal.android.pdsdk.ui.receive.PayDropReceiveActivity$EntryPoint m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.IsoDep,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{b618705 com.paypal.android.p2pmobile/com.paypal.android.pdsdk.ui.send.PayDropSendingStatusActivity$EntryPoint m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.IsoDep,
+03-11 12:16:38.913  4103  4103 I RegisteredComponentCache: ComponentInfo: ResolveInfo{288335a com.paypal.android.p2pmobile/com.paypal.android.pdsdk.ui.send.enteramount.PayDropEnterAmountActivity$EntryPoint m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.IsoDep,
+03-11 12:16:38.914  2913  2983 D LauncherApps: getActivityList: No launchable activities found forpackageName=dev.mambo.lib.ui.presentation.test, user=UserHandle{0}
+03-11 12:16:38.914  2913  2983 W AllAppsList: updatePackage: no Activities matched updated package, removing any AppInfo with package=dev.mambo.lib.ui.presentation.test, user=UserHandle{0}
+03-11 12:16:38.915 22106 25884 E PhenotypeCombinedFlags: Config package com.google.android.client_error_logging#com.google.android.apps.weather cannot use PROCESS_STABLE backing without declarative registration. See go/phenotype-android-integration#phenotype for more information. This will lead to stale flags.
+03-11 12:16:38.917 22106 22177 I EssentialsDailyForecast: Daily forecast cache hit for request=5980253
+03-11 12:16:38.917 22106 22177 I LocalWeatherDataService: Returning local weather as cache hit
+03-11 12:16:38.922 22106 25901 I Phlogger: Unable to retrieve flag snapshot for com.google.android.client_error_logging#com.google.android.apps.weather, using defaults.
+03-11 12:16:38.922 22106 25884 I Phlogger: Shared storage file not found for com.google.android.client_error_logging#com.google.android.apps.weather
+03-11 12:16:38.924 22106 22175 W WeatherForecastNotifica: Skipping Weather forecast notification because it is before sunset and evening time limit.
+03-11 12:16:38.926  2893  2893 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+03-11 12:16:38.927  1800  2268 I RoleService: Granting default roles...
+03-11 12:16:38.930  1800  2661 W Role    : Default holder doesn't have required signing certificate: com.google.android.retaildemo:6547c73dee150c103980bfdffe55cc9a011d785dd694a5f99afd8205bcaf1f80
+03-11 12:16:38.930  1800  2661 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+03-11 12:16:38.932  2893  3205 D ImsResolver: maybeAddedImsService, packageName: dev.mambo.lib.ui.presentation.test
+03-11 12:16:38.937  1800  2661 D NotificationUtils: getNotificationListenersForPackage(com.google.android.apps.wear.companion): [ComponentInfo{com.google.android.apps.wear.companion/com.google.android.libraries.wear.companion.notification.service.CompanionNotificationListenerService}]
+03-11 12:16:38.967  1800  2661 E ApduServiceInfo: Not adding <aid-group> with empty or invalid AIDs
+03-11 12:16:38.972  1800  2661 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.devicelockcontroller, role: android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER
+03-11 12:16:38.986  7431  7511 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=5627bf9e-3d4d-4033-906f-6751e3bb580b, tags={ com.linkedin.android.litrackinglib.network.SendTrackingEventWorker, period_sync_work } ]
+03-11 12:16:38.994  1800  5270 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@2254fd21 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+03-11 12:16:38.999 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: PAUSED
+03-11 12:16:39.000 25820 25820 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@d0ac30
+03-11 12:16:39.003 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: PRE_ON_CREATE
+03-11 12:16:39.003 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569
+03-11 12:16:39.004 22106 22175 I EssentialsHourlyForecas: Hourly forecast cache hit for request=-1135340275
+03-11 12:16:39.008 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: CREATED
+03-11 12:16:39.008 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569
+03-11 12:16:39.008 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: STARTED
+03-11 12:16:39.008 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569
+03-11 12:16:39.010 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: RESUMED
+03-11 12:16:39.010 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569
+03-11 12:16:39.025  1800  1872 I ActivityTaskManager: Displayed dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +30ms
+03-11 12:16:39.025 22106 22177 I PrecipitationForecastNo: Skipping Precipitation notification because of chance of precipitation is below threshold of 70 for location_id: 2d0e6266-ff0f-498e-9333-e38145b550f8
+03-11 12:16:39.029 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: PAUSED
+03-11 12:16:39.029 25820 25820 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=dev.mambo.lib.ui.presentation.test/androidx.activity.ComponentActivity }, activity.getIntent()=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=dev.mambo.lib.ui.presentation.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }, activity=androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569
+03-11 12:16:39.031   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:16:39.033 25820 25820 D VRI[ComponentActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:16:39.034   826   826 W powerhal-libperfmgr: Sess(3681), cannot resume, already active
+03-11 12:16:39.064   717   717 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+03-11 12:16:39.065  7431  7463 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=01a93162-f1ac-4e89-bc2c-ab658fcaba44, tags={ com.linkedin.android.segment.ChameleonPeriodicWork } ]
+03-11 12:16:39.086 18147 18152 I com.whatsapp: Method exceeds compiler instruction limit: 17434 in java.lang.Object X.29K.A00(int, X.0oI, java.lang.Object)
+03-11 12:16:39.092   719   719 W HwBinder:719_2: type=1400 audit(0.0:11004): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.092   719   719 W HwBinder:719_2: type=1400 audit(0.0:11005): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.098   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+03-11 12:16:39.098   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:39.098   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:39.098   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:39.112 22106 22112 I id.apps.weather: Compiler allocated 4229KB to compile int com.google.protobuf.ca.c(java.lang.Object, byte[], int, int, int, com.google.protobuf.h)
+03-11 12:16:39.121  1800  2289 I ImeTracker: com.whatsapp:8fef2451: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+03-11 12:16:39.122  1800  2289 I ImeTracker: com.whatsapp:8fef2451: onCancelled at PHASE_SERVER_SHOULD_HIDE
+03-11 12:16:39.124  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2589
+03-11 12:16:39.124  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+03-11 12:16:39.125  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1568 onStartInput(EditorInfo{EditorInfo{packageName=com.whatsapp, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+03-11 12:16:39.125  4028  4028 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+03-11 12:16:39.126  4028  4028 I AndroidIME: InputBundleManager.loadActiveInputBundleId():407 loadActiveInputBundleId: und-Latn-x-password, password
+03-11 12:16:39.164   719   757 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+03-11 12:16:39.164   719   757 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+03-11 12:16:39.164   719   757 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+03-11 12:16:39.164   719   757 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+03-11 12:16:39.160   719   719 W HwBinder:719_2: type=1400 audit(0.0:11006): avc:  denied  { search } for  name="log" dev="dm-67" ino=346 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+03-11 12:16:39.171  1800  4393 D ConnectivityService: requestNetwork for uid/pid:10192/3115 activeRequest: null callbackRequest: 3884 [NetworkRequest [ REQUEST id=3885, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|NC
+03-11 12:16:39.172  1800  2435 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3885, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:16:39.172  1800  2435 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3885, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:16:39.173  1800  2435 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=3885, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:16:39.173  1800  2435 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=3885, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10192 RequestorUid: 10192 RequestorPkg: com.google.android.apps.photos UnderlyingNetworks: Null] ]
+03-11 12:16:39.173  1800  2443 D ConnectivityService: NetReassign [3885 : null → 104] [c 0] [a 1] [i 1]
+03-11 12:16:39.309 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@f4ddd44
+03-11 12:16:39.312 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@503c14f
+03-11 12:16:39.313 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@99990dc
+03-11 12:16:39.313 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@6ade5e5
+03-11 12:16:39.314 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@834d8ba
+03-11 12:16:39.314 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@65bfb61
+03-11 12:16:39.324 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@afb599
+03-11 12:16:39.326 22106 22184 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@b0996c2
+03-11 12:16:39.344 22106 22170 I EssentialsCurrentCondit: Querying current condition cache for request=231847088
+03-11 12:16:39.344 22106 22177 I EssentialsCurrentCondit: Old current condition is different from new current condition for request=231847088
+03-11 12:16:39.359 22106 22176 I EssentialsCurrentCondit: Querying current condition cache for request=-1105819202
+03-11 12:16:39.360 22106 22171 I EssentialsCurrentCondit: Old current condition is different from new current condition for request=-1105819202
+03-11 12:16:39.362 22106 22169 I EssentialsCurrentCondit: Querying current condition cache for request=1581780847
+03-11 12:16:39.363 22106 22175 I EssentialsCurrentCondit: Old current condition is different from new current condition for request=1581780847
+03-11 12:16:39.363  1800  2483 W ServiceManagerCppClient: Waited one second for android.hardware.biometrics.fingerprint.IFingerprint/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+03-11 12:16:39.365   636 25918 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.biometrics.fingerprint.IFingerprint/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+03-11 12:16:39.370 22106 22170 I EssentialsCurrentCondit: Old current condition is different from new current condition for request=2131550694
+03-11 12:16:39.370 22106 22169 I EssentialsCurrentCondit: Current condition cache hit for request=231847088
+03-11 12:16:39.370 22106 22177 I EssentialsCurrentCondit: Current condition cache hit for request=-1105819202
+03-11 12:16:39.371 22106 22177 I EssentialsCurrentCondit: Current condition cache hit for request=1581780847
+03-11 12:16:39.372 22106 22176 I EssentialsCurrentCondit: Querying current condition cache for request=2131550694
+03-11 12:16:39.373 22106 22171 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.378 22106 22176 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.379 22106 22176 I LocationProviderImpl: Using last known location, age=PT23.486S
+03-11 12:16:39.392 22106 22176 I EssentialsDailyForecast: Querying daily forecast cache for request=-1105819202
+03-11 12:16:39.392 22106 22175 I EssentialsDailyForecast: Old daily forecast is different from new daily forecast for request=-1105819202
+03-11 12:16:39.404 22106 22177 I EssentialsDailyForecast: Querying daily forecast cache for request=2131550694
+03-11 12:16:39.404  2744  2744 D ServerContainer: uid 10541 is not cached.
+03-11 12:16:39.404 22106 22175 I EssentialsDailyForecast: Old daily forecast is different from new daily forecast for request=2131550694
+03-11 12:16:39.405  2517  2517 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 1
+03-11 12:16:39.412 22106 22170 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.413  4080  4990 W ekbn    : Failed to notify listeners
+03-11 12:16:39.413  4080  4990 W ekbn    : java.util.concurrent.CancellationException
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at java.util.concurrent.FutureTask.report(FutureTask.java:121)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at java.util.concurrent.FutureTask.get(FutureTask.java:191)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvbu.get(PG:1)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at b.cb(PG:2)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvdr.y(PG:10)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvbz.run(PG:24)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvbf.execute(PG:1)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvbj.c(PG:1)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvbj.b(PG:32)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvct.done(PG:3)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:381)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at java.util.concurrent.FutureTask.cancel(FutureTask.java:179)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvbu.cancel(PG:5)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at ekbg.run(PG:14)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fkmt.run(PG:24)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvdo.a(PG:3)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvcq.run(PG:19)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at fvdp.run(PG:5)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at dppy.run(PG:7)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at ftqc.run(PG:50)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at dppp.run(PG:42)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at java.lang.Thread.run(Thread.java:1012)
+03-11 12:16:39.413  4080  4990 W ekbn    : 	at dpra.run(PG:64)
+03-11 12:16:39.419 22106 22169 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.421 22106 22169 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.422 22106 22170 I EssentialsDailyForecast: Querying daily forecast cache for request=1581780847
+03-11 12:16:39.423 22106 22170 I EssentialsDailyForecast: Old daily forecast is different from new daily forecast for request=1581780847
+03-11 12:16:39.428 22106 22171 I EssentialsCurrentCondit: Current condition cache hit for request=2131550694
+03-11 12:16:39.429 22106 22176 I EssentialsDailyForecast: Querying daily forecast cache for request=231847088
+03-11 12:16:39.430 22106 22171 I EssentialsDailyForecast: Old daily forecast is different from new daily forecast for request=231847088
+03-11 12:16:39.433 22106 22169 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.433 22106 22169 I LocationProviderImpl: Using last known location, age=PT23.54S
+03-11 12:16:39.435 22106 22169 I EssentialsDailyForecast: Daily forecast cache hit for request=-1105819202
+03-11 12:16:39.435 22106 22169 I EssentialsDailyForecast: Daily forecast cache hit for request=2131550694
+03-11 12:16:39.439 22106 22176 I EssentialsDailyForecast: Daily forecast cache hit for request=1581780847
+03-11 12:16:39.440 22106 22176 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.440  1800  2590 W ParceledListSlice: Element #25 is 24192 bytes.
+03-11 12:16:39.440 22106 22176 I LocationProviderImpl: Using last known location, age=PT23.547S
+03-11 12:16:39.444 22106 22176 I EssentialsDailyForecast: Daily forecast cache hit for request=231847088
+03-11 12:16:39.453 22106 22177 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.454  1800  4994 W ParceledListSlice: Element #124 is 140132 bytes.
+03-11 12:16:39.454  1800  4994 W ParceledListSlice: Overly large reply size: 158320
+03-11 12:16:39.454 22106 22169 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.457 22106 22151 I SyncManagerImpl: #sync() complete
+03-11 12:16:39.458  1800  5270 W ParceledListSlice: Element #227 is 65972 bytes.
+03-11 12:16:39.458  1800  5270 W ParceledListSlice: Overly large reply size: 130664
+03-11 12:16:39.459  1800  4289 W ParceledListSlice: Element #228 is 17048 bytes.
+03-11 12:16:39.460 22106 22174 I SyncManagerImpl: Completed sync. Scheduling next wakeup
+03-11 12:16:39.460 22106 22174 I SyncWorkManagerPeriodic: Scheduling next periodic WorkManager workers
+03-11 12:16:39.461  7431  7435 W inkedin.android: Reducing the number of considered missed Gc histogram windows from 219 to 100
+03-11 12:16:39.461  1800  4994 W ParceledListSlice: Element #296 is 24288 bytes.
+03-11 12:16:39.464  1800  4994 W ParceledListSlice: Element #341 is 29484 bytes.
+03-11 12:16:39.464  1800  4289 W ParceledListSlice: Element #358 is 16616 bytes.
+03-11 12:16:39.465 22106 22177 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.466 22106 22151 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=a19940b8-1600-468c-9f34-bf8fe411c514, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker,com.google.apps.tiktok.sync.impl.workmanager.SyncPeriodicWorker,TikTokWorker#com.google.apps.tiktok.sync.impl.workmanager.SyncPeriodicWorker } ]
+03-11 12:16:39.470 22106 22176 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.471 22106 22176 I LocationProviderImpl: Using last known location, age=PT23.578S
+03-11 12:16:39.473 22106 22176 I LocationProviderImpl: Trying to obtain last location.
+03-11 12:16:39.475 22041 22057 I droid.deskclock: Waiting for a blocking GC ProfileSaver
+03-11 12:16:39.480 22106 22106 D WM-Processor: n a19940b8-1600-468c-9f34-bf8fe411c514 executed; reschedule = false
+03-11 12:16:39.480 22106 22106 D WM-SystemJobService: a19940b8-1600-468c-9f34-bf8fe411c514 executed on JobScheduler
+03-11 12:16:39.483 22106 22177 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.485 22106 22177 I LocationProviderImpl: Using last known location, age=PT23.592S
+03-11 12:16:39.491 22106 22175 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.491 22106 22176 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.491 22106 22176 I LocationProviderImpl: Using last known location, age=PT23.599S
+03-11 12:16:39.491 22106 22175 I LocationProviderImpl: Using last known location, age=PT23.599S
+03-11 12:16:39.492 22106 22175 I LocationProviderImpl: Last location obtained successfully
+03-11 12:16:39.492 22106 22175 I LocationProviderImpl: Using last known location, age=PT23.6S
+03-11 12:16:39.500 22106 22151 D WM-GreedyScheduler: Cancelling work ID a19940b8-1600-468c-9f34-bf8fe411c514
+03-11 12:16:39.520 22106 22106 I Endpoint: Created gRPC endpoint for service class com.google.android.apps.weather.api.server.Service
+03-11 12:16:39.528 22106 22151 D WM-SystemJobScheduler: Scheduling work ID a19940b8-1600-468c-9f34-bf8fe411c514Job ID 15686
+03-11 12:16:39.552 22106 22151 D WM-GreedyScheduler: Starting tracking for 36b7ac3a-c313-4aaf-b113-3f99e86ddfdf,a549a77e-86c9-4b83-90ed-6b0f32b5998d
+03-11 12:16:39.558 22106 22151 D WM-GreedyScheduler: Cancelling work ID 36b7ac3a-c313-4aaf-b113-3f99e86ddfdf
+03-11 12:16:39.568 22106 22151 D WM-SystemJobScheduler: Scheduling work ID 36b7ac3a-c313-4aaf-b113-3f99e86ddfdfJob ID 15687
+03-11 12:16:39.575 22106 22151 D WM-GreedyScheduler: Starting tracking for a549a77e-86c9-4b83-90ed-6b0f32b5998d
+03-11 12:16:39.579 22106 22151 D WM-GreedyScheduler: Cancelling work ID a549a77e-86c9-4b83-90ed-6b0f32b5998d
+03-11 12:16:39.601 22106 22150 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.617 25820 25820 D VRI[InstrumentationActivityInvoker$EmptyActivity]: visibilityChanged oldVisibility=true newVisibility=false
+03-11 12:16:39.628 22106 22150 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.631 22106 22174 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.632 22106 22151 D WM-SystemJobScheduler: Scheduling work ID a549a77e-86c9-4b83-90ed-6b0f32b5998dJob ID 15688
+03-11 12:16:39.636 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: STOPPED
+03-11 12:16:39.636 25820 25820 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@d0ac30
+03-11 12:16:39.641 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.644 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@d0ac30 in: DESTROYED
+03-11 12:16:39.644 25820 25820 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+03-11 12:16:39.645 25820 25820 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@a608f0
+03-11 12:16:39.649 22041 22051 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085577df0 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.650 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: STOPPED
+03-11 12:16:39.651 25820 25820 D LifecycleMonitor: Lifecycle status change: androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity@fbc9569 in: DESTROYED
+03-11 12:16:39.651 25820 25820 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@2d16d52
+03-11 12:16:39.653 22106 22150 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.655 22041 22051 I IPCThreadState: oneway function results for code 2 on binder at 0xb400007085577640 will be dropped but finished with status UNKNOWN_TRANSACTION
+03-11 12:16:39.663  2913  2913 D RecentsView: onTaskRemoved: 2413, not handling task stack changes
+03-11 12:16:39.664  2913  2913 D RecentsView: onTaskRemoved: 2413, not handling task stack changes
+03-11 12:16:39.668 22106 22172 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.669 22106 22174 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.671 22106 22150 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.672 22106 22174 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.672 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.673 22106 22172 I LocalWeatherDataService: Loading local weather from cache
+03-11 12:16:39.675 22106 22172 I EssentialsCurrentCondit: Querying current condition cache for request=-66601366
+03-11 12:16:39.678 25820 25844 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@41a5583]
+03-11 12:16:39.678 25820 25844 I TestRunner: finished: shouldShowValidErrorMessage_WhenGettingTasksFails(dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest)

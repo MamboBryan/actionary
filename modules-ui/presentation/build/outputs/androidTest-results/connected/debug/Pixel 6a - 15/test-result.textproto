@@ -1,0 +1,172 @@
+# 2025-03-11T09:16:41.678098Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 3
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "TasksScreenTest"
+    test_package: "dev.mambo.lib.ui.presentation.screens.tasks"
+    test_method: "shouldShowValidErrorMessage_WhenGettingTasksFails"
+    start_time {
+      seconds: 1741684596
+      nanos: 662000000
+    }
+    end_time {
+      seconds: 1741684598
+      nanos: 319000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/logcat-dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest-shouldShowValidErrorMessage_WhenGettingTasksFails.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "TasksScreenTest"
+    test_package: "dev.mambo.lib.ui.presentation.screens.tasks"
+    test_method: "shouldShowLoadingIndicator_WhenOnInitCalled"
+    start_time {
+      seconds: 1741684598
+      nanos: 342000000
+    }
+    end_time {
+      seconds: 1741684599
+      nanos: 52000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/logcat-dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest-shouldShowLoadingIndicator_WhenOnInitCalled.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "TasksScreenTest"
+    test_package: "dev.mambo.lib.ui.presentation.screens.tasks"
+    test_method: "shouldShowError_WhenGettingTasksFails"
+    start_time {
+      seconds: 1741684599
+      nanos: 665000000
+    }
+    end_time {
+      seconds: 1741684601
+      nanos: 29000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/logcat-dev.mambo.lib.ui.presentation.screens.tasks.TasksScreenTest-shouldShowError_WhenGettingTasksFails.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/mambo/Desktop/play/android/Actionary/modules-ui/presentation/build/outputs/androidTest-results/connected/debug/Pixel 6a - 15/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

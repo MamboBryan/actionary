@@ -16,9 +16,10 @@
         <activity
             android:name="dev.mambo.lib.ui.presentation.main.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Actionary">
+            android:theme="@style/Theme.Actionary.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
