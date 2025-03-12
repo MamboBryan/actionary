@@ -97,7 +97,7 @@ class TasksScreenModel(
         priorityState.update { if (it == priority) null else priority }
     }
 
-    fun onClickClearFilters()  {
+    fun onClickClearFilters() {
         categoryState.update { null }
         priorityState.update { null }
     }
