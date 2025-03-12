@@ -35,6 +35,11 @@ class TasksScreenTest {
                 state = TasksScreenState(),
                 onClickTask = {},
                 onClickCreateTask = {},
+                onValueChangeCategory = {},
+                onValueChangePriority = {},
+                onClickClearFilters = {},
+                onCheckTask = {},
+                navigate = {},
             )
         }
         composeTestRule.onNodeWithTag(TasksScreen.TestTags.LOADING).assertIsDisplayed()
@@ -48,6 +53,11 @@ class TasksScreenTest {
                 state = TasksScreenState(),
                 onClickTask = {},
                 onClickCreateTask = {},
+                onValueChangeCategory = {},
+                onValueChangePriority = {},
+                onClickClearFilters = {},
+                onCheckTask = {},
+                navigate = {},
             )
         }
         composeTestRule.onNodeWithTag(TasksScreen.TestTags.ERROR).assertIsDisplayed()
@@ -62,6 +72,11 @@ class TasksScreenTest {
                 state = TasksScreenState(),
                 onClickTask = {},
                 onClickCreateTask = {},
+                onValueChangeCategory = {},
+                onValueChangePriority = {},
+                onClickClearFilters = {},
+                onCheckTask = {},
+                navigate = {},
             )
         }
         composeTestRule.onNodeWithTag(TasksScreen.TestTags.ERROR).assertIsDisplayed()
