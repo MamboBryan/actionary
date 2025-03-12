@@ -82,7 +82,7 @@ class TasksScreenModel(
         }
     }
 
-    fun onCheckTask(task: TaskDomain)  {
+    fun onCheckTask(task: TaskDomain) {
         val value = if (task.completedAt == null)Clock.System.now().LocalDateTime else null
         screenModelScope.launch {
             taskRepository.updateTask(task.copy(completedAt = value))
@@ -95,5 +95,10 @@ class TasksScreenModel(
 
     fun onValueChangePriority(priority: PriorityDomain?) {
         priorityState.update { if (it == priority) null else priority }
+    }
+
+    fun onClickClearFilters()  {
+        categoryState.update { null }
+        priorityState.update { null }
     }
 }

@@ -20,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.outlined.OutlinedFlag
 import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material.icons.rounded.ClearAll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -31,6 +32,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
@@ -60,6 +62,7 @@ import dev.mambo.lib.ui.presentation.helpers.ListUiState
 import dev.mambo.lib.ui.presentation.screens.task.TaskScreen
 import dev.mambo.lib.ui.presentation.screens.task.components.FilterCategory
 import dev.mambo.lib.ui.presentation.screens.task.components.label
+import dev.mambo.lib.ui.presentation.screens.tasks.components.FilterPriority
 import kotlinx.datetime.Clock
 
 object TasksScreen : Screen {
@@ -85,6 +88,7 @@ object TasksScreen : Screen {
             onClickCreateTask = { navigator?.push(TaskScreen()) },
             onValueChangeCategory = screenModel::onValueChangeCategory,
             onValueChangePriority = screenModel::onValueChangePriority,
+            onClickClearFilters = screenModel::onClickClearFilters,
             navigate = { screen -> navigator?.push(screen) },
         )
     }
@@ -100,6 +104,7 @@ fun TasksScreenContent(
     onClickCreateTask: () -> Unit,
     onValueChangeCategory: (CategoryDomain?) -> Unit,
     onValueChangePriority: (PriorityDomain?) -> Unit,
+    onClickClearFilters: () -> Unit = {},
     navigate: (Screen) -> Unit,
 ) {
     if (state.task != null) navigate(TaskScreen(id = state.task.id))
@@ -110,6 +115,7 @@ fun TasksScreenContent(
                 state = state,
                 onValueChangeCategory = onValueChangeCategory,
                 onValueChangePriority = onValueChangePriority,
+                onClickClearFilters = onClickClearFilters,
             )
         },
         floatingActionButton = {
@@ -215,6 +221,7 @@ private fun TasksTopAppBar(
     state: TasksScreenState,
     onValueChangeCategory: (CategoryDomain?) -> Unit,
     onValueChangePriority: (PriorityDomain?) -> Unit,
+    onClickClearFilters: () -> Unit,
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
@@ -236,14 +243,35 @@ private fun TasksTopAppBar(
                 style = MaterialTheme.typography.displaySmall,
                 fontWeight = FontWeight.Bold,
             )
-            LazyRow(modifier = Modifier.fillMaxWidth()) {
-                item {
-                    FilterCategory(
-                        modifier = Modifier.padding(start = 16.dp),
-                        category = state.category,
-                        categories = state.categories,
-                        onItemSelected = onValueChangeCategory,
-                    )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                LazyRow(modifier = Modifier.weight(1f)) {
+                    item {
+                        FilterCategory(
+                            modifier = Modifier.padding(start = 16.dp),
+                            category = state.category,
+                            categories = state.categories,
+                            onItemSelected = onValueChangeCategory,
+                        )
+                    }
+                    item {
+                        FilterPriority(
+                            modifier = Modifier.padding(start = 16.dp),
+                            priority = state.priority,
+                            priorities = state.priorities,
+                            onItemSelected = onValueChangePriority,
+                        )
+                    }
+                }
+                AnimatedVisibility(visible = state.priority != null || state.category != null) {
+                    SmallFloatingActionButton(
+                        modifier = Modifier.padding(horizontal = 8.dp),
+                        onClick = onClickClearFilters,
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.ClearAll,
+                            contentDescription = "clear filter",
+                        )
+                    }
                 }
             }
         }
