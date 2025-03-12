@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 val PresentationModule =
     module {
-        factory<TasksScreenModel> { TasksScreenModel(repository = get()) }
-        factory<TaskScreenModel> { TaskScreenModel(repository = get()) }
+        factory<TasksScreenModel> { TasksScreenModel(taskRepository = get(), categoryRepository = get()) }
+        factory<TaskScreenModel> { TaskScreenModel(taskRepository = get(), categoryRepository = get()) }
     }

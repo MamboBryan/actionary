@@ -11,6 +11,7 @@ data class TaskCache(
     val completedAt: Long?,
     val dueAt: Long?,
     val priority: String? = null,
+    val category: CategoryCache? = null,
 )
 
 fun TaskCache.toTaskEntity() =
@@ -23,6 +24,7 @@ fun TaskCache.toTaskEntity() =
         completedAt = completedAt,
         dueAt = dueAt,
         priority = priority,
+        categoryId = category?.id,
     )
 
 fun TaskEntity.toTaskCache() =

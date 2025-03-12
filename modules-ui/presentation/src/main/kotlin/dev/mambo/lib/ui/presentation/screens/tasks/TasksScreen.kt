@@ -1,8 +1,9 @@
 package dev.mambo.lib.ui.presentation.screens.tasks
 
+import android.R.attr.text
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -13,20 +14,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.outlined.OutlinedFlag
 import androidx.compose.material.icons.rounded.Add
-import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -39,7 +36,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -50,11 +47,14 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
 import dev.mambo.lib.data.domain.helpers.LocalDateTime
+import dev.mambo.lib.data.domain.models.CategoryDomain
+import dev.mambo.lib.data.domain.models.PriorityDomain
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.ui.design.theme.ActionaryTheme
 import dev.mambo.lib.ui.presentation.components.CenteredColumn
 import dev.mambo.lib.ui.presentation.helpers.ListUiState
 import dev.mambo.lib.ui.presentation.screens.task.TaskScreen
+import dev.mambo.lib.ui.presentation.screens.task.components.FilterCategory
 import dev.mambo.lib.ui.presentation.screens.task.components.label
 import kotlinx.datetime.Clock
 
@@ -78,6 +78,8 @@ object TasksScreen : Screen {
             tasks = tasks,
             onClickTask = screenModel::onTaskClicked,
             onClickCreateTask = { navigator?.push(TaskScreen()) },
+            onValueChangeCategory = screenModel::onValueChangeCategory,
+            onValueChangePriority = screenModel::onValueChangePriority,
             navigate = { screen -> navigator?.push(screen) },
         )
     }
@@ -90,13 +92,19 @@ fun TasksScreenContent(
     state: TasksScreenState,
     onClickTask: (TaskDomain) -> Unit,
     onClickCreateTask: () -> Unit,
+    onValueChangeCategory: (CategoryDomain?) -> Unit,
+    onValueChangePriority: (PriorityDomain?) -> Unit,
     navigate: (Screen) -> Unit,
 ) {
     if (state.task != null) navigate(TaskScreen(id = state.task.id))
 
     Scaffold(
         topBar = {
-            TasksTopAppBar()
+            TasksTopAppBar(
+                state = state,
+                onValueChangeCategory = onValueChangeCategory,
+                onValueChangePriority = onValueChangePriority,
+            )
         },
         floatingActionButton = {
             AnimatedVisibility(visible = tasks is ListUiState.NotEmpty) {
@@ -196,7 +204,11 @@ fun TasksScreenContent(
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
-private fun TasksTopAppBar() {
+private fun TasksTopAppBar(
+    state: TasksScreenState,
+    onValueChangeCategory: (CategoryDomain?) -> Unit,
+    onValueChangePriority: (PriorityDomain?) -> Unit,
+) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
         shadowElevation = 4.dp,
@@ -217,35 +229,13 @@ private fun TasksTopAppBar() {
                 style = MaterialTheme.typography.displaySmall,
                 fontWeight = FontWeight.Bold,
             )
-            val list = listOf("Priority", "Category", "Date")
             LazyRow(modifier = Modifier.fillMaxWidth()) {
-                items(list) {
-                    FilterChip(
+                item {
+                    FilterCategory(
                         modifier = Modifier.padding(start = 16.dp),
-                        border = BorderStroke(0.dp, Color.Transparent),
-                        colors =
-                            FilterChipDefaults.filterChipColors(
-                                containerColor = MaterialTheme.colorScheme.primary.copy(0.25f),
-                            ),
-                        selected = false,
-                        onClick = {},
-                        label = {
-                            Row(
-                                modifier = Modifier,
-                                verticalAlignment = Alignment.CenterVertically,
-                            ) {
-                                Text(
-                                    text = it,
-                                    fontWeight = FontWeight.Bold,
-                                    style = MaterialTheme.typography.labelMedium,
-                                )
-                                Icon(
-                                    modifier = Modifier.padding(start = 2.dp),
-                                    imageVector = Icons.Rounded.KeyboardArrowDown,
-                                    contentDescription = "collapse",
-                                )
-                            }
-                        },
+                        category = state.category,
+                        categories = state.categories,
+                        onItemSelected = onValueChangeCategory,
                     )
                 }
             }
@@ -275,38 +265,60 @@ fun TaskItem(
                     modifier = Modifier.padding(bottom = 8.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    if (task.dueAt != null) {
-                        Row(
-                            modifier = Modifier,
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            Icon(
-                                modifier = Modifier.size(16.dp),
-                                imageVector = Icons.Filled.CalendarMonth,
-                                contentDescription = "date",
-                            )
+                    Row(
+                        modifier = Modifier,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        val category = task.category
+                        if (category != null) {
                             Text(
                                 style = MaterialTheme.typography.labelMedium,
-                                modifier = Modifier.padding(start = 8.dp, top = 2.dp),
+                                modifier =
+                                    Modifier
+                                        .padding(end = 8.dp)
+                                        .clip(RoundedCornerShape(25))
+                                        .background(MaterialTheme.colorScheme.primary)
+                                        .padding(horizontal = 8.dp, vertical = 4.dp),
                                 text =
-                                    task.dueAt?.let {
-                                        buildString {
-                                            append(
-                                                it.dayOfWeek.name.lowercase().take(3)
-                                                    .replaceFirstChar { it.uppercase() },
-                                            )
-                                            append(", ")
-                                            append(it.dayOfMonth)
-                                            append(" ")
-                                            append(
-                                                it.month.name.lowercase().take(3)
-                                                    .replaceFirstChar { it.uppercase() },
-                                            )
-                                            append(" ")
-                                            append(it.year)
-                                        }
-                                    } ?: "Date",
+                                    category.name.lowercase()
+                                        .replaceFirstChar { it.uppercase() },
+                                color = MaterialTheme.colorScheme.onPrimary,
                             )
+                        }
+
+                        if (task.dueAt != null) {
+                            Row(
+                                modifier = Modifier,
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Icon(
+                                    modifier = Modifier.size(16.dp),
+                                    imageVector = Icons.Filled.CalendarMonth,
+                                    contentDescription = "date",
+                                )
+                                Text(
+                                    style = MaterialTheme.typography.labelMedium,
+                                    modifier = Modifier.padding(start = 8.dp, top = 2.dp),
+                                    text =
+                                        task.dueAt?.let {
+                                            buildString {
+                                                append(
+                                                    it.dayOfWeek.name.lowercase().take(3)
+                                                        .replaceFirstChar { it.uppercase() },
+                                                )
+                                                append(", ")
+                                                append(it.dayOfMonth)
+                                                append(" ")
+                                                append(
+                                                    it.month.name.lowercase().take(3)
+                                                        .replaceFirstChar { it.uppercase() },
+                                                )
+                                                append(" ")
+                                                append(it.year)
+                                            }
+                                        } ?: "Date",
+                                )
+                            }
                         }
                     }
                     Spacer(modifier = Modifier.weight(1f))
@@ -376,6 +388,8 @@ private fun TasksScreenLoadingPreview() {
             onClickTask = {},
             onClickCreateTask = {},
             navigate = {},
+            onValueChangeCategory = {},
+            onValueChangePriority = {},
         )
     }
 }
@@ -390,6 +404,8 @@ private fun TasksScreenEmptyPreview() {
             onClickTask = {},
             onClickCreateTask = {},
             navigate = {},
+            onValueChangeCategory = {},
+            onValueChangePriority = {},
         )
     }
 }
@@ -404,6 +420,8 @@ private fun TasksScreenErrorPreview() {
             onClickTask = {},
             onClickCreateTask = {},
             navigate = {},
+            onValueChangeCategory = {},
+            onValueChangePriority = {},
         )
     }
 }
@@ -430,6 +448,8 @@ private fun TasksScreenNotEmptyPreview() {
             onClickTask = {},
             onClickCreateTask = {},
             navigate = {},
+            onValueChangeCategory = {},
+            onValueChangePriority = {},
         )
     }
 }

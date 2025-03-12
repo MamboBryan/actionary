@@ -17,6 +17,7 @@ fun TaskCache.toTaskDomain() =
         completedAt = completedAt?.asLocalDateTime(),
         dueAt = dueAt?.asLocalDateTime(),
         priority = tryOrNull { priority?.let { PriorityDomain.valueOf(it) } },
+        category = category?.toCategoryDomain(),
     )
 
 fun TaskDomain.toTaskCache() =
@@ -29,4 +30,5 @@ fun TaskDomain.toTaskCache() =
         completedAt = completedAt?.asEpochMilliseconds(),
         dueAt = dueAt?.asEpochMilliseconds(),
         priority = priority?.name,
+        category = category?.toCategoryCache(),
     )

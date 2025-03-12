@@ -1,11 +1,13 @@
 package dev.mambo.lib.data.core.repositories
 
 import dev.mambo.lib.data.core.mappers.asDataResult
+import dev.mambo.lib.data.core.mappers.toCategoryCache
 import dev.mambo.lib.data.core.mappers.toTaskCache
 import dev.mambo.lib.data.core.mappers.toTaskDomain
 import dev.mambo.lib.data.domain.helpers.DataResult
 import dev.mambo.lib.data.domain.helpers.LocalDateTime
 import dev.mambo.lib.data.domain.helpers.asEpochMilliseconds
+import dev.mambo.lib.data.domain.models.CategoryDomain
 import dev.mambo.lib.data.domain.models.PriorityDomain
 import dev.mambo.lib.data.domain.models.TaskDomain
 import dev.mambo.lib.data.domain.repositories.TaskRepository
@@ -29,11 +31,30 @@ class TaskRepositoryImpl(
         return local.getAllAsFlow().mapLatest { list -> list.map { it.toTaskDomain() } }
     }
 
+    override fun getTasksByCategory(category: CategoryDomain): Flow<List<TaskDomain>> {
+        return local.getAllByCategory(categoryId = category.id)
+            .mapLatest { list -> list.map { it.toTaskDomain() } }
+    }
+
+    override fun getTasksByPriority(priority: PriorityDomain): Flow<List<TaskDomain>> {
+        return local.getAllByPriority(priority = priority.name)
+            .mapLatest { list -> list.map { it.toTaskDomain() } }
+    }
+
+    override fun getTasksByPriorityAndCategory(
+        priority: PriorityDomain,
+        category: CategoryDomain,
+    ): Flow<List<TaskDomain>> {
+        return local.getAllByPriorityAndCategory(categoryId = category.id, priority = priority.name)
+            .mapLatest { list -> list.map { it.toTaskDomain() } }
+    }
+
     override suspend fun createTask(
         title: String,
         description: String,
         dueAt: LocalDateTime?,
         priority: PriorityDomain?,
+        category: CategoryDomain?,
     ): DataResult<TaskDomain> {
         val now = Clock.System.now().LocalDateTime.asEpochMilliseconds()
         val task =
@@ -46,6 +67,7 @@ class TaskRepositoryImpl(
                 dueAt = dueAt?.asEpochMilliseconds(),
                 priority = priority?.name,
                 completedAt = null,
+                category = category?.toCategoryCache(),
             )
         return local.insert(task = task).asDataResult { it.toTaskDomain() }
     }

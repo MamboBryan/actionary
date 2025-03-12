@@ -5,10 +5,11 @@ import dev.mambo.lib.local.helpers.LocalResult
 import dev.mambo.lib.local.sources.TaskLocalSource
 import io.mockk.coEvery
 import io.mockk.mockk
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class TaskLocalSourceTest {
     val tasks =
@@ -58,12 +59,10 @@ class TaskLocalSourceTest {
             val update = tasks.toMutableList()
             update.removeAt(4)
             coEvery { source.delete(task = tasks[4]) }.answers { LocalResult.Success(true) }
-            coEvery { source.getAll() } returns LocalResult.Success(update)
+            coEvery { source.getAllAsFlow() } returns flowOf(update)
             val result = source.delete(task = tasks[4])
             assert(result is LocalResult.Success)
-            val value = source.getAll()
-            assertTrue { value is LocalResult.Success }
-            val list = (value as LocalResult.Success).data
+            val list = source.getAllAsFlow().first()
             assertEquals(update, list)
         }
 

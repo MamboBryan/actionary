@@ -33,6 +33,7 @@ enum class TaskAction {
 enum class TaskValue {
     TITLE,
     DESCRIPTION,
+    CATEGORY,
 }
 
 @Composable
@@ -94,6 +95,7 @@ fun TaskEditSection(
             horizontalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Button(
+                enabled = state.isActionEnabled,
                 modifier = Modifier.weight(1f),
                 shape = RoundedCornerShape(25),
                 onClick = {

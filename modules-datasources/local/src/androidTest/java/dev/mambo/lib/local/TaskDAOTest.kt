@@ -9,6 +9,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import dev.mambo.lib.local.dao.TaskDAO
 import dev.mambo.lib.local.database.ActionaryDatabase
 import dev.mambo.lib.local.entities.TaskEntity
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Before
@@ -47,7 +48,7 @@ class TaskDAOTest {
                     createdAt = System.currentTimeMillis(),
                 )
             val id = dao.insert(item = task)
-            val item = dao.fetchById(id = id.toInt())
+            val item = dao.fetchById(id = id.toInt())?.task
             assertNotNull(item)
             assertEquals(task.title, item.title)
             assertEquals(task.description, item.description)
@@ -65,14 +66,14 @@ class TaskDAOTest {
                     )
                 }
             dao.insert(items = tasks)
-            val values = dao.fetchAll()
+            val values = dao.fetchAllWithCategory().first()
             assertTrue { values.isNotEmpty() }
             val expected = values.first()
-            val actual = dao.fetchById(id = expected.id)
+            val actual = dao.fetchById(id = expected.task.id)
             assertEquals(expected, actual)
             assertNotNull(actual)
-            assertEquals(expected.title, actual.title)
-            assertEquals(expected.description, actual.description)
+            assertEquals(expected.task.title, actual.task.title)
+            assertEquals(expected.task.description, actual.task.description)
         }
 
     @Test
@@ -85,11 +86,11 @@ class TaskDAOTest {
                     createdAt = System.currentTimeMillis(),
                 )
             val id = dao.insert(item = task)
-            val initial = dao.fetchById(id = id.toInt())
+            val initial = dao.fetchById(id = id.toInt())?.task
             assertNotNull(initial)
             val expected = initial.copy(title = "title 2", updatedAt = System.currentTimeMillis())
             dao.update(expected)
-            val actual = dao.fetchById(id = id.toInt())
+            val actual = dao.fetchById(id = id.toInt())?.task
             assertNotNull(actual)
             assertEquals(expected.title, actual.title)
             assertEquals(expected.updatedAt, actual.updatedAt)
@@ -107,7 +108,7 @@ class TaskDAOTest {
                     createdAt = System.currentTimeMillis(),
                 )
             val id = dao.insert(item = task)
-            val initial = dao.fetchById(id = id.toInt())
+            val initial = dao.fetchById(id = id.toInt())?.task
             assertNotNull(initial)
             dao.delete(initial)
             val actual = dao.fetchById(id = id.toInt())

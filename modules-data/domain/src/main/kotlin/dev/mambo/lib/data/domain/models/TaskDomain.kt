@@ -11,4 +11,5 @@ data class TaskDomain(
     val completedAt: LocalDateTime?,
     val dueAt: LocalDateTime?,
     val priority: PriorityDomain? = null,
+    val category: CategoryDomain? = null,
 )

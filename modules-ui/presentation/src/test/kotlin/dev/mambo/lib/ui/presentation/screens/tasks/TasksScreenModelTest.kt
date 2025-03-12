@@ -32,7 +32,7 @@ class TasksScreenModelTest {
         mockk<TaskRepository> {
             every { getTasks() } returns flowOf(list)
         }
-    private val model = TasksScreenModel(repository = repository)
+    private val model = TasksScreenModel(taskRepository = repository)
 
     @Test
     fun `tasks returns a list of entries`() =

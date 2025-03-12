@@ -29,19 +29,19 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
+import dev.mambo.lib.data.domain.models.CategoryDomain
 import dev.mambo.lib.data.domain.models.PriorityDomain
 import dev.mambo.lib.ui.presentation.components.BackButtonComponent
 import dev.mambo.lib.ui.presentation.components.LoadingComponent
 import dev.mambo.lib.ui.presentation.helpers.ItemUiState
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskAction
+import dev.mambo.lib.ui.presentation.screens.task.components.TaskCategory
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskEditSection
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskValue
 import dev.mambo.lib.ui.presentation.screens.task.components.TaskViewSection
 import kotlinx.datetime.LocalDateTime
 
 open class TaskScreen(val id: Int? = null) : Screen {
-    object TestTags
-
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.current
@@ -58,6 +58,8 @@ open class TaskScreen(val id: Int? = null) : Screen {
             onValueChangePriority = screenModel::onValueChangePriority,
             onClickEditTask = screenModel::onClickEditTask,
             onClickCompleteTask = screenModel::onClickCompleteTask,
+            onClickCreateCategory = screenModel::onClickCreateCategory,
+            onValueChangeCategory = screenModel::onValueChangeCategory,
         )
     }
 }
@@ -71,8 +73,10 @@ fun TaskScreenContent(
     onValueChangeTask: (TaskValue, String) -> Unit,
     onValueChangeDate: (LocalDateTime) -> Unit,
     onValueChangePriority: (PriorityDomain) -> Unit,
+    onValueChangeCategory: (CategoryDomain) -> Unit,
     onDismissDialog: () -> Unit,
     onClickEditTask: () -> Unit,
+    onClickCreateCategory: () -> Unit,
     onClickCompleteTask: () -> Unit,
 ) {
     if (state.navigateBack) onClickNavigateBack()
@@ -127,7 +131,15 @@ fun TaskScreenContent(
             TopAppBar(
                 navigationIcon = { BackButtonComponent(onClick = onClickNavigateBack) },
                 title = {
-                    Text(text = "")
+                    TaskCategory(
+                        state = state.categoryResult,
+                        name = state.categoryName,
+                        category = state.category,
+                        categories = state.categories,
+                        onValueChangeName = { onValueChangeTask(TaskValue.CATEGORY, it) },
+                        onItemSelected = onValueChangeCategory,
+                        onClickCreateCategory = onClickCreateCategory,
+                    )
                 },
                 actions = {
                     AnimatedVisibility(visible = state.id != null && state.editing.not()) {
