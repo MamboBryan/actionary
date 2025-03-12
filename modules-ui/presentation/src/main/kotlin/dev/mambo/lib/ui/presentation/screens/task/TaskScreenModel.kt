@@ -154,13 +154,12 @@ class TaskScreenModel(
                 mutableState.update { state ->
                     state.copy(
                         task = it,
+                        category = it?.category,
                         result =
                             if (it == null) {
                                 ItemUiState.Error("Task not found")
                             } else {
-                                ItemUiState.Success(
-                                    it,
-                                )
+                                ItemUiState.Success(it)
                             },
                     )
                 }
