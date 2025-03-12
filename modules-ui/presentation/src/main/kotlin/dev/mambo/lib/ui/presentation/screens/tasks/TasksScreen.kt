@@ -1,5 +1,6 @@
 package dev.mambo.lib.ui.presentation.screens.tasks
 
+import android.R.attr.onClick
 import android.R.attr.text
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
@@ -22,6 +23,7 @@ import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
@@ -37,8 +39,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -77,6 +81,7 @@ object TasksScreen : Screen {
             state = state,
             tasks = tasks,
             onClickTask = screenModel::onTaskClicked,
+            onCheckTask = screenModel::onCheckTask,
             onClickCreateTask = { navigator?.push(TaskScreen()) },
             onValueChangeCategory = screenModel::onValueChangeCategory,
             onValueChangePriority = screenModel::onValueChangePriority,
@@ -91,6 +96,7 @@ fun TasksScreenContent(
     tasks: ListUiState<TaskDomain>,
     state: TasksScreenState,
     onClickTask: (TaskDomain) -> Unit,
+    onCheckTask: (TaskDomain) -> Unit,
     onClickCreateTask: () -> Unit,
     onValueChangeCategory: (CategoryDomain?) -> Unit,
     onValueChangePriority: (PriorityDomain?) -> Unit,
@@ -190,6 +196,7 @@ fun TasksScreenContent(
                                 modifier = Modifier.fillMaxWidth(),
                                 task = task,
                                 onClick = { onClickTask(task) },
+                                onCheck = { onCheckTask(task) },
                             )
                         }
                         item {
@@ -248,132 +255,151 @@ fun TaskItem(
     task: TaskDomain,
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
+    onCheck: () -> Unit,
 ) {
-    Card(
-        modifier = modifier,
-        onClick = onClick,
-        colors =
-            CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.background,
-                contentColor = MaterialTheme.colorScheme.onBackground,
-            ),
-        shape = RoundedCornerShape(0),
+    val background =
+        if (task.completedAt != null) MaterialTheme.colorScheme.primary.copy(0.1f) else MaterialTheme.colorScheme.background
+
+    Row(
+        modifier =
+            Modifier
+                .fillMaxWidth()
+                .background(background),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Column(modifier = Modifier.padding(16.dp)) {
-                Row(
-                    modifier = Modifier.padding(bottom = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
+        Checkbox(
+            modifier = Modifier,
+            checked = task.completedAt != null,
+            onCheckedChange = { onCheck() },
+        )
+        Card(
+            modifier = modifier,
+            onClick = onClick,
+            colors =
+                CardDefaults.cardColors(
+                    containerColor = Color.Transparent,
+                    contentColor = MaterialTheme.colorScheme.onBackground,
+                ),
+            shape = RoundedCornerShape(0),
+        ) {
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Column(modifier = Modifier.padding(16.dp)) {
                     Row(
-                        modifier = Modifier,
+                        modifier = Modifier.padding(bottom = 8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        val category = task.category
-                        if (category != null) {
-                            Text(
-                                style = MaterialTheme.typography.labelMedium,
-                                modifier =
-                                    Modifier
-                                        .padding(end = 8.dp)
-                                        .clip(RoundedCornerShape(25))
-                                        .background(MaterialTheme.colorScheme.primary)
-                                        .padding(horizontal = 8.dp, vertical = 4.dp),
-                                text =
-                                    category.name.lowercase()
-                                        .replaceFirstChar { it.uppercase() },
-                                color = MaterialTheme.colorScheme.onPrimary,
-                            )
-                        }
-
-                        if (task.dueAt != null) {
-                            Row(
-                                modifier = Modifier,
-                                verticalAlignment = Alignment.CenterVertically,
-                            ) {
-                                Icon(
-                                    modifier = Modifier.size(16.dp),
-                                    imageVector = Icons.Filled.CalendarMonth,
-                                    contentDescription = "date",
-                                )
+                        Row(
+                            modifier = Modifier,
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            val category = task.category
+                            if (category != null) {
                                 Text(
                                     style = MaterialTheme.typography.labelMedium,
-                                    modifier = Modifier.padding(start = 8.dp, top = 2.dp),
+                                    modifier =
+                                        Modifier
+                                            .padding(end = 8.dp)
+                                            .clip(RoundedCornerShape(25))
+                                            .background(MaterialTheme.colorScheme.primary)
+                                            .padding(horizontal = 8.dp, vertical = 4.dp),
                                     text =
-                                        task.dueAt?.let {
-                                            buildString {
-                                                append(
-                                                    it.dayOfWeek.name.lowercase().take(3)
-                                                        .replaceFirstChar { it.uppercase() },
-                                                )
-                                                append(", ")
-                                                append(it.dayOfMonth)
-                                                append(" ")
-                                                append(
-                                                    it.month.name.lowercase().take(3)
-                                                        .replaceFirstChar { it.uppercase() },
-                                                )
-                                                append(" ")
-                                                append(it.year)
-                                            }
-                                        } ?: "Date",
+                                        category.name.lowercase()
+                                            .replaceFirstChar { it.uppercase() },
+                                    color = MaterialTheme.colorScheme.onPrimary,
+                                )
+                            }
+
+                            if (task.dueAt != null) {
+                                Row(
+                                    modifier = Modifier,
+                                    verticalAlignment = Alignment.CenterVertically,
+                                ) {
+                                    Icon(
+                                        modifier = Modifier.size(16.dp),
+                                        imageVector = Icons.Filled.CalendarMonth,
+                                        contentDescription = "date",
+                                    )
+                                    Text(
+                                        style = MaterialTheme.typography.labelMedium,
+                                        modifier = Modifier.padding(start = 8.dp, top = 2.dp),
+                                        text =
+                                            task.dueAt?.let {
+                                                buildString {
+                                                    append(
+                                                        it.dayOfWeek.name.lowercase().take(3)
+                                                            .replaceFirstChar { it.uppercase() },
+                                                    )
+                                                    append(", ")
+                                                    append(it.dayOfMonth)
+                                                    append(" ")
+                                                    append(
+                                                        it.month.name.lowercase().take(3)
+                                                            .replaceFirstChar { it.uppercase() },
+                                                    )
+                                                    append(" ")
+                                                    append(it.year)
+                                                }
+                                            } ?: "Date",
+                                    )
+                                }
+                            }
+                        }
+                        Spacer(modifier = Modifier.weight(1f))
+                        if (task.priority != null) {
+                            Row(
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(
+                                    style = MaterialTheme.typography.labelMedium,
+                                    modifier = Modifier,
+                                    text = task.priority?.label ?: "Priority",
+                                )
+                                Icon(
+                                    modifier =
+                                        Modifier
+                                            .padding(start = 8.dp)
+                                            .size(16.dp),
+                                    imageVector = Icons.Outlined.OutlinedFlag,
+                                    contentDescription = "priority",
                                 )
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.weight(1f))
-                    if (task.priority != null) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            Text(
-                                style = MaterialTheme.typography.labelMedium,
-                                modifier = Modifier,
-                                text = task.priority?.label ?: "Priority",
-                            )
-                            Icon(
-                                modifier =
-                                    Modifier
-                                        .padding(start = 8.dp)
-                                        .size(16.dp),
-                                imageVector = Icons.Outlined.OutlinedFlag,
-                                contentDescription = "priority",
-                            )
-                        }
+                    Text(
+                        text = task.title,
+                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.titleMedium,
+                        textDecoration = if (task.completedAt != null) TextDecoration.LineThrough else null,
+                    )
+                    Text(
+                        modifier = Modifier.fillMaxWidth(),
+                        text = task.description,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        textDecoration = if (task.completedAt != null) TextDecoration.LineThrough else null,
+                    )
+                    if (task.updatedAt != task.createdAt) {
+                        Text(
+                            style = MaterialTheme.typography.labelMedium,
+                            modifier = Modifier.padding(top = 8.dp),
+                            text =
+                                task.updatedAt.let {
+                                    buildString {
+                                        append("Edited : ")
+                                        append(it.dayOfMonth)
+                                        append("/")
+                                        append(it.monthNumber)
+                                        append("/")
+                                        append(it.year)
+                                    }
+                                },
+                        )
                     }
                 }
-                Text(
-                    text = task.title,
-                    fontWeight = FontWeight.Bold,
-                    style = MaterialTheme.typography.titleMedium,
-                )
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    text = task.description,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                if (task.updatedAt != task.createdAt) {
-                    Text(
-                        style = MaterialTheme.typography.labelMedium,
-                        modifier = Modifier.padding(top = 8.dp),
-                        text =
-                            task.updatedAt.let {
-                                buildString {
-                                    append("Edited : ")
-                                    append(it.dayOfMonth)
-                                    append("/")
-                                    append(it.monthNumber)
-                                    append("/")
-                                    append(it.year)
-                                }
-                            },
-                    )
-                }
-            }
 
-            HorizontalDivider(thickness = 0.5.dp)
+                HorizontalDivider(thickness = 0.5.dp)
+            }
         }
     }
 }
@@ -390,6 +416,7 @@ private fun TasksScreenLoadingPreview() {
             navigate = {},
             onValueChangeCategory = {},
             onValueChangePriority = {},
+            onCheckTask = {},
         )
     }
 }
@@ -406,6 +433,7 @@ private fun TasksScreenEmptyPreview() {
             navigate = {},
             onValueChangeCategory = {},
             onValueChangePriority = {},
+            onCheckTask = {},
         )
     }
 }
@@ -422,6 +450,7 @@ private fun TasksScreenErrorPreview() {
             navigate = {},
             onValueChangeCategory = {},
             onValueChangePriority = {},
+            onCheckTask = {},
         )
     }
 }
@@ -450,6 +479,7 @@ private fun TasksScreenNotEmptyPreview() {
             navigate = {},
             onValueChangeCategory = {},
             onValueChangePriority = {},
+            onCheckTask = {},
         )
     }
 }

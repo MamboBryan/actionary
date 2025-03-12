@@ -82,6 +82,13 @@ class TasksScreenModel(
         }
     }
 
+    fun onCheckTask(task: TaskDomain)  {
+        val value = if (task.completedAt == null)Clock.System.now().LocalDateTime else null
+        screenModelScope.launch {
+            taskRepository.updateTask(task.copy(completedAt = value))
+        }
+    }
+
     fun onValueChangeCategory(category: CategoryDomain?) {
         categoryState.update { if (it == category) null else category }
     }
